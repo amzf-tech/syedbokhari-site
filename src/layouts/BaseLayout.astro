@@ -1,7 +1,7 @@
 ---
 const {
-  title = "Syed Bokhari | NDIS Behaviour Support Practitioner (Registration Pending)",
-  description = "NDIS Behaviour Support Practitioner (BSP application submitted and pending).",
+  title = "Syed Bokhari | Behaviour Support (Application Under Assessment)",
+  description = "Behaviour support enquiries. Behaviour Support Practitioner application under assessment (Alternate Pathway). Services delivered under supervision and through an appropriately registered organisation.",
   pathname,
 } = Astro.props;
 ---
@@ -24,7 +24,7 @@ const {
           "@type": "Person",
           "@id": "https://syedbokhari.com.au/#person",
           "name": "Syed Bokhari",
-          "jobTitle": "Behaviour Support Practitioner (Core – Under Supervision)",
+          "jobTitle": "Behaviour Support (Core-level practitioner under supervision)",
           "url": "https://syedbokhari.com.au",
           "sameAs": [
             "https://www.linkedin.com/in/syed-fr-bokhari/"
@@ -39,7 +39,7 @@ const {
         {
           "@type": "ProfessionalService",
           "@id": "https://syedbokhari.com.au/#service",
-          "name": "Syed Bokhari Behaviour Support Services",
+          "name": "Syed Bokhari Behaviour Support",
           "url": "https://syedbokhari.com.au",
           "provider": {
             "@id": "https://syedbokhari.com.au/#person"
@@ -85,10 +85,11 @@ const {
       <footer class="site-footer">
         <div class="container footer-inner">
           <div>
-            <div class="kicker">NDIS Behaviour Support Practitioner</div>
+            <div class="kicker">Behaviour Support</div>
             <div class="p" style="margin-top:0.25rem">
-              Behaviour Support Practitioner application submitted and pending.
-              Services provided consistent with applicable NDIS requirements.
+              Behaviour Support Practitioner application under assessment (Alternate Pathway).
+              Where services are delivered, they are delivered under supervision and through an appropriately
+              registered organisation, in line with applicable NDIS requirements.
             </div>
           </div>
 
@@ -116,7 +117,7 @@ const {
           url("/images/bg-grid.png");
         background-repeat: no-repeat, no-repeat, repeat;
         background-size: auto, auto, 380px 380px;
-        background-attachment: scroll; /* KEY FIX: avoids “empty space” feel */
+        background-attachment: scroll;
       }
 
       .site-header{
