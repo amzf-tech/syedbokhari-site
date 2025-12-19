@@ -2,9 +2,9 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pathname = Astro.url.pathname;
 
-const title = "Syed Bokhari | NDIS Behaviour Support Practitioner (Registration Pending)";
+const title = "Syed Bokhari | Behaviour Support (Under Supervision)";
 const description =
-  "Syed Bokhari is a Behaviour Support Practitioner providing functional behaviour assessment, BSP development, and implementation support. BSP application submitted and pending.";
+  "Syed Bokhari provides behaviour support support under professional supervision, including functional assessment, behaviour support plan development, and implementation support. NDIS Commission application under assessment via the Alternate Pathway.";
 ---
 
 <BaseLayout title={title} pathname={pathname} description={description}>
@@ -13,19 +13,19 @@ const description =
     <div class="hero-grid">
       <!-- TEXT -->
       <div>
-        <p class="kicker">NDIS Behaviour Support Practitioner</p>
+        <p class="kicker">Behaviour Support</p>
 
-        <h1 class="h1">NDIS Behaviour Support Practitioner</h1>
+        <h1 class="h1">Behaviour Support</h1>
 
         <p class="p">
-          I work with NDIS participants, families, and provider teams to support
-          positive, respectful, and evidence-informed behaviour support.
-          <strong> Behaviour Support Practitioner application submitted and pending.</strong>
+          I work under professional supervision to support NDIS participants, families, and provider teams
+          with positive, respectful, and evidence-informed behaviour support.
+          <strong> Application under assessment by the NDIS Quality and Safeguards Commission (Alternate Pathway).</strong>
         </p>
 
         <div class="actions">
-          <a class="btn" href="/contact">Contact</a>
-          <a class="btn secondary" href="/services">Services</a>
+          <a class="btn" href="/contact">Make an enquiry</a>
+          <a class="btn secondary" href="/services">View services</a>
         </div>
 
         <p class="small" style="margin-top:0.75rem">
@@ -39,10 +39,12 @@ const description =
         </p>
 
         <div class="notice">
-          <strong>Registration status:</strong>
+          <strong>Registration & service delivery:</strong>
           <span class="small">
-            Behaviour Support Practitioner application submitted and pending.
-            Services are provided consistent with applicable NDIS requirements.
+            My application is currently under assessment by the NDIS Quality and Safeguards Commission
+            (Alternate Pathway). During this period, behaviour support services may be delivered under
+            supervision and through an appropriately registered organisation, in line with NDIS requirements.
+            Independent service delivery under my own NDIS registration will commence following approval.
           </span>
         </div>
       </div>
@@ -51,7 +53,7 @@ const description =
       <div class="card photo">
         <img
           src="/images/headshot.jpg"
-          alt="Syed Bokhari, Behaviour Support Practitioner"
+          alt="Syed Bokhari"
           loading="eager"
         />
       </div>
@@ -92,7 +94,9 @@ const description =
     <h2 class="h2">Behaviour Support Services</h2>
     <p class="p">
       Behaviour support services include functional assessment, BSP development,
-      implementation support, and collaboration with NDIS providers across Australia.
+      implementation support, and collaboration with providers across Australia.
+      Services are provided under supervision and through an appropriately registered organisation
+      until individual NDIS registration is approved.
     </p>
 
     <p class="p">
@@ -106,13 +110,13 @@ const description =
   <style>
     .hero {
       padding: 1rem 0 0;
-      min-height: 65vh; /* prevents excessive empty feel on wide screens */
+      min-height: 65vh;
     }
 
     .hero-grid {
       display: grid;
       gap: 1.5rem;
-      align-items: center; /* KEY FIX: aligns text with image vertically */
+      align-items: center;
     }
 
     .actions {
@@ -122,7 +126,6 @@ const description =
       flex-wrap: wrap;
     }
 
-    /* IMAGE: full headshot, no cropping */
     .photo {
       border-radius: 16px;
       padding: 1rem;
@@ -153,7 +156,7 @@ const description =
     }
 
     .overview {
-      margin-top: 1.25rem; /* slightly tighter than before */
+      margin-top: 1.25rem;
     }
 
     .pad {
