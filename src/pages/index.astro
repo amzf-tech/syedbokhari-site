@@ -15,9 +15,7 @@ const description =
       <div>
         <p class="kicker">NDIS Behaviour Support Practitioner</p>
 
-        <h1 class="h1">
-          NDIS Behaviour Support Practitioner
-        </h1>
+        <h1 class="h1">NDIS Behaviour Support Practitioner</h1>
 
         <p class="p">
           I work with NDIS participants, families, and provider teams to support
@@ -108,12 +106,13 @@ const description =
   <style>
     .hero {
       padding: 1rem 0 0;
+      min-height: 65vh; /* prevents excessive empty feel on wide screens */
     }
 
     .hero-grid {
       display: grid;
       gap: 1.5rem;
-      align-items: start;
+      align-items: center; /* KEY FIX: aligns text with image vertically */
     }
 
     .actions {
@@ -154,7 +153,7 @@ const description =
     }
 
     .overview {
-      margin-top: 2rem;
+      margin-top: 1.25rem; /* slightly tighter than before */
     }
 
     .pad {
