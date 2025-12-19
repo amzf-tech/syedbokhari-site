@@ -1,0 +1,234 @@
+:root {
+  --bg: #ffffff;
+  --text: #111827;
+  --muted: #4b5563;
+  --border: #e5e7eb;
+  --card: #fafafa;
+  --link: #111827;
+  --max: 1020px;
+  --radius: 18px;
+  --shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.6;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+a:hover { opacity: 0.85; }
+
+.container {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 28px 18px 40px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 14px;
+  margin-bottom: 24px;
+}
+
+.brandwrap{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  text-decoration:none;
+}
+.brandlogo{
+  width:40px;
+  height:40px;
+  border-radius: 14px;
+  overflow:hidden;
+  border:1px solid var(--border);
+  background:#fff;
+  box-shadow: var(--shadow);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.brandlogo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.brandname{
+  display:flex;
+  flex-direction:column;
+  line-height:1.1;
+}
+.brandname strong{
+  font-weight:700;
+  letter-spacing:0.2px;
+}
+.brandname span{
+  font-size:12px;
+  color:var(--muted);
+}
+
+.navlinks {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.navlinks a {
+  text-decoration: none;
+  padding: 7px 12px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 14px;
+}
+
+.navlinks a[aria-current="page"] {
+  border-color: var(--border);
+  background: #f9fafb;
+}
+
+h1 { font-size: 40px; line-height: 1.15; margin: 12px 0 10px; }
+h2 { font-size: 20px; margin: 22px 0 10px; }
+h3 { font-size: 16px; margin: 18px 0 8px; }
+
+p { margin: 10px 0; color: var(--muted); }
+
+.hero {
+  display: grid;
+  gap: 14px;
+  padding: 22px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.kicker {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 0;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+.badges {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+.badge {
+  font-size: 13px;
+  color: #111827;
+  border: 1px solid var(--border);
+  background: #ffffff;
+  border-radius: 999px;
+  padding: 6px 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  background: #ffffff;
+  box-shadow: var(--shadow);
+}
+
+.small {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.footer {
+  border-top: 1px solid var(--border);
+  margin-top: 28px;
+  padding-top: 14px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.list {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  color: var(--muted);
+}
+
+.notice {
+  border-left: 3px solid #111827;
+  padding: 10px 12px;
+  background: #f9fafb;
+  border-radius: 12px;
+}
+
+.btnrow{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top: 6px;
+}
+.btn{
+  display:inline-block;
+  text-decoration:none;
+  border:1px solid var(--border);
+  background:#fff;
+  padding:10px 12px;
+  border-radius: 999px;
+  font-size:14px;
+}
+.btn.primary{
+  background:#111827;
+  color:#fff;
+  border-color:#111827;
+  text-decoration:none;
+}
+.btn.primary:hover{ opacity:0.92; }
+
+.form{
+  display:grid;
+  gap:10px;
+  margin-top: 10px;
+}
+label{
+  font-size:14px;
+  color:var(--muted);
+}
+input, textarea{
+  width:100%;
+  padding:12px 12px;
+  border-radius: 12px;
+  border:1px solid var(--border);
+  font: inherit;
+}
+textarea{ min-height: 130px; resize: vertical; }
+
+hr{
+  border:none;
+  border-top:1px solid var(--border);
+  margin: 18px 0;
+}
+
+@media (min-width: 900px) {
+  .grid { grid-template-columns: 1fr 1fr; }
+}

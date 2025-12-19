@@ -1,0 +1,37 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pathname = Astro.url.pathname;
+---
+
+<BaseLayout title="Services" pathname={pathname} description="Service focus for Syed Bokhari — Positive Behaviour Support.">
+  <h1>Service focus</h1>
+
+  <div class="card">
+    <p>
+      This page describes my practice focus in Positive Behaviour Support. Service delivery arrangements are discussed with providers
+      in line with current registration status and applicable compliance requirements.
+    </p>
+
+    <h2>Core service areas</h2>
+    <ul class="list">
+      <li>Information gathering and functional assessment support</li>
+      <li>Data collection tools and behavioural measurement frameworks</li>
+      <li>Behaviour support plan development and review (as applicable)</li>
+      <li>Implementation support: coaching, team training, and consistency planning</li>
+      <li>Risk assessment considerations and safety planning in collaboration with the support network</li>
+    </ul>
+
+    <hr />
+
+    <h2>Quality and safeguards</h2>
+    <ul class="list">
+      <li>Person-centred, trauma-informed and culturally respectful practice</li>
+      <li>Least restrictive practice and rights-based decision-making</li>
+      <li>Clear documentation, review cycles, and measurable outcomes</li>
+    </ul>
+
+    <p class="small">
+      If you are a provider seeking a practitioner, please use the contact page for professional enquiries.
+    </p>
+  </div>
+</BaseLayout>

@@ -1,0 +1,65 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pathname = Astro.url.pathname;
+---
+
+<BaseLayout
+  title="Home"
+  pathname={pathname}
+  description="Syed Bokhari — Behaviour Support Practitioner (NDIS BSP application submitted). Provider-focused professional profile."
+>
+  <section class="hero">
+    <p class="kicker">Positive Behaviour Support</p>
+    <h1>Syed Bokhari</h1>
+
+    <div class="badges" role="list">
+      <span class="badge" role="listitem">Provider partnerships</span>
+      <span class="badge" role="listitem">Evidence-informed practice</span>
+      <span class="badge" role="listitem">NDIS BSP application submitted</span>
+    </div>
+
+    <div class="notice">
+      <strong>Registration status:</strong>
+      <span class="small">
+        NDIS Quality and Safeguards Commission BSP application submitted and pending assessment.
+      </span>
+    </div>
+
+    <p>
+      I am establishing a professional practice focused on ethical, person-centred Positive Behaviour Support (PBS),
+      aligned with NDIS Quality and Safeguards Commission expectations.
+    </p>
+
+    <div class="btnrow">
+      <a class="btn primary" href="/contact">Professional enquiries</a>
+      <a class="btn" href="/services">View service focus</a>
+    </div>
+
+    <p class="small">
+      Current focus: provider partnerships and contracting discussions aligned to compliant frameworks.
+    </p>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <h2>Practice approach</h2>
+      <ul class="list">
+        <li>Functional, hypothesis-driven assessment and formulation</li>
+        <li>Collaborative work with families and support teams</li>
+        <li>Data-informed review and continuous improvement</li>
+        <li>Least restrictive practice and rights-based decision-making</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Availability</h2>
+      <p>
+        I am open to discussions with providers regarding compliant contracting arrangements, supervision pathways
+        (where required), and referral processes.
+      </p>
+      <p class="small">
+        This website is currently provider-focused while registration is pending. Participant-facing intake will be added only once appropriate approvals are in place.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

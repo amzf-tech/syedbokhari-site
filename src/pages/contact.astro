@@ -1,0 +1,29 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pathname = Astro.url.pathname;
+---
+
+<BaseLayout title="Contact" pathname={pathname} description="Contact Syed Bokhari for professional enquiries.">
+  <h1>Contact</h1>
+
+  <div class="card">
+    <p>
+      For professional enquiries (provider partnerships, contracting discussions), contact me via email:
+    </p>
+
+    <p><strong>Email:</strong> <a href="mailto:hello@syedbokhari.com.au">hello@syedbokhari.com.au</a></p>
+
+    <div class="notice">
+      <strong>Note:</strong>
+      <span class="small">
+        This website is currently provider-focused while NDIS BSP registration is pending.
+      </span>
+    </div>
+
+    <hr />
+
+    <p class="small">
+      Optional next step: once your email is set up, you can add a simple contact form using a service such as Formspree or Netlify Forms (no server required).
+    </p>
+  </div>
+</BaseLayout>

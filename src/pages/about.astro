@@ -1,0 +1,31 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pathname = Astro.url.pathname;
+---
+
+<BaseLayout title="About" pathname={pathname} description="About Syed Bokhari — professional background and practice principles.">
+  <h1>About</h1>
+
+  <div class="card">
+    <p>
+      I work in Positive Behaviour Support with a focus on dignity, capability-building, and outcomes that matter
+      to the person and their support network.
+    </p>
+
+    <h2>Professional focus</h2>
+    <ul class="list">
+      <li>Functional Behaviour Assessment (FBA) and data-driven formulation</li>
+      <li>Behaviour support planning aligned to NDIS expectations</li>
+      <li>Capacity-building and coaching for support teams</li>
+      <li>Reduction of restrictive practices (where applicable) consistent with authorisation pathways</li>
+    </ul>
+
+    <hr />
+
+    <h2>Compliance and quality</h2>
+    <p class="small">
+      I am committed to ethical practice, accurate documentation, and transparent communication.
+      Registration status is stated clearly on this website and can be confirmed with providers as required.
+    </p>
+  </div>
+</BaseLayout>
