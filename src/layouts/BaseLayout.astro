@@ -15,48 +15,48 @@ const {
     <title>{title}</title>
     <link rel="stylesheet" href="/src/styles/global.css" />
 
-    <!-- Structured data for SEO -->
+    <!-- Structured data for SEO (JSON-LD) -->
     <script type="application/ld+json">
-    {JSON.stringify({
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Person",
-          "@id": "https://syedbokhari.com.au/#person",
-          "name": "Syed Bokhari",
-          "jobTitle": "Behaviour Support (Core-level practitioner under supervision)",
-          "url": "https://syedbokhari.com.au",
-          "sameAs": [
-            "https://www.linkedin.com/in/syed-fr-bokhari/"
-          ],
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+61-411-072-466",
-            "contactType": "professional enquiries",
-            "email": "syed@syedbokhari.com.au"
-          }
-        },
-        {
-          "@type": "ProfessionalService",
-          "@id": "https://syedbokhari.com.au/#service",
-          "name": "Syed Bokhari Behaviour Support",
-          "url": "https://syedbokhari.com.au",
-          "provider": {
-            "@id": "https://syedbokhari.com.au/#person"
-          },
-          "areaServed": {
-            "@type": "Country",
-            "name": "Australia"
-          },
-          "knowsAbout": [
-            "Positive Behaviour Support",
-            "Functional Behaviour Assessment",
-            "Behaviour Support Plans",
-            "NDIS behaviour support"
-          ]
-        }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://syedbokhari.com.au/#person",
+      "name": "Syed Bokhari",
+      "jobTitle": "Behaviour support practitioner (core-level, under supervision)",
+      "url": "https://syedbokhari.com.au",
+      "sameAs": [
+        "https://www.linkedin.com/in/syed-fr-bokhari/"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+61-411-072-466",
+        "contactType": "professional enquiries",
+        "email": "syed@syedbokhari.com.au"
+      }
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://syedbokhari.com.au/#service",
+      "name": "Syed Bokhari Behaviour Support",
+      "url": "https://syedbokhari.com.au",
+      "provider": {
+        "@id": "https://syedbokhari.com.au/#person"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Australia"
+      },
+      "knowsAbout": [
+        "Positive Behaviour Support",
+        "Functional Behaviour Assessment",
+        "Behaviour Support Plans",
+        "NDIS behaviour support"
       ]
-    })}
+    }
+  ]
+}
     </script>
   </head>
 
