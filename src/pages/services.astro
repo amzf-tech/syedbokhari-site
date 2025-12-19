@@ -1,37 +1,139 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pathname = Astro.url.pathname;
+
+const title = "Services | Syed Bokhari";
+const description =
+  "NDIS behaviour support services by Syed Bokhari, including functional assessment support, BSP development, and implementation support. BSP application submitted and pending.";
 ---
 
-<BaseLayout title="Services" pathname={pathname} description="Service focus for Syed Bokhari — Positive Behaviour Support.">
-  <h1>Service focus</h1>
+<BaseLayout title={title} pathname={pathname} description={description}>
+  <section class="container">
+    <p class="kicker">Services</p>
+    <h1 class="h1">NDIS Behaviour Support Services</h1>
 
-  <div class="card">
-    <p>
-      This page describes my practice focus in Positive Behaviour Support. Service delivery arrangements are discussed with providers
-      in line with current registration status and applicable compliance requirements.
-    </p>
+    <div class="card pad">
+      <p class="p">
+        This page outlines my practice focus in behaviour support for NDIS participants and provider teams.
+        <strong> Behaviour Support Practitioner application submitted and pending.</strong>
+        Service delivery arrangements are discussed with providers consistent with applicable NDIS requirements.
+      </p>
 
-    <h2>Core service areas</h2>
-    <ul class="list">
-      <li>Information gathering and functional assessment support</li>
-      <li>Data collection tools and behavioural measurement frameworks</li>
-      <li>Behaviour support plan development and review (as applicable)</li>
-      <li>Implementation support: coaching, team training, and consistency planning</li>
-      <li>Risk assessment considerations and safety planning in collaboration with the support network</li>
-    </ul>
+      <div class="notice">
+        <strong>Registration status:</strong>
+        <span class="small">
+          Behaviour Support Practitioner application submitted and pending.
+          Services are provided consistent with applicable NDIS requirements and standards.
+        </span>
+      </div>
 
-    <hr />
+      <hr class="rule" />
 
-    <h2>Quality and safeguards</h2>
-    <ul class="list">
-      <li>Person-centred, trauma-informed and culturally respectful practice</li>
-      <li>Least restrictive practice and rights-based decision-making</li>
-      <li>Clear documentation, review cycles, and measurable outcomes</li>
-    </ul>
+      <h2 class="h2">Core service areas</h2>
+      <ul class="list">
+        <li>Information gathering and structured intake with the support network</li>
+        <li>Functional behaviour assessment support (under supervision)</li>
+        <li>Behaviour Support Plan (BSP) development and review (as applicable)</li>
+        <li>Implementation support, coaching, and consistency planning</li>
+        <li>Behaviour-related risk identification and safety considerations</li>
+      </ul>
 
-    <p class="small">
-      If you are a provider seeking a practitioner, please use the contact page for professional enquiries.
-    </p>
-  </div>
+      <hr class="rule" />
+
+      <h2 class="h2">Who this is for</h2>
+      <ul class="list">
+        <li>NDIS registered providers</li>
+        <li>Support coordinators</li>
+        <li>Plan managers</li>
+        <li>Multidisciplinary teams supporting NDIS participants</li>
+      </ul>
+
+      <hr class="rule" />
+
+      <h2 class="h2">Professional profile</h2>
+      <p class="p">
+        A concise professional profile outlining my experience, qualifications, and practice approach
+        is available for provider reference.
+      </p>
+
+      <p class="p">
+        <a href="/profile.pdf" target="_blank" rel="noopener noreferrer">
+          Download professional profile (PDF)
+        </a>
+      </p>
+
+      <hr class="rule" />
+
+      <h2 class="h2">Professional enquiries</h2>
+      <p class="p">
+        For provider partnerships and contracting enquiries:
+      </p>
+
+      <p class="contact">
+        <strong>Email:</strong>
+        <a href="mailto:syed@syedbokhari.com.au">syed@syedbokhari.com.au</a>
+        <span class="dot">·</span>
+        <strong>Phone:</strong>
+        <a href="tel:0411072466">0411 072 466</a>
+      </p>
+
+      <p class="p" style="margin-top:1rem">
+        You can also use the <a href="/contact">Contact</a> page.
+      </p>
+    </div>
+  </section>
+
+  <style>
+    .pad { padding: 1.5rem; }
+
+    .notice {
+      margin-top: 1.25rem;
+      padding: 1rem;
+      border: 1px solid rgba(15, 23, 42, 0.15);
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.85);
+    }
+
+    .small {
+      display: block;
+      margin-top: 0.25rem;
+      color: #475569;
+      font-size: 0.95rem;
+    }
+
+    .rule {
+      border: 0;
+      border-top: 1px solid rgba(15, 23, 42, 0.12);
+      margin: 1.5rem 0;
+    }
+
+    .list {
+      margin: 0.75rem 0 0;
+      padding-left: 1.1rem;
+      color: #475569;
+    }
+
+    .list li {
+      margin: 0.35rem 0;
+    }
+
+    .contact {
+      margin-top: 0.5rem;
+      color: #0f172a;
+    }
+
+    .contact a {
+      color: inherit;
+    }
+
+    .dot {
+      margin: 0 0.5rem;
+      color: #475569;
+    }
+
+    @media (max-width: 520px) {
+      .dot { display: none; }
+      .contact { display: grid; gap: 0.35rem; }
+    }
+  </style>
 </BaseLayout>

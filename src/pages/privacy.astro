@@ -1,0 +1,155 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pathname = Astro.url.pathname;
+
+const title = "Privacy | Syed Bokhari";
+const description =
+  "Privacy policy for syedbokhari.com.au: how personal information is collected, used, stored, and disclosed.";
+const lastUpdated = "19 December 2025";
+---
+
+<BaseLayout title={title} pathname={pathname} description={description}>
+  <section class="container">
+    <p class="kicker">Privacy</p>
+    <h1 class="h1">Privacy Policy</h1>
+    <p class="p"><strong>Last updated:</strong> {lastUpdated}</p>
+
+    <div class="card pad">
+      <h2 class="h2">Overview</h2>
+      <p class="p">
+        This Privacy Policy explains how personal information is collected and handled when you visit
+        <strong> syedbokhari.com.au</strong> and when you contact Syed Bokhari (NDIS Behaviour Support Practitioner).
+        This site is intended for professional enquiries and general contact.
+      </p>
+
+      <hr class="rule" />
+
+      <h2 class="h2">What information may be collected</h2>
+      <p class="p">
+        If you contact me via the website contact form, email, or phone, the information collected may include:
+      </p>
+      <ul class="list">
+        <li>Your name</li>
+        <li>Your email address</li>
+        <li>Your phone number (if provided)</li>
+        <li>The content of your message</li>
+        <li>Technical information such as IP address and browser details (via standard internet logs)</li>
+      </ul>
+
+      <hr class="rule" />
+
+      <h2 class="h2">How information is used</h2>
+      <p class="p">Personal information is used for purposes such as:</p>
+      <ul class="list">
+        <li>Responding to enquiries and communicating with you</li>
+        <li>Managing professional enquiries and service discussions</li>
+        <li>Improving website reliability and security</li>
+      </ul>
+
+      <hr class="rule" />
+
+      <h2 class="h2">Contact form processing</h2>
+      <p class="p">
+        The contact form on this website is processed by a third-party service (<strong>Formspree</strong>).
+        When you submit the form, the information you enter is transmitted to Formspree to deliver your message.
+        Form submissions may be stored by Formspree and forwarded to the nominated email address.
+      </p>
+      <p class="p">
+        If you prefer not to use the form, you can contact me directly by email or phone.
+      </p>
+
+      <hr class="rule" />
+
+      <h2 class="h2">Sensitive information</h2>
+      <p class="p">
+        Please do not include sensitive personal information in the website contact form.
+        If you are an NDIS participant (or contacting on behalf of one), sensitive details should be shared only
+        through appropriate, secure channels after initial contact and confirmation of arrangements.
+      </p>
+
+      <hr class="rule" />
+
+      <h2 class="h2">Disclosure of personal information</h2>
+      <p class="p">
+        Personal information is not sold. It may be disclosed only where reasonably necessary to:
+      </p>
+      <ul class="list">
+        <li>Respond to your enquiry (for example, communicating with you or relevant provider contacts you nominate)</li>
+        <li>Meet legal or regulatory obligations</li>
+        <li>Maintain safety and reduce risk where serious concerns arise</li>
+      </ul>
+
+      <hr class="rule" />
+
+      <h2 class="h2">Storage and security</h2>
+      <p class="p">
+        Reasonable steps are taken to protect personal information from misuse, interference, loss, unauthorised access,
+        modification, or disclosure. However, no method of transmission over the internet is completely secure.
+      </p>
+
+      <hr class="rule" />
+
+      <h2 class="h2">Access and correction</h2>
+      <p class="p">
+        You may request access to personal information held about you and request corrections if you believe it is inaccurate,
+        out of date, incomplete, irrelevant, or misleading.
+      </p>
+
+      <hr class="rule" />
+
+      <h2 class="h2">How to contact</h2>
+      <p class="p">
+        For privacy-related enquiries, contact:
+      </p>
+      <p class="contact">
+        <strong>Email:</strong>
+        <a href="mailto:syed@syedbokhari.com.au">syed@syedbokhari.com.au</a>
+        <span class="dot">·</span>
+        <strong>Phone:</strong>
+        <a href="tel:0411072466">0411 072 466</a>
+      </p>
+
+      <div class="notice" role="note" aria-label="Emergency notice">
+        <strong>Emergency notice:</strong>
+        <span class="small">
+          This website is not monitored for urgent matters. If there is immediate risk or emergency, call 000.
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .pad { padding: 1.5rem; }
+
+    .rule {
+      border: 0;
+      border-top: 1px solid rgba(15, 23, 42, 0.12);
+      margin: 1.5rem 0;
+    }
+
+    .list {
+      margin: 0.75rem 0 0;
+      padding-left: 1.1rem;
+      color: #475569;
+    }
+    .list li { margin: 0.35rem 0; }
+
+    .contact { margin-top: 0.5rem; color: #0f172a; }
+    .contact a { color: inherit; }
+    .dot { margin: 0 0.5rem; color: #475569; }
+
+    .notice {
+      margin-top: 1.25rem;
+      padding: 1rem;
+      border: 1px solid rgba(15, 23, 42, 0.15);
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.85);
+    }
+    .small { display: block; margin-top: 0.25rem; color: #475569; font-size: 0.95rem; }
+
+    @media (max-width: 520px) {
+      .dot { display: none; }
+      .contact { display: grid; gap: 0.35rem; }
+    }
+  </style>
+</BaseLayout>

@@ -1,29 +1,149 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pathname = Astro.url.pathname;
+
+const title = "Contact | Syed Bokhari";
+const description =
+  "Contact Syed Bokhari, NDIS Behaviour Support Practitioner (BSP application submitted and pending).";
 ---
 
-<BaseLayout title="Contact" pathname={pathname} description="Contact Syed Bokhari for professional enquiries.">
-  <h1>Contact</h1>
+<BaseLayout title={title} pathname={pathname} description={description}>
+  <section class="container">
+    <h1 class="h1">Contact</h1>
 
-  <div class="card">
-    <p>
-      For professional enquiries (provider partnerships, contracting discussions), contact me via email:
-    </p>
+    <div class="card pad">
+      <p class="p">
+        For professional enquiries, including provider partnerships and contracting discussions,
+        you can contact me directly or send a message using the form below.
+      </p>
 
-    <p><strong>Email:</strong> <a href="mailto:hello@syedbokhari.com.au">hello@syedbokhari.com.au</a></p>
+      <div class="grid cols-2" style="margin-top:1.25rem">
+        <!-- Contact details -->
+        <div>
+          <p style="margin:0">
+            <strong>Email:</strong><br />
+            <a href="mailto:syed@syedbokhari.com.au">syed@syedbokhari.com.au</a>
+          </p>
 
-    <div class="notice">
-      <strong>Note:</strong>
-      <span class="small">
-        This website is currently provider-focused while NDIS BSP registration is pending.
-      </span>
+          <p style="margin:1rem 0 0">
+            <strong>Phone:</strong><br />
+            <a href="tel:0411072466">0411 072 466</a>
+          </p>
+
+          <div class="notice" role="note" aria-label="Registration status">
+            <strong>Registration status:</strong>
+            <span class="small">
+              Behaviour Support Practitioner application submitted and pending.
+              Services are provided consistent with applicable NDIS requirements.
+            </span>
+          </div>
+        </div>
+
+        <!-- Contact form -->
+        <form
+          class="form"
+          method="POST"
+          action="https://formspree.io/f/xvzpgpqo"
+        >
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" required autocomplete="name" />
+          </label>
+
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" required autocomplete="email" />
+          </label>
+
+          <label>
+            <span>Phone (optional)</span>
+            <input type="tel" name="phone" autocomplete="tel" />
+          </label>
+
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="6" required></textarea>
+          </label>
+
+          <!-- Spam protection -->
+          <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off" />
+
+          <!-- Email subject -->
+          <input
+            type="hidden"
+            name="_subject"
+            value="New website enquiry — syedbokhari.com.au"
+          />
+
+          <button class="btn" type="submit">Send message</button>
+
+          <p class="small" style="margin-top:0.75rem">
+            Please do not include sensitive personal information.
+            If there is an immediate risk or emergency, call 000.
+          </p>
+        </form>
+      </div>
     </div>
+  </section>
 
-    <hr />
+  <style>
+    .pad {
+      padding: 1.5rem;
+    }
 
-    <p class="small">
-      Optional next step: once your email is set up, you can add a simple contact form using a service such as Formspree or Netlify Forms (no server required).
-    </p>
-  </div>
+    .form {
+      display: grid;
+      gap: 0.85rem;
+      align-content: start;
+    }
+
+    label {
+      display: grid;
+      gap: 0.35rem;
+    }
+
+    label span {
+      font-weight: 600;
+      color: #0f172a;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.75rem 0.8rem;
+      border-radius: 12px;
+      border: 1px solid rgba(15, 23, 42, 0.15);
+      background: rgba(255, 255, 255, 0.9);
+      font: inherit;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .notice {
+      margin-top: 1.25rem;
+      padding: 1rem;
+      border: 1px solid rgba(15, 23, 42, 0.15);
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.85);
+    }
+
+    .small {
+      display: block;
+      margin-top: 0.25rem;
+      color: #475569;
+      font-size: 0.95rem;
+    }
+
+    .honeypot {
+      display: none;
+    }
+
+    @media (max-width: 900px) {
+      .grid.cols-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </BaseLayout>

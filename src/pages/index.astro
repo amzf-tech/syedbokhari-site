@@ -1,65 +1,178 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pathname = Astro.url.pathname;
+
+const title = "Syed Bokhari | NDIS Behaviour Support Practitioner (Registration Pending)";
+const description =
+  "Syed Bokhari is a Behaviour Support Practitioner providing functional behaviour assessment, BSP development, and implementation support. BSP application submitted and pending.";
 ---
 
-<BaseLayout
-  title="Home"
-  pathname={pathname}
-  description="Syed Bokhari — Behaviour Support Practitioner (NDIS BSP application submitted). Provider-focused professional profile."
->
-  <section class="hero">
-    <p class="kicker">Positive Behaviour Support</p>
-    <h1>Syed Bokhari</h1>
+<BaseLayout title={title} pathname={pathname} description={description}>
+  <!-- HERO -->
+  <section class="container hero">
+    <div class="hero-grid">
+      <!-- TEXT -->
+      <div>
+        <p class="kicker">NDIS Behaviour Support Practitioner</p>
 
-    <div class="badges" role="list">
-      <span class="badge" role="listitem">Provider partnerships</span>
-      <span class="badge" role="listitem">Evidence-informed practice</span>
-      <span class="badge" role="listitem">NDIS BSP application submitted</span>
+        <h1 class="h1">
+          NDIS Behaviour Support Practitioner
+        </h1>
+
+        <p class="p">
+          I work with NDIS participants, families, and provider teams to support
+          positive, respectful, and evidence-informed behaviour support.
+          <strong> Behaviour Support Practitioner application submitted and pending.</strong>
+        </p>
+
+        <div class="actions">
+          <a class="btn" href="/contact">Contact</a>
+          <a class="btn secondary" href="/services">Services</a>
+        </div>
+
+        <p class="small" style="margin-top:0.75rem">
+          <a
+            href="https://www.linkedin.com/in/syed-fr-bokhari/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View LinkedIn profile
+          </a>
+        </p>
+
+        <div class="notice">
+          <strong>Registration status:</strong>
+          <span class="small">
+            Behaviour Support Practitioner application submitted and pending.
+            Services are provided consistent with applicable NDIS requirements.
+          </span>
+        </div>
+      </div>
+
+      <!-- IMAGE -->
+      <div class="card photo">
+        <img
+          src="/images/headshot.jpg"
+          alt="Syed Bokhari, Behaviour Support Practitioner"
+          loading="eager"
+        />
+      </div>
     </div>
+  </section>
 
-    <div class="notice">
-      <strong>Registration status:</strong>
-      <span class="small">
-        NDIS Quality and Safeguards Commission BSP application submitted and pending assessment.
-      </span>
+  <!-- OVERVIEW -->
+  <section class="container overview">
+    <div class="grid cols-3">
+      <div class="card pad">
+        <h2 class="h2">Assessment</h2>
+        <p class="p">
+          Functional behaviour assessment and structured information gathering
+          to understand behaviour within its context.
+        </p>
+      </div>
+
+      <div class="card pad">
+        <h2 class="h2">Plan Development</h2>
+        <p class="p">
+          Behaviour Support Plan (BSP) development aligned with NDIS expectations
+          and participant needs.
+        </p>
+      </div>
+
+      <div class="card pad">
+        <h2 class="h2">Implementation Support</h2>
+        <p class="p">
+          Coaching and guidance for families and support teams to support consistent
+          and safe implementation.
+        </p>
+      </div>
     </div>
+  </section>
 
-    <p>
-      I am establishing a professional practice focused on ethical, person-centred Positive Behaviour Support (PBS),
-      aligned with NDIS Quality and Safeguards Commission expectations.
+  <!-- SEO SUPPORT -->
+  <section class="container seo">
+    <h2 class="h2">Behaviour Support Services</h2>
+    <p class="p">
+      Behaviour support services include functional assessment, BSP development,
+      implementation support, and collaboration with NDIS providers across Australia.
     </p>
 
-    <div class="btnrow">
-      <a class="btn primary" href="/contact">Professional enquiries</a>
-      <a class="btn" href="/services">View service focus</a>
-    </div>
-
-    <p class="small">
-      Current focus: provider partnerships and contracting discussions aligned to compliant frameworks.
+    <p class="p">
+      Professional enquiries:
+      <a href="mailto:syed@syedbokhari.com.au">syed@syedbokhari.com.au</a>
+      ·
+      <a href="tel:0411072466">0411 072 466</a>
     </p>
   </section>
 
-  <section class="grid">
-    <div class="card">
-      <h2>Practice approach</h2>
-      <ul class="list">
-        <li>Functional, hypothesis-driven assessment and formulation</li>
-        <li>Collaborative work with families and support teams</li>
-        <li>Data-informed review and continuous improvement</li>
-        <li>Least restrictive practice and rights-based decision-making</li>
-      </ul>
-    </div>
+  <style>
+    .hero {
+      padding: 1rem 0 0;
+    }
 
-    <div class="card">
-      <h2>Availability</h2>
-      <p>
-        I am open to discussions with providers regarding compliant contracting arrangements, supervision pathways
-        (where required), and referral processes.
-      </p>
-      <p class="small">
-        This website is currently provider-focused while registration is pending. Participant-facing intake will be added only once appropriate approvals are in place.
-      </p>
-    </div>
-  </section>
+    .hero-grid {
+      display: grid;
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    .actions {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    /* IMAGE: full headshot, no cropping */
+    .photo {
+      border-radius: 16px;
+      padding: 1rem;
+      background: #ffffff;
+    }
+
+    .photo img {
+      width: 100%;
+      height: auto;
+      max-height: 420px;
+      display: block;
+      object-fit: contain;
+    }
+
+    .notice {
+      margin-top: 1.25rem;
+      padding: 1rem;
+      border: 1px solid rgba(15, 23, 42, 0.15);
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.85);
+    }
+
+    .small {
+      display: block;
+      margin-top: 0.25rem;
+      color: #475569;
+      font-size: 0.95rem;
+    }
+
+    .overview {
+      margin-top: 2rem;
+    }
+
+    .pad {
+      padding: 1.25rem;
+    }
+
+    .seo {
+      margin-top: 2rem;
+    }
+
+    @media (min-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1.2fr 0.8fr;
+      }
+
+      .photo img {
+        max-height: 480px;
+      }
+    }
+  </style>
 </BaseLayout>
