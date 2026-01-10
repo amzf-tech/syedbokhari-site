@@ -2,159 +2,621 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pathname = Astro.url.pathname;
 
-const title = "Services | Syed Bokhari";
-const description =
-  "Behaviour support services delivered under professional supervision, including functional assessment support, behaviour support plan development support, and implementation support. NDIS Commission application under assessment via the Alternate Pathway.";
+const title = "Services | Syed Bokhari - NDIS Behaviour Support Practitioner";
+const description = "Comprehensive NDIS behaviour support services including functional assessment, BSP development, and implementation support. Delivered under professional supervision across Australia.";
 ---
 
 <BaseLayout title={title} pathname={pathname} description={description}>
-  <section class="container">
-    <p class="kicker">Services</p>
-    <h1 class="h1">Behaviour Support Services</h1>
-
-    <div class="card pad">
-      <p class="p">
-        This page outlines my practice focus in behaviour support for NDIS participants and provider teams.
-        <strong> My application is under assessment by the NDIS Quality and Safeguards Commission (Alternate Pathway).</strong>
-        During this period, service delivery may occur under professional supervision and through an appropriately
-        registered organisation, in line with applicable NDIS requirements.
-      </p>
-
-      <div class="notice">
-        <strong>Registration & service delivery:</strong>
-        <span class="small">
-          Application currently under assessment (Alternate Pathway). Where services are delivered, they are delivered
-          under supervision and through an appropriately registered organisation in accordance with applicable NDIS
-          requirements and standards. Independent delivery under my own NDIS registration will commence following approval.
-        </span>
-      </div>
-
-      <hr class="rule" />
-
-      <h2 class="h2">How support is provided</h2>
-      <p class="p">
-        Behaviour support is delivered in collaboration with the supervising practitioner and the registered organisation.
-        This includes structured supervision, review of assessment information, and oversight of behaviour support planning
-        and implementation support. Service delivery arrangements are confirmed with the contracting provider and aligned
-        with applicable NDIS requirements.
-      </p>
-
-      <hr class="rule" />
-
-      <h2 class="h2">Practice approach</h2>
-      <p class="p">
-        My practice approach is person-centred, respectful, and grounded in positive behaviour support principles.
-        I work collaboratively with participants, families, and support teams to understand behaviour within its context
-        and to support quality-of-life outcomes, capacity building, and safe, consistent supports.
-      </p>
-
-      <hr class="rule" />
-
-      <h2 class="h2">Core service areas</h2>
-      <ul class="list">
-        <li>Structured intake, information gathering, and collaboration with the support network</li>
-        <li>Functional behaviour assessment support (under supervision)</li>
-        <li>Behaviour Support Plan (BSP) development and review support (as applicable)</li>
-        <li>Implementation support, coaching, and consistency planning for families and teams</li>
-        <li>Behaviour-related risk identification and safety considerations</li>
-      </ul>
-
-      <hr class="rule" />
-
-      <h2 class="h2">Who this is for</h2>
-      <ul class="list">
-        <li>NDIS registered providers</li>
-        <li>Support coordinators</li>
-        <li>Plan managers</li>
-        <li>Multidisciplinary teams supporting NDIS participants</li>
-      </ul>
-
-      <hr class="rule" />
-
-      <h2 class="h2">Professional profile</h2>
-      <p class="p">
-        A concise professional profile outlining my experience, qualifications, and practice approach
-        is available for provider reference.
-      </p>
-
-      <p class="p">
-        <a href="/profile.pdf" target="_blank" rel="noopener noreferrer">
-          Download professional profile (PDF)
-        </a>
-      </p>
-
-      <hr class="rule" />
-
-      <h2 class="h2">Professional enquiries</h2>
-      <p class="p">
-        For provider partnerships and contracting enquiries (including supervised delivery arrangements):
-      </p>
-
-      <p class="contact">
-        <strong>Email:</strong>
-        <a href="mailto:syed@syedbokhari.com.au">syed@syedbokhari.com.au</a>
-        <span class="dot">·</span>
-        <strong>Phone:</strong>
-        <a href="tel:0411072466">0411 072 466</a>
-      </p>
-
-      <p class="p" style="margin-top:1rem">
-        You can also use the <a href="/contact">Contact</a> page.
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="container">
+      <h1 class="h1">Behaviour Support Services</h1>
+      <p class="subtitle">
+        Comprehensive, evidence-based behaviour support delivered under professional supervision
       </p>
     </div>
   </section>
 
-  <style>
-    .pad { padding: 1.5rem; }
+  <!-- SERVICES OVERVIEW -->
+  <section class="services-overview">
+    <div class="container">
+      <div class="overview-content">
+        <h2 class="h2">How I Can Help</h2>
+        <p class="p">
+          I provide comprehensive behaviour support services to NDIS participants, families, and support teams 
+          across Australia. All services are delivered under professional supervision, ensuring the highest 
+          quality of care while my NDIS registration is under assessment through the Alternate Pathway.
+        </p>
+        
+        <div class="service-highlights">
+          <div class="highlight-item">
+            <div class="highlight-icon">🎯</div>
+            <div>
+              <h4>Individualized Approach</h4>
+              <p>Every person is unique - support plans are tailored to individual needs and goals</p>
+            </div>
+          </div>
+          
+          <div class="highlight-item">
+            <div class="highlight-icon">🏠</div>
+            <div>
+              <h4>Australia-Wide Service</h4>
+              <p>Remote and in-person support available across all states and territories</p>
+            </div>
+          </div>
+          
+          <div class="highlight-item">
+            <div class="highlight-icon">🛡️</div>
+            <div>
+              <h4>Enhanced Oversight</h4>
+              <p>Professional supervision provides additional quality assurance and expertise</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    .notice {
-      margin-top: 1.25rem;
-      padding: 1rem;
-      border: 1px solid rgba(15, 23, 42, 0.15);
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.85);
-    }
+  <!-- DETAILED SERVICES -->
+  <section class="detailed-services">
+    <div class="container">
+      <!-- Service 1: Assessment -->
+      <div class="service-detail">
+        <div class="service-content">
+          <div class="service-header">
+            <div class="service-icon-large">🔍</div>
+            <div>
+              <h2 class="h2">Functional Behaviour Assessment</h2>
+              <p class="service-subtitle">Understanding behaviour to create effective support strategies</p>
+            </div>
+          </div>
+          
+          <p class="p">
+            A comprehensive Functional Behaviour Assessment (FBA) is the foundation of effective behaviour support. 
+            I use evidence-based assessment tools and collaborative approaches to understand why behaviours occur 
+            and what maintains them.
+          </p>
+          
+          <h3 class="h3">What's Included:</h3>
+          <ul class="service-features">
+            <li><strong>Comprehensive Information Gathering:</strong> Review of relevant reports, plans, and documentation</li>
+            <li><strong>Stakeholder Interviews:</strong> Conversations with participants, families, and support teams</li>
+            <li><strong>Direct Observation:</strong> Structured observations in relevant environments</li>
+            <li><strong>Data Collection:</strong> Systematic recording of behaviour patterns and contexts</li>
+            <li><strong>Functional Analysis:</strong> Identifying triggers, functions, and maintaining factors</li>
+            <li><strong>Report Development:</strong> Detailed assessment report with recommendations</li>
+          </ul>
+          
+          <div class="service-benefits">
+            <h3 class="h3">Benefits:</h3>
+            <div class="benefits-grid">
+              <div class="benefit">Clear understanding of behaviour patterns</div>
+              <div class="benefit">Evidence-based recommendations</div>
+              <div class="benefit">Foundation for effective support planning</div>
+              <div class="benefit">Collaborative stakeholder involvement</div>
+            </div>
+          </div>
+          
+          <div class="service-process">
+            <h3 class="h3">Assessment Process:</h3>
+            <div class="process-steps">
+              <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <h4>Initial Consultation</h4>
+                  <p>Free 30-minute discussion to understand your needs</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <h4>Information Gathering</h4>
+                  <p>Comprehensive review of documentation and interviews</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <h4>Direct Assessment</h4>
+                  <p>Observations and data collection in relevant settings</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                  <h4>Report & Recommendations</h4>
+                  <p>Detailed assessment report with practical recommendations</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    .small {
-      display: block;
-      margin-top: 0.25rem;
-      color: #475569;
-      font-size: 0.95rem;
-    }
+      <!-- Service 2: BSP Development -->
+      <div class="service-detail">
+        <div class="service-content">
+          <div class="service-header">
+            <div class="service-icon-large">📋</div>
+            <div>
+              <h2 class="h2">Behaviour Support Plan Development</h2>
+              <p class="service-subtitle">Creating comprehensive, individualized support plans</p>
+            </div>
+          </div>
+          
+          <p class="p">
+            I develop comprehensive Behaviour Support Plans (BSPs) that align with NDIS requirements and 
+            focus on improving quality of life while addressing behaviours of concern through positive, 
+            evidence-based strategies.
+          </p>
+          
+          <h3 class="h3">What's Included:</h3>
+          <ul class="service-features">
+            <li><strong>Person-Centered Planning:</strong> Focus on individual goals, preferences, and strengths</li>
+            <li><strong>Proactive Strategies:</strong> Environmental modifications and skill-building approaches</li>
+            <li><strong>Reactive Strategies:</strong> Safe and dignified responses to behaviours of concern</li>
+            <li><strong>Skill Development:</strong> Teaching alternative behaviours and life skills</li>
+            <li><strong>Restrictive Practice Documentation:</strong> If required, comprehensive restrictive practice assessments</li>
+            <li><strong>Implementation Guidelines:</strong> Clear, practical guidance for support teams</li>
+          </ul>
+          
+          <div class="service-approach">
+            <h3 class="h3">My Approach:</h3>
+            <div class="approach-pillars">
+              <div class="pillar">
+                <div class="pillar-icon">🎯</div>
+                <h4>Strength-Based</h4>
+                <p>Building on individual capabilities and interests</p>
+              </div>
+              <div class="pillar">
+                <div class="pillar-icon">🏠</div>
+                <h4>Quality of Life Focus</h4>
+                <p>Improving overall wellbeing and life satisfaction</p>
+              </div>
+              <div class="pillar">
+                <div class="pillar-icon">🤝</div>
+                <h4>Collaborative</h4>
+                <p>Working closely with all stakeholders</p>
+              </div>
+              <div class="pillar">
+                <div class="pillar-icon">📊</div>
+                <h4>Evidence-Based</h4>
+                <p>Using proven strategies and interventions</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    .rule {
-      border: 0;
-      border-top: 1px solid rgba(15, 23, 42, 0.12);
-      margin: 1.5rem 0;
-    }
+      <!-- Service 3: Implementation Support -->
+      <div class="service-detail">
+        <div class="service-content">
+          <div class="service-header">
+            <div class="service-icon-large">🤝</div>
+            <div>
+              <h2 class="h2">Implementation Support</h2>
+              <p class="service-subtitle">Ensuring effective plan implementation and positive outcomes</p>
+            </div>
+          </div>
+          
+          <p class="p">
+            Successful behaviour support requires effective implementation. I provide ongoing coaching, 
+            training, and support to ensure Behaviour Support Plans are implemented consistently and 
+            effectively across all environments.
+          </p>
+          
+          <h3 class="h3">What's Included:</h3>
+          <ul class="service-features">
+            <li><strong>Team Training:</strong> Comprehensive training for support workers and family members</li>
+            <li><strong>Coaching Sessions:</strong> Regular coaching to build confidence and competence</li>
+            <li><strong>Progress Monitoring:</strong> Systematic tracking of plan effectiveness</li>
+            <li><strong>Plan Reviews:</strong> Regular reviews and adjustments as needed</li>
+            <li><strong>Crisis Support:</strong> Additional support during challenging periods</li>
+            <li><strong>Documentation Support:</strong> Assistance with data collection and reporting</li>
+          </ul>
+          
+          <div class="support-types">
+            <h3 class="h3">Types of Implementation Support:</h3>
+            <div class="support-grid">
+              <div class="support-type">
+                <h4>Initial Implementation</h4>
+                <p>Intensive support during the first 4-6 weeks of plan implementation</p>
+              </div>
+              <div class="support-type">
+                <h4>Ongoing Coaching</h4>
+                <p>Regular check-ins and coaching sessions to maintain effectiveness</p>
+              </div>
+              <div class="support-type">
+                <h4>Refresher Training</h4>
+                <p>Periodic training updates for new team members or skill refreshers</p>
+              </div>
+              <div class="support-type">
+                <h4>Emergency Consultation</h4>
+                <p>Additional support available for crisis situations or urgent needs</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    .list {
-      margin: 0.75rem 0 0;
-      padding-left: 1.1rem;
-      color: #475569;
-    }
+  <!-- SPECIALIZED SUPPORT -->
+  <section class="specialized-support">
+    <div class="container">
+      <h2 class="h2 text-center">Specialized Support Areas</h2>
+      <p class="text-center text-secondary mb-4">
+        Additional expertise in complex support needs
+      </p>
+      
+      <div class="specialty-grid">
+        <div class="specialty-card">
+          <h4>Complex Communication Needs</h4>
+          <p>Supporting individuals with limited verbal communication using AAC and alternative strategies</p>
+        </div>
+        
+        <div class="specialty-card">
+          <h4>Dual Diagnosis</h4>
+          <p>Behaviour support for individuals with both disability and mental health considerations</p>
+        </div>
+        
+        <div class="specialty-card">
+          <h4>Transition Support</h4>
+          <p>Supporting individuals through major life transitions (school to adult services, housing changes, etc.)</p>
+        </div>
+        
+        <div class="specialty-card">
+          <h4>Forensic Disability</h4>
+          <p>Specialized support for individuals with disability involved in the justice system</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    .list li {
-      margin: 0.35rem 0;
-    }
+  <!-- SERVICE AREAS -->
+  <section class="service-areas">
+    <div class="container">
+      <h2 class="h2 text-center">Service Delivery Areas</h2>
+      <p class="text-center text-secondary mb-4">
+        Australia-wide behaviour support services
+      </p>
+      
+      <div class="delivery-options">
+        <div class="delivery-option">
+          <div class="option-icon">🏠</div>
+          <h4>In-Person Support</h4>
+          <p>Face-to-face sessions in your home, school, or community settings</p>
+          <small>Available in major metropolitan areas</small>
+        </div>
+        
+        <div class="delivery-option">
+          <div class="option-icon">💻</div>
+          <h4>Telehealth Sessions</h4>
+          <p>Remote support via video conferencing for flexibility and accessibility</p>
+          <small>Available Australia-wide</small>
+        </div>
+        
+        <div class="delivery-option">
+          <div class="option-icon">🚗</div>
+          <h4>Regional Travel</h4>
+          <p>Scheduled visits to regional and rural areas on arrangement</p>
+          <small>Travel fees may apply</small>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    .contact {
-      margin-top: 0.5rem;
-      color: #0f172a;
-    }
-
-    .contact a {
-      color: inherit;
-    }
-
-    .dot {
-      margin: 0 0.5rem;
-      color: #475569;
-    }
-
-    @media (max-width: 520px) {
-      .dot { display: none; }
-      .contact { display: grid; gap: 0.35rem; }
-    }
-  </style>
+  <!-- NEXT STEPS CTA -->
+  <section class="next-steps">
+    <div class="container">
+      <div class="cta-card">
+        <h3 class="h3">Ready to Get Started?</h3>
+        <p class="p">Let's discuss how behaviour support can help achieve your goals</p>
+        
+        <div class="cta-options">
+          <div class="cta-option">
+            <h4>Free Initial Consultation</h4>
+            <p>30-minute discussion to understand your needs and how I can help</p>
+            <a href="/contact" class="btn btn-primary">Book Consultation</a>
+          </div>
+          
+          <div class="cta-option">
+            <h4>Quick Questions?</h4>
+            <p>Call or email for immediate assistance</p>
+            <div class="contact-quick">
+              <a href="tel:0411072466" class="btn btn-secondary">📞 0411 072 466</a>
+              <a href="mailto:syed@syedbokhari.com.au" class="btn btn-secondary">✉️ Email Syed</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </BaseLayout>
+
+<style>
+  /* Page Header */
+  .page-header {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+  }
+  
+  .page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* Services Overview */
+  .services-overview {
+    padding: 3rem 0;
+    background: #f8fafc;
+  }
+  
+  .overview-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .service-highlights {
+    margin-top: 2rem;
+  }
+  
+  .highlight-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    text-align: left;
+  }
+  
+  .highlight-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+  }
+
+  /* Detailed Services */
+  .detailed-services {
+    padding: 3rem 0;
+  }
+  
+  .service-detail {
+    margin-bottom: 4rem;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .service-detail:last-child {
+    border-bottom: none;
+  }
+  
+  .service-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .service-icon-large {
+    font-size: 4rem;
+  }
+  
+  .service-subtitle {
+    font-size: 1.1rem;
+    color: #64748b;
+    margin-top: 0.5rem;
+  }
+  
+  .service-features {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .service-features li {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+  
+  .service-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #10b981;
+    font-weight: bold;
+  }
+  
+  .service-benefits {
+    margin-top: 2rem;
+    padding: 2rem;
+    background: #f8fafc;
+    border-radius: 12px;
+  }
+  
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .benefit {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  .process-steps {
+    margin-top: 2rem;
+  }
+  
+  .step {
+    display: flex;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    align-items: flex-start;
+  }
+  
+  .step-number {
+    background: #2563eb;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+  }
+  
+  .approach-pillars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .pillar {
+    text-align: center;
+    padding: 1.5rem;
+  }
+  
+  .pillar-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .support-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .support-type {
+    background: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+
+  /* Specialized Support */
+  .specialized-support {
+    padding: 3rem 0;
+    background: #f8fafc;
+  }
+  
+  .specialty-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .specialty-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .specialty-card h4 {
+    margin-bottom: 1rem;
+    color: #2563eb;
+  }
+
+  /* Service Areas */
+  .service-areas {
+    padding: 3rem 0;
+  }
+  
+  .delivery-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .delivery-option {
+    text-align: center;
+    padding: 2rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+  }
+  
+  .delivery-option:hover {
+    border-color: #2563eb;
+    transform: translateY(-2px);
+  }
+  
+  .option-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Next Steps */
+  .next-steps {
+    padding: 3rem 0;
+    background: #f8fafc;
+  }
+  
+  .cta-card {
+    background: white;
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .cta-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .cta-option {
+    padding: 1.5rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+  }
+  
+  .contact-quick {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .service-header {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .step {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .cta-options {
+      grid-template-columns: 1fr;
+    }
+    
+    .contact-quick {
+      align-items: center;
+    }
+  }
+</style>

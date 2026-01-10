@@ -2,124 +2,312 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pathname = Astro.url.pathname;
 
-const title = "About | Syed Bokhari";
-const description =
-  "About Syed Bokhari. Behaviour support practice under professional supervision, including experience, qualifications, and practice approach aligned with applicable NDIS requirements.";
+const title = "About Syed Bokhari | NDIS Behaviour Support Practitioner (Under Supervision)";
+const description = "Learn about Syed Bokhari's qualifications, experience, and approach to NDIS behaviour support. Bachelor of Biomedicine, Master of Arts, practicing under professional supervision.";
 ---
 
 <BaseLayout title={title} pathname={pathname} description={description}>
-  <section class="container">
-    <p class="kicker">About</p>
-    <h1 class="h1">Syed Bokhari</h1>
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="container">
+      <h1 class="h1">About Syed Bokhari</h1>
+      <p class="subtitle">NDIS Behaviour Support Practitioner (Under Supervision)</p>
+    </div>
+  </section>
 
-    <p class="small" style="margin-top:0.25rem">
-      <a
-        href="https://www.linkedin.com/in/syed-fr-bokhari/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        LinkedIn profile
-      </a>
-    </p>
+  <!-- PROFESSIONAL OVERVIEW -->
+  <section class="professional-overview">
+    <div class="container">
+      <div class="overview-grid">
+        <div class="content-card">
+          <p class="kicker">Professional Background</p>
+          <h2 class="h2">Dedicated to Quality Behaviour Support</h2>
+          
+          <p class="p lead">
+            I am a <strong>Core-level behaviour support practitioner (under professional supervision)</strong>, 
+            supporting NDIS participants, families, and provider teams in the development and implementation 
+            of Positive Behaviour Support strategies within appropriate governance arrangements.
+          </p>
 
-    <div class="about-grid">
-      <!-- TEXT CONTENT -->
-      <div class="card pad">
-        <p class="p">
-          I am a <strong>Core-level behaviour support practitioner (under professional supervision)</strong>.
-          I support NDIS participants, families, and provider teams in the development and implementation of
-          Positive Behaviour Support strategies within appropriate governance arrangements.
-          <strong> My application is currently under assessment by the NDIS Quality and Safeguards Commission (Alternate Pathway).</strong>
-        </p>
+          <div class="status-badge">
+            <span class="status-indicator"></span>
+            <span>NDIS Quality & Safeguards Commission - Alternate Pathway (Under Assessment)</span>
+          </div>
 
-        <h2 class="h2" style="margin-top:1.5rem">Professional background</h2>
-        <p class="p">
-          I have professional experience supporting individuals with complex psychosocial, behavioural, and
-          functional needs within disability-related service and support environments. This work has involved
-          comprehensive assessment, identification of behaviour-related risks, and collaboration with participants,
-          families, guardians, and providers to support person-centred, evidence-informed practice aligned with
-          NDIS principles.
-        </p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/syed-fr-bokhari/" target="_blank" rel="noopener noreferrer" class="social-link">
+              💼 LinkedIn Profile
+            </a>
+            <a href="https://www.facebook.com/syedbokharibsp" target="_blank" rel="noopener noreferrer" class="social-link">
+              📘 Facebook Page
+            </a>
+          </div>
+        </div>
 
-        <p class="p">
-          Through this work, I have developed experience in safeguarding considerations, least-restrictive practice,
-          multidisciplinary collaboration, and high-quality professional documentation. I work closely with specialist
-          providers, including Behaviour Support Practitioners, and contribute to risk-informed and ethically grounded
-          decision-making.
-        </p>
+        <div class="photo-card">
+          <img
+            src="/images/headshot.jpg"
+            alt="Syed Bokhari - NDIS Behaviour Support Practitioner"
+            loading="lazy"
+          />
+          <div class="photo-caption">
+            <strong>Syed Bokhari</strong><br>
+            <small>Behaviour Support Practitioner (Under Supervision)</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <h2 class="h2" style="margin-top:1.5rem">Behaviour support practice</h2>
-        <p class="p">
-          Within my current scope, I contribute to behaviour support work <strong>under supervision</strong>, including
-          participation in functional assessment processes, Behaviour Support Plan (BSP) development support, and
-          implementation support. Where services are delivered, they are delivered under supervision and through an
-          appropriately registered organisation, in line with applicable NDIS requirements and the governance
-          arrangements of the contracting provider.
-        </p>
+  <!-- QUALIFICATIONS -->
+  <section class="qualifications">
+    <div class="container">
+      <h2 class="h2 text-center">Educational Background</h2>
+      <p class="text-center text-secondary mb-4">
+        Strong academic foundation supporting evidence-based practice
+      </p>
+      
+      <div class="qualifications-grid">
+        <div class="qualification-card">
+          <div class="qual-icon">🎓</div>
+          <h3>Bachelor of Biomedicine</h3>
+          <p>Comprehensive understanding of human biology, health sciences, and research methodology</p>
+          <div class="qual-relevance">
+            <strong>Relevance to Practice:</strong>
+            <ul>
+              <li>Scientific approach to assessment</li>
+              <li>Evidence-based decision making</li>
+              <li>Understanding of biological factors in behaviour</li>
+            </ul>
+          </div>
+        </div>
 
-        <ul class="list">
-          <li>Positive Behaviour Support (PBS) principles</li>
-          <li>Functional behaviour assessment support (under supervision)</li>
-          <li>Behaviour-related risk identification and safety considerations</li>
-          <li>Support implementation, coaching, and consistency planning</li>
-          <li>Reflective practice and structured supervision</li>
-        </ul>
+        <div class="qualification-card">
+          <div class="qual-icon">📚</div>
+          <h3>Master of Arts</h3>
+          <p>Advanced skills in critical thinking, communication, and human behaviour analysis</p>
+          <div class="qual-relevance">
+            <strong>Relevance to Practice:</strong>
+            <ul>
+              <li>Advanced analytical skills</li>
+              <li>Effective communication strategies</li>
+              <li>Understanding social and cultural factors</li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-        <h2 class="h2" style="margin-top:1.5rem">Practice experience examples</h2>
-        <p class="p">
-          My experience includes contributing to behaviour support work for individuals with complex support needs
-          within supervised and multidisciplinary settings. Examples of practice exposure include:
-        </p>
+      <div class="additional-training">
+        <h3 class="h3 text-center">Professional Development</h3>
+        <div class="training-list">
+          <div class="training-item">
+            <div class="training-icon">📋</div>
+            <div>
+              <h4>Behaviour Support Practitioner Learning Modules</h4>
+              <p>Completion of specialized training aligned with NDIS BSP Capability Framework</p>
+            </div>
+          </div>
+          
+          <div class="training-item">
+            <div class="training-icon">🔄</div>
+            <div>
+              <h4>Ongoing Professional Development</h4>
+              <p>Continuous learning aligned with NDIS Quality and Safeguards Commission requirements</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <ul class="list">
-          <li>Supporting information gathering and functional assessment processes under supervision</li>
-          <li>Contributing to the development and review of Behaviour Support Plans within registered provider arrangements</li>
-          <li>Assisting with implementation planning and coaching for support teams and families</li>
-          <li>Identifying behaviour-related risks and contributing to safety and safeguarding discussions</li>
-          <li>Participating in reflective practice and supervision to support ethical decision-making</li>
-        </ul>
+  <!-- PROFESSIONAL EXPERIENCE -->
+  <section class="experience">
+    <div class="container">
+      <h2 class="h2 text-center">Professional Experience</h2>
+      <p class="text-center text-secondary mb-4">
+        Experience supporting individuals with complex needs in disability services
+      </p>
+      
+      <div class="experience-content">
+        <div class="experience-card">
+          <h3>Complex Support Experience</h3>
+          <p class="p">
+            I have professional experience supporting individuals with complex psychosocial, behavioural, and 
+            functional needs within disability-related service and support environments. This work has involved:
+          </p>
+          
+          <ul class="experience-list">
+            <li>Comprehensive assessment and identification of behaviour-related risks</li>
+            <li>Collaboration with participants, families, guardians, and providers</li>
+            <li>Person-centred, evidence-informed practice aligned with NDIS principles</li>
+            <li>Safeguarding considerations and least-restrictive practice approaches</li>
+            <li>Multidisciplinary collaboration and high-quality professional documentation</li>
+          </ul>
+        </div>
 
-        <h2 class="h2" style="margin-top:1.5rem">Focus of support</h2>
-        <p class="p">
-          Within my scope and under supervision, my focus is on supporting behaviour support that promotes quality of life,
-          capacity building, and least-restrictive practice. This includes contributing to supports that aim to:
-        </p>
+        <div class="experience-card">
+          <h3>Behaviour Support Practice</h3>
+          <p class="p">
+            Within my current scope, I contribute to behaviour support work <strong>under supervision</strong>, including:
+          </p>
+          
+          <ul class="experience-list">
+            <li>Participation in functional assessment processes</li>
+            <li>Behaviour Support Plan (BSP) development support</li>
+            <li>Implementation support and coaching</li>
+            <li>Risk-informed and ethically grounded decision-making</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <ul class="list">
-          <li>Reduce environmental and support-related triggers for behaviours of concern</li>
-          <li>Increase consistency, confidence, and capability within support teams</li>
-          <li>Promote dignity, choice, and participant safety</li>
-          <li>Support sustainable, evidence-informed practice across settings</li>
-        </ul>
+  <!-- PRACTICE APPROACH -->
+  <section class="practice-approach">
+    <div class="container">
+      <h2 class="h2 text-center">My Practice Approach</h2>
+      <p class="text-center text-secondary mb-4">
+        Core principles guiding my behaviour support practice
+      </p>
+      
+      <div class="approach-grid">
+        <div class="approach-card">
+          <div class="approach-icon">👤</div>
+          <h4>Person-Centred</h4>
+          <p>Respecting individual choice, dignity, and rights in all aspects of support</p>
+        </div>
+        
+        <div class="approach-card">
+          <div class="approach-icon">🧠</div>
+          <h4>Trauma-Informed</h4>
+          <p>Understanding and responding to the impact of trauma on behaviour and wellbeing</p>
+        </div>
+        
+        <div class="approach-card">
+          <div class="approach-icon">📊</div>
+          <h4>Evidence-Based</h4>
+          <p>Using proven strategies and interventions supported by research</p>
+        </div>
+        
+        <div class="approach-card">
+          <div class="approach-icon">🤝</div>
+          <h4>Collaborative</h4>
+          <p>Working closely with families, providers, and multidisciplinary teams</p>
+        </div>
+        
+        <div class="approach-card">
+          <div class="approach-icon">📋</div>
+          <h4>Ethical Documentation</h4>
+          <p>Clear, measurable goals and professional documentation standards</p>
+        </div>
+        
+        <div class="approach-card">
+          <div class="approach-icon">🔄</div>
+          <h4>Reflective Practice</h4>
+          <p>Continuous learning and improvement through supervision and self-reflection</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <h2 class="h2" style="margin-top:1.5rem">Qualifications and training</h2>
-        <ul class="list">
-          <li>Bachelor of Biomedicine</li>
-          <li>Master of Arts</li>
-          <li>Completion of Behaviour Support Practitioner learning modules (as applicable)</li>
-          <li>Ongoing professional development aligned with the NDIS BSP Capability Framework</li>
-        </ul>
+  <!-- PRACTICE EXAMPLES -->
+  <section class="practice-examples">
+    <div class="container">
+      <h2 class="h2 text-center">Practice Experience Examples</h2>
+      <p class="text-center text-secondary mb-4">
+        Real examples of my contribution to behaviour support work under supervision
+      </p>
+      
+      <div class="examples-grid">
+        <div class="example-card">
+          <h4>Assessment Support</h4>
+          <p>Supporting information gathering and functional assessment processes under supervision, including stakeholder interviews and data collection</p>
+        </div>
+        
+        <div class="example-card">
+          <h4>Plan Development</h4>
+          <p>Contributing to the development and review of Behaviour Support Plans within registered provider arrangements</p>
+        </div>
+        
+        <div class="example-card">
+          <h4>Implementation Support</h4>
+          <p>Assisting with implementation planning and coaching for support teams and families</p>
+        </div>
+        
+        <div class="example-card">
+          <h4>Risk Management</h4>
+          <p>Identifying behaviour-related risks and contributing to safety and safeguarding discussions</p>
+        </div>
+        
+        <div class="example-card">
+          <h4>Professional Development</h4>
+          <p>Participating in reflective practice and supervision to support ethical decision-making</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <h2 class="h2" style="margin-top:1.5rem">Practice approach</h2>
-        <ul class="list">
-          <li>Person-centred and trauma-informed practice</li>
-          <li>Respect for dignity, rights, and choice</li>
-          <li>Ethical and reflective decision-making</li>
-          <li>Clear documentation and measurable goals (where applicable)</li>
-          <li>Collaboration with families, providers, and multidisciplinary teams</li>
-        </ul>
+  <!-- FOCUS AREAS -->
+  <section class="focus-areas">
+    <div class="container">
+      <h2 class="h2 text-center">Focus of Support</h2>
+      <p class="text-center text-secondary mb-4">
+        Within my scope and under supervision, my focus is on supporting behaviour support that promotes:
+      </p>
+      
+      <div class="focus-grid">
+        <div class="focus-item">
+          <div class="focus-icon">🎯</div>
+          <h4>Quality of Life</h4>
+          <p>Improving overall wellbeing and life satisfaction</p>
+        </div>
+        
+        <div class="focus-item">
+          <div class="focus-icon">🏗️</div>
+          <h4>Capacity Building</h4>
+          <p>Developing skills and increasing independence</p>
+        </div>
+        
+        <div class="focus-item">
+          <div class="focus-icon">🔓</div>
+          <h4>Least-Restrictive Practice</h4>
+          <p>Using the least restrictive interventions necessary</p>
+        </div>
+        
+        <div class="focus-item">
+          <div class="focus-icon">🛡️</div>
+          <h4>Participant Safety</h4>
+          <p>Promoting dignity, choice, and safety in all interventions</p>
+        </div>
+        
+        <div class="focus-item">
+          <div class="focus-icon">🔄</div>
+          <h4>Sustainable Practice</h4>
+          <p>Supporting consistent, evidence-informed practice across settings</p>
+        </div>
+        
+        <div class="focus-item">
+          <div class="focus-icon">🎯</div>
+          <h4>Trigger Reduction</h4>
+          <p>Reducing environmental and support-related triggers for behaviours of concern</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <hr class="rule" />
-
-        <h2 class="h2">Registration and compliance</h2>
+  <!-- REGISTRATION STATUS -->
+  <section class="registration-status">
+    <div class="container">
+      <div class="status-card">
+        <h2 class="h2">Registration & Compliance</h2>
         <p class="p">
           I practise within a clearly defined scope and am committed to transparency, ethical practice,
           and alignment with applicable NDIS Quality and Safeguards requirements. Registration status is
           stated clearly on this website and can be discussed with providers as required.
         </p>
-
+        
         <div class="notice" role="note" aria-label="Registration status">
-          <strong>Registration & service delivery:</strong>
+          <strong>📝 Current Registration Status:</strong>
           <span class="small">
             Application currently under assessment by the NDIS Quality and Safeguards Commission (Alternate Pathway).
             Where services are delivered, they are delivered under supervision and through an appropriately registered
@@ -127,78 +315,448 @@ const description =
             Independent delivery under my own NDIS registration will commence following approval.
           </span>
         </div>
-      </div>
-
-      <!-- PHOTO -->
-      <div class="card photo-card">
-        <img
-          src="/images/headshot.jpg"
-          alt="Syed Bokhari"
-          loading="lazy"
-        />
+        
+        <div class="compliance-commitment">
+          <h3 class="h3">Commitment to Compliance:</h3>
+          <ul class="compliance-list">
+            <li>Transparent communication about registration status</li>
+            <li>Practice within clearly defined scope under supervision</li>
+            <li>Alignment with NDIS Quality and Safeguards requirements</li>
+            <li>Ethical practice and professional boundaries</li>
+            <li>Regular supervision and professional development</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
-  <style>
-    .pad { padding: 1.5rem; }
-
-    .about-grid {
-      display: grid;
-      gap: 1.5rem;
-      margin-top: 1rem;
-    }
-
-    .photo-card {
-      overflow: hidden;
-      border-radius: 16px;
-      padding: 1rem;
-      background: #ffffff;
-    }
-
-    .photo-card img {
-      width: 100%;
-      height: auto;
-      display: block;
-      object-fit: contain;
-    }
-
-    .list {
-      margin: 0.75rem 0 0;
-      padding-left: 1.1rem;
-      color: #475569;
-    }
-
-    .list li {
-      margin: 0.35rem 0;
-    }
-
-    .rule {
-      border: 0;
-      border-top: 1px solid rgba(15, 23, 42, 0.12);
-      margin: 1.5rem 0;
-    }
-
-    .notice {
-      margin-top: 1.25rem;
-      padding: 1rem;
-      border: 1px solid rgba(15, 23, 42, 0.15);
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.85);
-    }
-
-    .small {
-      display: block;
-      margin-top: 0.25rem;
-      color: #475569;
-      font-size: 0.95rem;
-    }
-
-    @media (min-width: 900px) {
-      .about-grid {
-        grid-template-columns: 1.2fr 0.8fr;
-        align-items: start;
-      }
-    }
-  </style>
+  <!-- CONNECT CTA -->
+  <section class="connect-cta">
+    <div class="container">
+      <div class="cta-card">
+        <h3 class="h3">Let's Connect</h3>
+        <p class="p">Interested in learning more about my approach to behaviour support?</p>
+        
+        <div class="connect-options">
+          <a href="/contact" class="btn btn-primary">Book Free Consultation</a>
+          <a href="https://www.linkedin.com/in/syed-fr-bokhari/" target="_blank" class="btn btn-secondary">Connect on LinkedIn</a>
+          <a href="https://www.facebook.com/syedbokharibsp" target="_blank" class="btn btn-secondary">Follow on Facebook</a>
+        </div>
+        
+        <div class="contact-direct">
+          <p class="small">Or reach out directly:</p>
+          <div class="contact-info">
+            <a href="mailto:syed@syedbokhari.com.au">📧 syed@syedbokhari.com.au</a>
+            <a href="tel:0411072466">📱 0411 072 466</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </BaseLayout>
+
+<style>
+  /* Page Header */
+  .page-header {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    padding: 3rem 0;
+    text-align: center;
+  }
+  
+  .page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+    color: #64748b;
+  }
+
+  /* Professional Overview */
+  .professional-overview {
+    padding: 3rem 0;
+  }
+  
+  .overview-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  
+  .content-card {
+    padding: 2rem;
+  }
+  
+  .lead {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+  
+  .status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #ecfdf5;
+    color: #065f46;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    margin: 1.5rem 0;
+  }
+  
+  .status-indicator {
+    width: 8px;
+    height: 8px;
+    background: #10b981;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+  }
+  
+  .social-link:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+  }
+  
+  .photo-card {
+    background: white;
+    border-radius: 16px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .photo-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+  
+  .photo-caption {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #64748b;
+  }
+
+  /* Qualifications */
+  .qualifications {
+    padding: 3rem 0;
+    background: #f8fafc;
+  }
+  
+  .qualifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+  
+  .qualification-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .qual-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .qual-relevance {
+    margin-top: 1.5rem;
+    text-align: left;
+  }
+  
+  .qual-relevance strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #2563eb;
+  }
+  
+  .additional-training {
+    margin-top: 3rem;
+  }
+  
+  .training-list {
+    max-width: 600px;
+    margin: 2rem auto 0;
+  }
+  
+  .training-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    margin: 1.5rem 0;
+  }
+  
+  .training-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+  }
+
+  /* Experience */
+  .experience {
+    padding: 3rem 0;
+  }
+  
+  .experience-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .experience-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+  }
+  
+  .experience-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .experience-list li {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+  
+  .experience-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #10b981;
+    font-weight: bold;
+  }
+
+  /* Practice Approach */
+  .practice-approach {
+    padding: 3rem 0;
+    background: #f8fafc;
+  }
+  
+  .approach-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .approach-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .approach-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Practice Examples */
+  .practice-examples {
+    padding: 3rem 0;
+  }
+  
+  .examples-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .example-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Focus Areas */
+  .focus-areas {
+    padding: 3rem 0;
+    background: #f8fafc;
+  }
+  
+  .focus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .focus-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .focus-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Registration Status */
+  .registration-status {
+    padding: 3rem 0;
+  }
+  
+  .status-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .notice {
+    background: #eff6ff;
+    border: 1px solid #2563eb;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+  }
+  
+  .compliance-commitment {
+    margin-top: 2rem;
+  }
+  
+  .compliance-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+  }
+  
+  .compliance-list li {
+    margin: 0.75rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+  
+  .compliance-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #10b981;
+    font-weight: bold;
+  }
+
+  /* Connect CTA */
+  .connect-cta {
+    padding: 3rem 0;
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    color: white;
+  }
+  
+  .cta-card {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .connect-options {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+  }
+  
+  .contact-direct {
+    margin-top: 2rem;
+  }
+  
+  .contact-info {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .contact-info a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    transition: all 0.2s ease;
+  }
+  
+  .contact-info a:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .overview-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .social-links {
+      flex-direction: column;
+    }
+    
+    .qualifications-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .approach-grid,
+    .examples-grid,
+    .focus-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .connect-options {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .contact-info {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .status-card {
+      padding: 2rem 1rem;
+    }
+  }
+
+  /* Utility Classes */
+  .text-center { text-align: center; }
+  .text-secondary { color: #64748b; }
+  .mb-4 { margin-bottom: 2rem; }
+</style>

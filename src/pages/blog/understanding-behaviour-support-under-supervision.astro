@@ -1,0 +1,457 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const title = "Understanding Behaviour Support Under Supervision | Syed Bokhari";
+const description = "Discover the benefits of working with a behaviour support practitioner under professional supervision and why this model might be the right choice for your NDIS support needs.";
+const category = "Behaviour Support";
+const date = "2026-01-10";
+const readTime = "5 min read";
+const tags = ["NDIS", "Supervision", "Quality Assurance"];
+const formattedDate = new Date(date).toLocaleDateString('en-AU', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+});
+---
+
+<BaseLayout title={title} pathname={Astro.url.pathname} description={description}>
+  <!-- ARTICLE HEADER -->
+  <article class="blog-post">
+    <header class="article-header">
+      <div class="container">
+        <div class="article-meta">
+          <span class="article-category">{category}</span>
+          <span class="article-date">{formattedDate}</span>
+          <span class="article-read-time">{readTime}</span>
+        </div>
+        
+        <h1 class="article-title">Understanding Behaviour Support Under Supervision</h1>
+        
+        <div class="article-tags">
+          {tags.map(tag => (
+            <span class="tag">{tag}</span>
+          ))}
+        </div>
+      </div>
+    </header>
+
+    <!-- ARTICLE CONTENT -->
+    <div class="article-content">
+      <div class="container">
+        <div class="content-wrapper">
+          <div class="post-content">
+            <h2>What Does "Under Supervision" Mean?</h2>
+            <p>When you see that a behaviour support practitioner is "under supervision," it means they are working under the guidance and oversight of a fully registered, experienced practitioner. This is a common and valuable model in the NDIS behaviour support sector.</p>
+
+            <h2>Why Choose a Practitioner Under Supervision?</h2>
+            <p>Working with a practitioner under supervision offers several unique benefits that can enhance the quality of support you receive:</p>
+
+            <h3>Enhanced Quality Assurance</h3>
+            <p>When a practitioner works under supervision, your support benefits from the expertise of two professionals. The supervising practitioner provides regular oversight, ensuring that all assessments and support plans meet the highest standards and align with current best practices.</p>
+
+            <h3>Fresh Perspectives and Current Knowledge</h3>
+            <p>Practitioners under supervision are often recently trained in the latest evidence-based approaches. Combined with the experience of their supervisor, this brings together fresh perspectives with established expertise.</p>
+
+            <h3>Comprehensive Oversight</h3>
+            <p>All work is regularly reviewed by the supervising practitioner, providing an additional layer of quality control and ensuring compliance with NDIS requirements.</p>
+
+            <h2>How Does Supervision Work?</h2>
+            <p>The supervision process involves regular meetings between the practitioner and their supervisor to discuss cases, review plans, and ensure the highest quality of support. This collaborative approach means you benefit from combined expertise.</p>
+
+            <h2>Your Rights and Choices</h2>
+            <p>You have the right to know about the supervision arrangements and can ask questions about how supervision enhances your support. Many participants find that working with a practitioner under supervision provides them with confidence in the quality and oversight of their support.</p>
+
+            <h2>Moving Forward</h2>
+            <p>If you're considering behaviour support services, don't let "under supervision" deter you. This model often provides enhanced quality assurance and access to broader expertise. Feel free to ask questions about how supervision works and how it benefits your specific situation.</p>
+
+            <h2>Key Takeaways</h2>
+            <ul>
+              <li>Supervision provides enhanced quality assurance through dual professional oversight</li>
+              <li>Combines fresh training with established expertise</li>
+              <li>Ensures compliance with NDIS requirements and best practices</li>
+              <li>Offers transparent and collaborative support delivery</li>
+              <li>Provides confidence through additional professional oversight</li>
+            </ul>
+          </div>
+
+          <!-- AUTHOR BIO -->
+          <div class="author-bio">
+            <div class="bio-header">
+              <h3>About the Author</h3>
+            </div>
+            <div class="bio-content">
+              <div class="bio-photo">
+                <img src="/images/headshot.jpg" alt="Syed Bokhari" />
+              </div>
+              <div class="bio-text">
+                <h4>Syed Bokhari</h4>
+                <p class="bio-title">Behaviour Support Practitioner (Under Supervision)</p>
+                <p class="bio-description">
+                  Supporting NDIS participants, families, and provider teams with positive, respectful, 
+                  and evidence-informed behaviour support across Australia.
+                </p>
+                <div class="bio-links">
+                  <a href="/about">Learn More →</a>
+                  <a href="/contact">Get In Touch →</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- NAVIGATION -->
+    <nav class="post-navigation">
+      <div class="container">
+        <div class="nav-links">
+          <a href="/blog" class="nav-link back-to-blog">
+            ← Back to Blog
+          </a>
+          
+          <div class="post-share">
+            <span class="share-label">Share this article:</span>
+            <div class="share-buttons">
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://syedbokhari.com.au/blog/understanding-behaviour-support-under-supervision" 
+                 target="_blank" class="share-btn linkedin">
+                LinkedIn
+              </a>
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https://syedbokhari.com.au/blog/understanding-behaviour-support-under-supervision" 
+                 target="_blank" class="share-btn facebook">
+                Facebook
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- CTA SECTION -->
+    <section class="post-cta">
+      <div class="container">
+        <div class="cta-card">
+          <h3>Need Behaviour Support?</h3>
+          <p>Let's discuss how I can help you or your loved one achieve your NDIS goals.</p>
+          <div class="cta-buttons">
+            <a href="/contact" class="btn btn-primary">Book Free Consultation</a>
+            <a href="/services" class="btn btn-secondary">View Services</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </BaseLayout>
+
+  <style>
+    /* Article Header */
+    .article-header {
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+      padding: 3rem 0;
+    }
+    
+    .article-meta {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+    
+    .article-category {
+      background: #2563eb;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    
+    .article-date {
+      color: #64748b;
+    }
+    
+    .article-read-time {
+      color: #64748b;
+      font-size: 0.9rem;
+    }
+    
+    .article-title {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    
+    .article-tags {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    
+    .tag {
+      background: white;
+      color: #64748b;
+      padding: 0.25rem 0.75rem;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      border: 1px solid #e2e8f0;
+    }
+
+    /* Article Content */
+    .article-content {
+      padding: 3rem 0;
+    }
+    
+    .content-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .post-content {
+      line-height: 1.7;
+    }
+    
+    .post-content h2 {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: #1e293b;
+    }
+    
+    .post-content h3 {
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #1e293b;
+    }
+    
+    .post-content p {
+      margin-bottom: 1.5rem;
+    }
+    
+    .post-content ul {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+    
+    .post-content li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* Author Bio */
+    .author-bio {
+      background: #f8fafc;
+      border-radius: 16px;
+      padding: 2rem;
+      margin: 3rem 0;
+    }
+    
+    .bio-header {
+      margin-bottom: 1.5rem;
+    }
+    
+    .bio-content {
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+    }
+    
+    .bio-photo {
+      flex-shrink: 0;
+    }
+    
+    .bio-photo img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    
+    .bio-text {
+      flex: 1;
+    }
+    
+    .bio-title {
+      color: #64748b;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .bio-description {
+      margin-bottom: 1rem;
+    }
+    
+    .bio-links {
+      display: flex;
+      gap: 1rem;
+    }
+    
+    .bio-links a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    
+    .bio-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Post Navigation */
+    .post-navigation {
+      padding: 2rem 0;
+      border-top: 1px solid #e2e8f0;
+    }
+    
+    .nav-links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    
+    .back-to-blog {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    
+    .back-to-blog:hover {
+      text-decoration: underline;
+    }
+    
+    .post-share {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .share-label {
+      color: #64748b;
+      font-size: 0.9rem;
+    }
+    
+    .share-buttons {
+      display: flex;
+      gap: 0.5rem;
+    }
+    
+    .share-btn {
+      padding: 0.5rem 1rem;
+      background: #f8fafc;
+      color: #1e293b;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      transition: all 0.2s ease;
+    }
+    
+    .share-btn:hover {
+      background: #e2e8f0;
+    }
+    
+    .share-btn.linkedin:hover {
+      background: #0077b5;
+      color: white;
+    }
+    
+    .share-btn.facebook:hover {
+      background: #1877f2;
+      color: white;
+    }
+
+    /* Post CTA */
+    .post-cta {
+      padding: 3rem 0;
+      background: #f8fafc;
+    }
+    
+    .cta-card {
+      background: white;
+      padding: 3rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .cta-card h3 {
+      margin-bottom: 1rem;
+    }
+    
+    .cta-card p {
+      margin-bottom: 2rem;
+      color: #64748b;
+    }
+    
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .article-title {
+        font-size: 2rem;
+      }
+      
+      .article-meta {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      
+      .bio-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .nav-links {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .post-share {
+        flex-direction: column;
+      }
+      
+      .cta-buttons {
+        flex-direction: column;
+      }
+    }
+
+    /* Button Styles */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.875rem 1.75rem;
+      background: #2563eb;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .btn:hover {
+      background: #1d4ed8;
+      transform: translateY(-1px);
+    }
+    
+    .btn-primary {
+      background: #2563eb;
+      color: white;
+    }
+    
+    .btn-secondary {
+      background: #f8fafc;
+      color: #1e293b;
+      border: 2px solid #e2e8f0;
+    }
+    
+    .btn-secondary:hover {
+      background: #e2e8f0;
+    }
+  </style>
+</BaseLayout>

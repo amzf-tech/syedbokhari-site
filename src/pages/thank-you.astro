@@ -1,0 +1,449 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pathname = Astro.url.pathname;
+
+const title = "Thank You | Message Sent - Syed Bokhari";
+const description = "Thank you for your enquiry. I'll respond within 24-48 hours. For urgent matters, please call 0411 072 466.";
+---
+
+<BaseLayout title={title} pathname={pathname} description={description}>
+  <!-- THANK YOU HERO -->
+  <section class="thank-you-hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="success-icon">✅</div>
+        <h1 class="h1">Message Sent Successfully!</h1>
+        <p class="hero-subtitle">
+          Thank you for reaching out. I appreciate your interest in behaviour support services 
+          and will respond to your enquiry within 24-48 hours.
+        </p>
+        
+        <div class="next-steps">
+          <h3>What happens next?</h3>
+          <div class="steps">
+            <div class="step">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <h4>Review Your Enquiry</h4>
+                <p>I'll carefully review your message and understand your needs</p>
+              </div>
+            </div>
+            
+            <div class="step">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <h4>Respond Within 48 Hours</h4>
+                <p>You'll receive a detailed response with next steps and available options</p>
+              </div>
+            </div>
+            
+            <div class="step">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <h4>Schedule Consultation (if appropriate)</h4>
+                <p>We can arrange a free initial consultation to discuss your needs further</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMMEDIATE ACTIONS -->
+  <section class="immediate-actions">
+    <div class="container">
+      <h2 class="h2 text-center">While You Wait...</h2>
+      <p class="text-center text-secondary mb-4">
+        Explore these resources to learn more about behaviour support
+      </p>
+      
+      <div class="actions-grid">
+        <div class="action-card">
+          <div class="action-icon">📚</div>
+          <h3>Learn About Services</h3>
+          <p>Discover the range of behaviour support services I offer</p>
+          <a href="/services" class="btn btn-outline">View Services</a>
+        </div>
+        
+        <div class="action-card">
+          <div class="action-icon">👤</div>
+          <h3>About My Approach</h3>
+          <p>Learn about my qualifications and practice approach</p>
+          <a href="/about" class="btn btn-outline">About Me</a>
+        </div>
+        
+        <div class="action-card">
+          <div class="action-icon">📖</div>
+          <h3>Read Blog Posts</h3>
+          <p>Explore insights about behaviour support and NDIS</p>
+          <a href="/blog" class="btn btn-outline">Visit Blog</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIRECT CONTACT OPTIONS -->
+  <section class="direct-contact">
+    <div class="container">
+      <h2 class="h2 text-center">Need Immediate Assistance?</h2>
+      <p class="text-center text-secondary mb-4">
+        While I prepare your response, here are ways to reach me directly
+      </p>
+      
+      <div class="contact-options">
+        <div class="contact-option">
+          <div class="option-icon">📧</div>
+          <h4>Email Directly</h4>
+          <p>For non-urgent follow-up questions</p>
+          <a href="mailto:syed@syedbokhari.com.au" class="contact-link">syed@syedbokhari.com.au</a>
+        </div>
+        
+        <div class="contact-option">
+          <div class="option-icon">📱</div>
+          <h4>Phone Call</h4>
+          <p>For urgent enquiries or quick questions</p>
+          <a href="tel:0411072466" class="contact-link">0411 072 466</a>
+        </div>
+        
+        <div class="contact-option">
+          <div class="option-icon">💼</div>
+          <h4>LinkedIn</h4>
+          <p>Connect for professional updates</p>
+          <a href="https://www.linkedin.com/in/syed-fr-bokhari/" target="_blank" class="contact-link">LinkedIn Profile</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPORTANT REMINDERS -->
+  <section class="important-reminders">
+    <div class="container">
+      <div class="reminders-card">
+        <h3 class="h3">Important Reminders</h3>
+        
+        <div class="reminder-list">
+          <div class="reminder-item">
+            <div class="reminder-icon">⏰</div>
+            <div>
+              <h4>Response Time</h4>
+              <p>I typically respond within 24-48 hours during business days (Monday-Friday)</p>
+            </div>
+          </div>
+          
+          <div class="reminder-item">
+            <div class="reminder-icon">📧</div>
+            <div>
+              <h4>Check Your Email</h4>
+              <p>Look for a response from syed@syedbokhari.com.au in your inbox and spam folder</p>
+            </div>
+          </div>
+          
+          <div class="reminder-item">
+            <div class="reminder-icon">🚨</div>
+            <div>
+              <h4>Emergency Situations</h4>
+              <p>For immediate safety concerns, call 000. For urgent behaviour support, contact your current provider.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BACK TO HOME -->
+  <section class="back-to-home">
+    <div class="container text-center">
+      <a href="/" class="btn btn-primary btn-large">
+        ← Back to Home Page
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Thank You Hero */
+  .thank-you-hero {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  .hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .success-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation: bounce 0.6s ease-out;
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-20px); }
+    60% { transform: translateY(-10px); }
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+  }
+
+  /* Next Steps */
+  .next-steps {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .next-steps h3 {
+    margin-bottom: 1.5rem;
+  }
+  
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .step {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .step-number {
+    background: white;
+    color: #10b981;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+  }
+  
+  .step-content h4 {
+    margin-bottom: 0.25rem;
+    color: white;
+  }
+  
+  .step-content p {
+    opacity: 0.9;
+  }
+
+  /* Immediate Actions */
+  .immediate-actions {
+    padding: 3rem 0;
+    background: #f8fafc;
+  }
+  
+  .actions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .action-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .action-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .action-card h3 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .action-card p {
+    margin-bottom: 1.5rem;
+    color: #64748b;
+  }
+
+  /* Direct Contact */
+  .direct-contact {
+    padding: 3rem 0;
+  }
+  
+  .contact-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .contact-option {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .option-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-option h4 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .contact-option p {
+    margin-bottom: 1rem;
+    color: #64748b;
+  }
+  
+  .contact-link {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .contact-link:hover {
+    text-decoration: underline;
+  }
+
+  /* Important Reminders */
+  .important-reminders {
+    padding: 3rem 0;
+    background: #f8fafc;
+  }
+  
+  .reminders-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .reminder-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  .reminder-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .reminder-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+  
+  .reminder-item h4 {
+    margin-bottom: 0.25rem;
+  }
+
+  /* Back to Home */
+  .back-to-home {
+    padding: 3rem 0;
+    background: #f8fafc;
+  }
+  
+  .btn-large {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+
+  /* Utility Classes */
+  .text-center { text-align: center; }
+  .text-secondary { color: #64748b; }
+  .mb-4 { margin-bottom: 2rem; }
+
+  /* Button Styles */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.875rem 1.75rem;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+  }
+  
+  .btn-primary {
+    background: #2563eb;
+    color: white;
+  }
+  
+  .btn-outline {
+    background: transparent;
+    color: #2563eb;
+    border: 2px solid #2563eb;
+  }
+  
+  .btn-outline:hover {
+    background: #2563eb;
+    color: white;
+  }
+
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 2rem;
+    }
+    
+    .actions-grid,
+    .contact-options {
+      grid-template-columns: 1fr;
+    }
+    
+    .reminder-item {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+</style>
+
+<script>
+  // Add some interactive elements
+  document.addEventListener('DOMContentLoaded', function() {
+    // Add click tracking for contact options
+    const contactLinks = document.querySelectorAll('.contact-link');
+    contactLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        // You could add analytics tracking here
+        console.log('Contact method clicked:', this.textContent);
+      });
+    });
+    
+    // Auto-redirect after 10 seconds (optional)
+    // setTimeout(() => {

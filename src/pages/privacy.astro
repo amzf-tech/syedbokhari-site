@@ -2,154 +2,845 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pathname = Astro.url.pathname;
 
-const title = "Privacy | Syed Bokhari";
-const description =
-  "Privacy policy for syedbokhari.com.au: how personal information is collected, used, stored, and disclosed.";
+const title = "Privacy Policy | Syed Bokhari - NDIS Behaviour Support";
+const description = "Privacy policy for syedbokhari.com.au. How personal information is collected, used, stored, and disclosed for behaviour support enquiries.";
 const lastUpdated = "19 December 2025";
 ---
 
 <BaseLayout title={title} pathname={pathname} description={description}>
-  <section class="container">
-    <p class="kicker">Privacy</p>
-    <h1 class="h1">Privacy Policy</h1>
-    <p class="p"><strong>Last updated:</strong> {lastUpdated}</p>
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="container">
+      <p class="kicker">Privacy Policy</p>
+      <h1 class="h1">How We Protect Your Information</h1>
+      <p class="subtitle">Last updated: {lastUpdated}</p>
+    </div>
+  </section>
 
-    <div class="card pad">
-      <h2 class="h2">Overview</h2>
-      <p class="p">
-        This Privacy Policy explains how personal information is collected and handled when you visit
-        <strong> syedbokhari.com.au</strong> and when you contact Syed Bokhari regarding behaviour support enquiries.
-        This site is intended for professional enquiries and general contact.
-      </p>
-
-      <hr class="rule" />
-
-      <h2 class="h2">What information may be collected</h2>
-      <p class="p">
-        If you contact me via the website contact form, email, or phone, the information collected may include:
-      </p>
-      <ul class="list">
-        <li>Your name</li>
-        <li>Your email address</li>
-        <li>Your phone number (if provided)</li>
-        <li>The content of your message</li>
-        <li>Technical information such as IP address and browser details (via standard internet logs)</li>
-      </ul>
-
-      <hr class="rule" />
-
-      <h2 class="h2">How information is used</h2>
-      <p class="p">Personal information is used for purposes such as:</p>
-      <ul class="list">
-        <li>Responding to enquiries and communicating with you</li>
-        <li>Managing professional enquiries and service discussions</li>
-        <li>Improving website reliability and security</li>
-      </ul>
-
-      <hr class="rule" />
-
-      <h2 class="h2">Contact form processing</h2>
-      <p class="p">
-        The contact form on this website is processed by a third-party service (<strong>Formspree</strong>).
-        When you submit the form, the information you enter is transmitted to Formspree to deliver your message.
-        Form submissions may be stored by Formspree and forwarded to the nominated email address.
-      </p>
-      <p class="p">
-        If you prefer not to use the form, you can contact me directly by email or phone.
-      </p>
-
-      <hr class="rule" />
-
-      <h2 class="h2">Sensitive information</h2>
-      <p class="p">
-        Please do not include sensitive personal information in the website contact form.
-        If you are an NDIS participant (or contacting on behalf of one), sensitive details should be shared only
-        through appropriate, secure channels after initial contact and confirmation of arrangements.
-      </p>
-
-      <hr class="rule" />
-
-      <h2 class="h2">Disclosure of personal information</h2>
-      <p class="p">
-        Personal information is not sold. It may be disclosed only where reasonably necessary to:
-      </p>
-      <ul class="list">
-        <li>Respond to your enquiry (for example, communicating with you or relevant provider contacts you nominate)</li>
-        <li>Meet legal or regulatory obligations</li>
-        <li>Maintain safety and reduce risk where serious concerns arise</li>
-      </ul>
-
-      <hr class="rule" />
-
-      <h2 class="h2">Storage and security</h2>
-      <p class="p">
-        Reasonable steps are taken to protect personal information from misuse, interference, loss, unauthorised access,
-        modification, or disclosure. However, no method of transmission over the internet is completely secure.
-      </p>
-
-      <hr class="rule" />
-
-      <h2 class="h2">Access and correction</h2>
-      <p class="p">
-        You may request access to personal information held about you and request corrections if you believe it is inaccurate,
-        out of date, incomplete, irrelevant, or misleading.
-      </p>
-
-      <hr class="rule" />
-
-      <h2 class="h2">How to contact</h2>
-      <p class="p">
-        For privacy-related enquiries, contact:
-      </p>
-      <p class="contact">
-        <strong>Email:</strong>
-        <a href="mailto:syed@syedbokhari.com.au">syed@syedbokhari.com.au</a>
-        <span class="dot">·</span>
-        <strong>Phone:</strong>
-        <a href="tel:0411072466">0411 072 466</a>
-      </p>
-
-      <div class="notice" role="note" aria-label="Emergency notice">
-        <strong>Emergency notice:</strong>
-        <span class="small">
-          This website is not monitored for urgent matters. If there is immediate risk or emergency, call 000.
-        </span>
+  <!-- OVERVIEW -->
+  <section class="policy-overview">
+    <div class="container">
+      <div class="overview-card">
+        <div class="overview-icon">🔒</div>
+        <div class="overview-content">
+          <h2 class="h2">Overview</h2>
+          <p class="p">
+            This Privacy Policy explains how personal information is collected and handled when you visit
+            <strong>syedbokhari.com.au</strong> and when you contact Syed Bokhari regarding behaviour support enquiries.
+            This site is intended for professional enquiries and general contact.
+          </p>
+          <div class="policy-highlights">
+            <span class="highlight">✓ No sensitive data via contact form</span>
+            <span class="highlight">✓ Professional enquiries only</span>
+            <span class="highlight">✓ Secure third-party form processing</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <style>
-    .pad { padding: 1.5rem; }
+  <!-- POLICY SECTIONS -->
+  <section class="policy-sections">
+    <div class="container">
+      <!-- Information Collection -->
+      <div class="policy-section">
+        <div class="section-header">
+          <div class="section-icon">📋</div>
+          <h2 class="h2">What Information May Be Collected</h2>
+        </div>
+        
+        <div class="section-content">
+          <p class="p">
+            If you contact me via the website contact form, email, or phone, the information collected may include:
+          </p>
+          
+          <div class="info-types">
+            <div class="info-type">
+              <div class="type-icon">👤</div>
+              <div>
+                <h4>Personal Information</h4>
+                <ul>
+                  <li>Your name</li>
+                  <li>Your email address</li>
+                  <li>Your phone number (if provided)</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="info-type">
+              <div class="type-icon">💬</div>
+              <div>
+                <h4>Communication Details</h4>
+                <ul>
+                  <li>The content of your message</li>
+                  <li>Enquiry type and purpose</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="info-type">
+              <div class="type-icon">🔧</div>
+              <div>
+                <h4>Technical Information</h4>
+                <ul>
+                  <li>IP address and browser details</li>
+                  <li>Standard internet logs</li>
+                  <li>Website usage analytics</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    .rule {
-      border: 0;
-      border-top: 1px solid rgba(15, 23, 42, 0.12);
-      margin: 1.5rem 0;
-    }
+      <!-- How Information is Used -->
+      <div class="policy-section">
+        <div class="section-header">
+          <div class="section-icon">🎯</div>
+          <h2 class="h2">How Information is Used</h2>
+        </div>
+        
+        <div class="section-content">
+          <p class="p">Personal information is used for purposes such as:</p>
+          
+          <div class="usage-purposes">
+            <div class="purpose-card">
+              <div class="purpose-icon">💬</div>
+              <h4>Communication</h4>
+              <p>Responding to enquiries and maintaining professional contact</p>
+            </div>
+            
+            <div class="purpose-card">
+              <div class="purpose-icon">⚙️</div>
+              <h4>Service Management</h4>
+              <p>Managing professional enquiries and service discussions</p>
+            </div>
+            
+            <div class="purpose-card">
+              <div class="purpose-icon">🔒</div>
+              <h4>Security</h4>
+              <p>Improving website reliability and security</p>
+            </div>
+            
+            <div class="purpose-card">
+              <div class="purpose-icon">📈</div>
+              <h4>Improvement</h4>
+              <p>Understanding website usage to improve user experience</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    .list {
-      margin: 0.75rem 0 0;
-      padding-left: 1.1rem;
-      color: #475569;
-    }
-    .list li { margin: 0.35rem 0; }
+      <!-- Contact Form Processing -->
+      <div class="policy-section">
+        <div class="section-header">
+          <div class="section-icon">📧</div>
+          <h2 class="h2">Contact Form Processing</h2>
+        </div>
+        
+        <div class="section-content">
+          <div class="formspree-info">
+            <div class="formspree-logo">
+              <span class="logo-text">Formspree</span>
+              <span class="logo-badge">Third-Party Service</span>
+            </div>
+            <p class="p">
+              The contact form on this website is processed by <strong>Formspree</strong>, a secure third-party service. 
+              When you submit the form, the information you enter is transmitted to Formspree to deliver your message. 
+              Form submissions may be stored by Formspree and forwarded to the nominated email address.
+            </p>
+          </div>
+          
+          <div class="alternative-contact">
+            <h4>Alternative Contact Methods</h4>
+            <p>If you prefer not to use the form, you can contact me directly:</p>
+            <div class="contact-alternatives">
+              <a href="mailto:syed@syedbokhari.com.au" class="alt-method">
+                <span class="alt-icon">📧</span>
+                <span>Email: syed@syedbokhari.com.au</span>
+              </a>
+              <a href="tel:0411072466" class="alt-method">
+                <span class="alt-icon">📱</span>
+                <span>Phone: 0411 072 466</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    .contact { margin-top: 0.5rem; color: #0f172a; }
-    .contact a { color: inherit; }
-    .dot { margin: 0 0.5rem; color: #475569; }
+      <!-- Sensitive Information Warning -->
+      <div class="policy-section warning-section">
+        <div class="section-header">
+          <div class="section-icon warning-icon">⚠️</div>
+          <h2 class="h2">Sensitive Information Warning</h2>
+        </div>
+        
+        <div class="section-content">
+          <div class="warning-card">
+            <p class="p">
+              <strong>Please do not include sensitive personal information in the website contact form.</strong> 
+              If you are an NDIS participant (or contacting on behalf of one), sensitive details should be shared only 
+              through appropriate, secure channels after initial contact and confirmation of arrangements.
+            </p>
+            
+            <div class="sensitive-examples">
+              <h4>Examples of information NOT to include in contact form:</h4>
+              <div class="examples-grid">
+                <div class="example-item">❌ Detailed medical history</div>
+                <div class="example-item">❌ NDIS plan numbers</div>
+                <div class="example-item">❌ Detailed behavioural incidents</div>
+                <div class="example-item">❌ Financial information</div>
+                <div class="example-item">❌ Legal documentation details</div>
+                <div class="example-item">❌ Third-party personal information</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    .notice {
-      margin-top: 1.25rem;
-      padding: 1rem;
-      border: 1px solid rgba(15, 23, 42, 0.15);
-      border-radius: 12px;
-      background: rgba(255, 255, 255, 0.85);
-    }
-    .small { display: block; margin-top: 0.25rem; color: #475569; font-size: 0.95rem; }
+      <!-- Disclosure of Information -->
+      <div class="policy-section">
+        <div class="section-header">
+          <div class="section-icon">🔓</div>
+          <h2 class="h2">Disclosure of Personal Information</h2>
+        </div>
+        
+        <div class="section-content">
+          <p class="p">
+            Personal information is not sold. It may be disclosed only where reasonably necessary to:
+          </p>
+          
+          <div class="disclosure-reasons">
+            <div class="reason-item">
+              <div class="reason-icon">💬</div>
+              <div>
+                <h4>Respond to Your Enquiry</h4>
+                <p>Communicating with you or relevant provider contacts you nominate</p>
+              </div>
+            </div>
+            
+            <div class="reason-item">
+              <div class="reason-icon">⚖️</div>
+              <div>
+                <h4>Legal Obligations</h4>
+                <p>Meet legal or regulatory obligations when required</p>
+              </div>
+            </div>
+            
+            <div class="reason-item">
+              <div class="reason-icon">🛡️</div>
+              <div>
+                <h4>Safety & Risk Management</h4>
+                <p>Maintain safety and reduce risk where serious concerns arise</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    @media (max-width: 520px) {
-      .dot { display: none; }
-      .contact { display: grid; gap: 0.35rem; }
-    }
-  </style>
+      <!-- Storage and Security -->
+      <div class="policy-section">
+        <div class="section-header">
+          <div class="section-icon">🔐</div>
+          <h2 class="h2">Storage and Security</h2>
+        </div>
+        
+        <div class="section-content">
+          <p class="p">
+            Reasonable steps are taken to protect personal information from misuse, interference, loss, 
+            unauthorised access, modification, or disclosure. However, no method of transmission over 
+            the internet is completely secure.
+          </p>
+          
+          <div class="security-measures">
+            <h4>Security Measures Include:</h4>
+            <div class="measures-grid">
+              <div class="measure">✅ Secure third-party form processing</div>
+              <div class="measure">✅ Encrypted email communication</div>
+              <div class="measure">✅ Regular security updates</div>
+              <div class="measure">✅ Professional supervision oversight</div>
+              <div class="measure">✅ Limited access to information</div>
+              <div class="measure">✅ Regular data review and cleanup</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Access and Correction -->
+      <div class="policy-section">
+        <div class="section-header">
+          <div class="section-icon">📝</div>
+          <h2 class="h2">Access and Correction</h2>
+        </div>
+        
+        <div class="section-content">
+          <p class="p">
+            You may request access to personal information held about you and request corrections if you believe 
+            it is inaccurate, out of date, incomplete, irrelevant, or misleading.
+          </p>
+          
+          <div class="access-process">
+            <h4>How to Request Access or Correction:</h4>
+            <div class="process-steps">
+              <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <p>Contact me directly via email or phone</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <p>Provide details of what information you want to access or correct</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <p>I will respond within a reasonable timeframe (usually within 30 days)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact for Privacy -->
+      <div class="policy-section">
+        <div class="section-header">
+          <div class="section-icon">📞</div>
+          <h2 class="h2">How to Contact for Privacy Enquiries</h2>
+        </div>
+        
+        <div class="section-content">
+          <p class="p">
+            For privacy-related enquiries, contact:
+          </p>
+          
+          <div class="privacy-contact">
+            <div class="contact-method">
+              <div class="contact-icon">📧</div>
+              <div>
+                <strong>Email:</strong>
+                <a href="mailto:syed@syedbokhari.com.au">syed@syedbokhari.com.au</a>
+              </div>
+            </div>
+            
+            <div class="contact-method">
+              <div class="contact-icon">📱</div>
+              <div>
+                <strong>Phone:</strong>
+                <a href="tel:0411072466">0411 072 466</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="emergency-notice">
+            <strong>🚨 Emergency Notice:</strong>
+            <span class="small">
+              This website is not monitored for urgent matters. If there is immediate risk or emergency, call 000.
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POLICY UPDATES -->
+  <section class="policy-updates">
+    <div class="container">
+      <div class="updates-card">
+        <h2 class="h2">Policy Updates</h2>
+        <p class="p">
+          This Privacy Policy may be updated from time to time to reflect changes in practice, technology, or legal requirements. 
+          The last updated date will be modified accordingly, and significant changes will be highlighted where appropriate.
+        </p>
+        
+        <div class="update-info">
+          <strong>Last Updated:</strong> {lastUpdated}
+          <br>
+          <strong>Next Review:</strong> June 2026
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RELATED LINKS -->
+  <section class="related-links">
+    <div class="container">
+      <h2 class="h2 text-center">Related Information</h2>
+      
+      <div class="links-grid">
+        <a href="/contact" class="link-card">
+          <div class="link-icon">📞</div>
+          <h4>Contact Information</h4>
+          <p>How to get in touch for behaviour support enquiries</p>
+        </a>
+        
+        <a href="/services" class="link-card">
+          <div class="link-icon">🎯</div>
+          <h4>Services</h4>
+          <p>Learn about behaviour support services offered</p>
+        </a>
+        
+        <a href="/about" class="link-card">
+          <div class="link-icon">👤</div>
+          <h4>About</h4>
+          <p>Professional background and qualifications</p>
+        </a>
+      </div>
+    </div>
+  </section>
 </BaseLayout>
+
+<style>
+  /* Page Header */
+  .page-header {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+  }
+  
+  .page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+  }
+
+  /* Policy Overview */
+  .policy-overview {
+    padding: 3rem 0;
+    background: #f8fafc;
+  }
+  
+  .overview-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+  
+  .overview-icon {
+    font-size: 3rem;
+    flex-shrink: 0;
+  }
+  
+  .overview-content {
+    flex: 1;
+  }
+  
+  .policy-highlights {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+  }
+  
+  .highlight {
+    background: #ecfdf5;
+    color: #065f46;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  /* Policy Sections */
+  .policy-sections {
+    padding: 3rem 0;
+  }
+  
+  .policy-section {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .policy-section:last-child {
+    border-bottom: none;
+  }
+  
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .section-icon {
+    font-size: 2.5rem;
+  }
+  
+  .warning-icon {
+    color: #f59e0b;
+  }
+  
+  .section-content {
+    max-width: 800px;
+  }
+
+  /* Information Types */
+  .info-types {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .info-type {
+    background: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 12px;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .type-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+  }
+  
+  .info-type h4 {
+    margin-bottom: 0.5rem;
+    color: #1e293b;
+  }
+  
+  .info-type ul {
+    margin: 0;
+    padding-left: 1.2rem;
+  }
+
+  /* Usage Purposes */
+  .usage-purposes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .purpose-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .purpose-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .purpose-card h4 {
+    margin-bottom: 0.5rem;
+  }
+
+  /* Formspree Info */
+  .formspree-info {
+    background: #f8fafc;
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 1.5rem 0;
+  }
+  
+  .formspree-logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .logo-text {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .logo-badge {
+    background: #2563eb;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+  }
+  
+  .alternative-contact {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 8px;
+  }
+  
+  .contact-alternatives {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .alt-method {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+  }
+  
+  .alt-method:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+  }
+  
+  .alt-icon {
+    font-size: 1.2rem;
+  }
+
+  /* Warning Section */
+  .warning-section {
+    background: #fffbeb;
+    border-radius: 12px;
+    padding: 2rem;
+  }
+  
+  .warning-card {
+    background: white;
+    border: 2px solid #f59e0b;
+    border-radius: 8px;
+    padding: 1.5rem;
+  }
+  
+  .sensitive-examples {
+    margin-top: 1.5rem;
+  }
+  
+  .examples-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .example-item {
+    background: #fef2f2;
+    color: #dc2626;
+    padding: 0.75rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  /* Disclosure Reasons */
+  .disclosure-reasons {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .reason-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  .reason-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+  }
+  
+  .reason-item h4 {
+    margin-bottom: 0.5rem;
+  }
+
+  /* Security Measures */
+  .security-measures {
+    margin-top: 2rem;
+  }
+  
+  .measures-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .measure {
+    background: #ecfdf5;
+    color: #065f46;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+  }
+
+  /* Access Process */
+  .access-process {
+    margin-top: 2rem;
+  }
+  
+  .process-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  .step {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .step-number {
+    background: #2563eb;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+  }
+
+  /* Privacy Contact */
+  .privacy-contact {
+    margin-top: 1.5rem;
+  }
+  
+  .contact-method {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+  
+  .contact-icon {
+    font-size: 1.5rem;
+    width: 30px;
+    text-align: center;
+  }
+  
+  .contact-method a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .contact-method a:hover {
+    text-decoration: underline;
+  }
+  
+  .emergency-notice {
+    background: #fef2f2;
+    border: 1px solid #ef4444;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  /* Policy Updates */
+  .policy-updates {
+    padding: 3rem 0;
+    background: #f8fafc;
+  }
+  
+  .updates-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .update-info {
+    background: #f8fafc;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+  }
+
+  /* Related Links */
+  .related-links {
+    padding: 3rem 0;
+  }
+  
+  .links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .link-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+    transition: all 0.2s ease;
+  }
+  
+  .link-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .link-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .link-card h4 {
+    margin-bottom: 0.5rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .overview-card {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .policy-highlights {
+      justify-content: center;
+    }
+    
+    .info-types,
+    .usage-purposes,
+    .measures-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .contact-alternatives {
+      flex-direction: column;
+    }
+    
+    .examples-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .links-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Utility Classes */
+  .text-center { text-align: center; }
+  .text-secondary { color: #64748b; }
+  .mb-4 { margin-bottom: 2rem; }
+</style>
