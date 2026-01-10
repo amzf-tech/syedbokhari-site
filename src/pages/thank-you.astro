@@ -53,7 +53,7 @@ const description = "Thank you for your enquiry. I'll respond within 24-48 hours
   <!-- IMMEDIATE ACTIONS -->
   <section class="immediate-actions">
     <div class="container">
-      <h2 class="h2 text-center">While You Wait...</h2>
+      <h2 class="h2">While You Wait...</h2>
       <p class="text-center text-secondary mb-4">
         Explore these resources to learn more about behaviour support
       </p>
@@ -378,72 +378,9 @@ const description = "Thank you for your enquiry. I'll respond within 24-48 hours
   .text-center { text-align: center; }
   .text-secondary { color: #64748b; }
   .mb-4 { margin-bottom: 2rem; }
-
-  /* Button Styles */
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.875rem 1.75rem;
-    background: #2563eb;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: all 0.2s ease;
-    border: none;
-    cursor: pointer;
+  .small {
+    font-size: 0.875rem;
+    color: #64748b;
   }
-  
-  .btn:hover {
-    background: #1d4ed8;
-    transform: translateY(-1px);
-  }
-  
-  .btn-primary {
-    background: #2563eb;
-    color: white;
-  }
-  
-  .btn-outline {
-    background: transparent;
-    color: #2563eb;
-    border: 2px solid #2563eb;
-  }
-  
-  .btn-outline:hover {
-    background: #2563eb;
-    color: white;
-  }
-
-  @media (max-width: 768px) {
-    .hero-content h1 {
-      font-size: 2rem;
-    }
-    
-    .actions-grid,
-    .contact-options {
-      grid-template-columns: 1fr;
-    }
-    
-    .reminder-item {
-      flex-direction: column;
-      text-align: center;
-    }
-  }
-</style>
-
-<script>
-  // Add some interactive elements
-  document.addEventListener('DOMContentLoaded', function() {
-    // Add click tracking for contact options
-    const contactLinks = document.querySelectorAll('.contact-link');
-    contactLinks.forEach(link => {
-      link.addEventListener('click', function() {
-        // You could add analytics tracking here
-        console.log('Contact method clicked:', this.textContent);
-      });
-    });
-    
-    // Auto-redirect after 10 seconds (optional)
-    // setTimeout(() => {
+  </style>
+</BaseLayout>

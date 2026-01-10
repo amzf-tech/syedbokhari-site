@@ -1,169 +1,174 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
-// Get the slug from the URL
-const { slug } = Astro.params;
-const pathname = Astro.url.pathname;
+/* ------------------------------------------------------------------ */
+/*  1.  getStaticPaths  –  MUST contain its own data                  */
+/* ------------------------------------------------------------------ */
+export async function getStaticPaths() {
+  /* define the posts object INSIDE the function */
+  const posts = {
+    'understanding-behaviour-support-under-supervision': {
+      title: 'Understanding Behaviour Support Under Supervision',
+      description: 'Discover the benefits of working with a behaviour support practitioner under professional supervision and why this model might be the right choice for your NDIS support needs.',
+      category: 'Behaviour Support',
+      date: '2026-01-10',
+      readTime: '5 min read',
+      tags: ['NDIS', 'Supervision', 'Quality Assurance'],
+      content: `
+        <h2>What Does "Under Supervision" Mean?</h2>
+        <p>When you see that a behaviour support practitioner is "under supervision," it means they are working under the guidance and oversight of a fully registered, experienced practitioner. This is a common and valuable model in the NDIS behaviour support sector.</p>
 
-// Define your blog posts data
-const posts = {
-  'understanding-behaviour-support-under-supervision': {
-    title: 'Understanding Behaviour Support Under Supervision',
-    description: 'Discover the benefits of working with a behaviour support practitioner under professional supervision and why this model might be the right choice for your NDIS support needs.',
-    category: 'Behaviour Support',
-    date: '2026-01-10',
-    readTime: '5 min read',
-    tags: ['NDIS', 'Supervision', 'Quality Assurance'],
-    content: `
-      <h2>What Does "Under Supervision" Mean?</h2>
-      <p>When you see that a behaviour support practitioner is "under supervision," it means they are working under the guidance and oversight of a fully registered, experienced practitioner. This is a common and valuable model in the NDIS behaviour support sector.</p>
+        <h2>Why Choose a Practitioner Under Supervision?</h2>
+        <p>Working with a practitioner under supervision offers several unique benefits that can enhance the quality of support you receive:</p>
 
-      <h2>Why Choose a Practitioner Under Supervision?</h2>
-      <p>Working with a practitioner under supervision offers several unique benefits that can enhance the quality of support you receive:</p>
+        <h3>Enhanced Quality Assurance</h3>
+        <p>When a practitioner works under supervision, your support benefits from the expertise of two professionals. The supervising practitioner provides regular oversight, ensuring that all assessments and support plans meet the highest standards and align with current best practices.</p>
 
-      <h3>Enhanced Quality Assurance</h3>
-      <p>When a practitioner works under supervision, your support benefits from the expertise of two professionals. The supervising practitioner provides regular oversight, ensuring that all assessments and support plans meet the highest standards and align with current best practices.</p>
+        <h3>Fresh Perspectives and Current Knowledge</h3>
+        <p>Practitioners under supervision are often recently trained in the latest evidence-based approaches. Combined with the experience of their supervisor, this brings together fresh perspectives with established expertise.</p>
 
-      <h3>Fresh Perspectives and Current Knowledge</h3>
-      <p>Practitioners under supervision are often recently trained in the latest evidence-based approaches. Combined with the experience of their supervisor, this brings together fresh perspectives with established expertise.</p>
+        <h3>Comprehensive Oversight</h3>
+        <p>All work is regularly reviewed by the supervising practitioner, providing an additional layer of quality control and ensuring compliance with NDIS requirements.</p>
 
-      <h3>Comprehensive Oversight</h3>
-      <p>All work is regularly reviewed by the supervising practitioner, providing an additional layer of quality control and ensuring compliance with NDIS requirements.</p>
+        <h2>Your Rights and Choices</h2>
+        <p>You have the right to know about the supervision arrangements and can ask questions about how supervision enhances your support. Many participants find that working with a practitioner under supervision provides them with confidence in the quality and oversight of their support.</p>
 
-      <h2>Your Rights and Choices</h2>
-      <p>You have the right to know about the supervision arrangements and can ask questions about how supervision enhances your support. Many participants find that working with a practitioner under supervision provides them with confidence in the quality and oversight of their support.</p>
+        <h2>Key Takeaways</h2>
+        <ul>
+          <li>Supervision provides enhanced quality assurance through dual professional oversight</li>
+          <li>Combines fresh training with established expertise</li>
+          <li>Ensures compliance with NDIS requirements and best practices</li>
+          <li>Offers transparent and collaborative support delivery</li>
+          <li>Provides confidence through additional professional oversight</li>
+        </ul>
+      `
+    },
+    'signs-ndis-participant-needs-behaviour-support': {
+      title: '5 Signs Your NDIS Participant Might Benefit from Behaviour Support',
+      description: 'Key indicators that suggest behaviour support could improve quality of life and help achieve NDIS goals.',
+      category: 'NDIS Support',
+      date: '2026-01-05',
+      readTime: '4 min read',
+      tags: ['NDIS Goals', 'Quality of Life', 'Support Planning'],
+      content: `
+        <h2>Introduction</h2>
+        <p>Behaviour support can be a valuable service for NDIS participants, but knowing when to engage a behaviour support practitioner isn't always clear. Here are five key signs that suggest behaviour support might be beneficial:</p>
 
-      <h2>Key Takeaways</h2>
-      <ul>
-        <li>Supervision provides enhanced quality assurance through dual professional oversight</li>
-        <li>Combines fresh training with established expertise</li>
-        <li>Ensures compliance with NDIS requirements and best practices</li>
-        <li>Offers transparent and collaborative support delivery</li>
-        <li>Provides confidence through additional professional oversight</li>
-      </ul>
-    `
-  },
-  'signs-ndis-participant-needs-behaviour-support': {
-    title: '5 Signs Your NDIS Participant Might Benefit from Behaviour Support',
-    description: 'Key indicators that suggest behaviour support could improve quality of life and help achieve NDIS goals.',
-    category: 'NDIS Support',
-    date: '2026-01-05',
-    readTime: '4 min read',
-    tags: ['NDIS Goals', 'Quality of Life', 'Support Planning'],
-    content: `
-      <h2>Introduction</h2>
-      <p>Behaviour support can be a valuable service for NDIS participants, but knowing when to engage a behaviour support practitioner isn't always clear. Here are five key signs that suggest behaviour support might be beneficial:</p>
+        <h2>1. Difficulty Achieving NDIS Goals Due to Behaviours</h2>
+        <p>If behaviours of concern are consistently preventing progress toward NDIS goals, behaviour support can help identify triggers and develop strategies to address these barriers.</p>
 
-      <h2>1. Difficulty Achieving NDIS Goals Due to Behaviours</h2>
-      <p>If behaviours of concern are consistently preventing progress toward NDIS goals, behaviour support can help identify triggers and develop strategies to address these barriers.</p>
+        <h2>2. Increased Restrictive Practices or Crisis Situations</h2>
+        <p>Frequent use of restrictive practices or regular crisis situations indicate that proactive behaviour support strategies could help reduce the need for such interventions.</p>
 
-      <h2>2. Increased Restrictive Practices or Crisis Situations</h2>
-      <p>Frequent use of restrictive practices or regular crisis situations indicate that proactive behaviour support strategies could help reduce the need for such interventions.</p>
+        <h2>3. Support Team Stress and Inconsistency</h2>
+        <p>When support workers or family members express stress, uncertainty, or inconsistency in responding to behaviours, professional behaviour support can provide clarity and unified approaches.</p>
 
-      <h2>3. Support Team Stress and Inconsistency</h2>
-      <p>When support workers or family members express stress, uncertainty, or inconsistency in responding to behaviours, professional behaviour support can provide clarity and unified approaches.</p>
+        <h2>4. Quality of Life Concerns</h2>
+        <p>If behaviours are limiting community participation, relationships, or daily activities, behaviour support can help develop strategies to improve overall quality of life.</p>
 
-      <h2>4. Quality of Life Concerns</h2>
-      <p>If behaviours are limiting community participation, relationships, or daily activities, behaviour support can help develop strategies to improve overall quality of life.</p>
+        <h2>5. Transition or Change-Related Challenges</h2>
+        <p>Major life transitions often trigger increased support needs where behaviour support can provide stability and continuity.</p>
 
-      <h2>5. Transition or Change-Related Challenges</h2>
-      <p>Major life transitions often trigger increased support needs where behaviour support can provide stability and continuity.</p>
+        <h2>What to Do Next</h2>
+        <p>If you recognize any of these signs, consider reaching out for an initial consultation. Behaviour support works best when implemented proactively rather than waiting for crisis situations.</p>
+      `
+    },
+    'preparing-first-behaviour-support-meeting': {
+      title: 'Preparing for Your First Behaviour Support Meeting',
+      description: 'What to expect and how to prepare for your initial consultation with a behaviour support practitioner.',
+      category: 'First Meeting',
+      date: '2025-12-28',
+      readTime: '6 min read',
+      tags: ['First Meeting', 'Preparation', 'What to Expect'],
+      content: `
+        <h2>Before the Meeting</h2>
+        <p>Preparation is key to making the most of your initial consultation with a behaviour support practitioner. Here are some steps to help you prepare:</p>
 
-      <h2>What to Do Next</h2>
-      <p>If you recognize any of these signs, consider reaching out for an initial consultation. Behaviour support works best when implemented proactively rather than waiting for crisis situations.</p>
-    `
-  },
-  'preparing-first-behaviour-support-meeting': {
-    title: 'Preparing for Your First Behaviour Support Meeting',
-    description: 'What to expect and how to prepare for your initial consultation with a behaviour support practitioner.',
-    category: 'First Meeting',
-    date: '2025-12-28',
-    readTime: '6 min read',
-    tags: ['First Meeting', 'Preparation', 'What to Expect'],
-    content: `
-      <h2>Before the Meeting</h2>
-      <p>Preparation is key to making the most of your initial consultation with a behaviour support practitioner. Here are some steps to help you prepare:</p>
+        <h3>Gather Relevant Information</h3>
+        <p>Collect and organize the following documents:</p>
+        <ul>
+          <li>Current NDIS plan and goals</li>
+          <li>Any existing behaviour support documentation</li>
+          <li>Recent incident reports or support notes (if applicable)</li>
+          <li>Contact details for key support people</li>
+        </ul>
 
-      <h3>Gather Relevant Information</h3>
-      <p>Collect and organize the following documents:</p>
-      <ul>
-        <li>Current NDIS plan and goals</li>
-        <li>Any existing behaviour support documentation</li>
-        <li>Recent incident reports or support notes (if applicable)</li>
-        <li>Contact details for key support people</li>
-      </ul>
+        <h3>Think About Your Goals</h3>
+        <p>Consider what you hope to achieve through behaviour support. What would success look like for you or your loved one?</p>
 
-      <h3>Think About Your Goals</h3>
-      <p>Consider what you hope to achieve through behaviour support. What would success look like for you or your loved one?</p>
+        <h2>During the Meeting</h2>
+        <h3>What to Expect</h3>
+        <ul>
+          <li>Discussion of current situation and challenges</li>
+          <li>Review of any existing documentation</li>
+          <li>Explanation of the behaviour support process</li>
+          <li>Discussion of supervision arrangements (if applicable)</li>
+          <li>Outline of next steps and timeline</li>
+        </ul>
 
-      <h2>During the Meeting</h2>
-      <h3>What to Expect</h3>
-      <ul>
-        <li>Discussion of current situation and challenges</li>
-        <li>Review of any existing documentation</li>
-        <li>Explanation of the behaviour support process</li>
-        <li>Discussion of supervision arrangements (if applicable)</li>
-        <li>Outline of next steps and timeline</li>
-      </ul>
+        <h3>Questions to Ask</h3>
+        <ul>
+          <li>What does the assessment process involve?</li>
+          <li>How long does the process typically take?</li>
+          <li>What are the costs involved?</li>
+          <li>How will we measure progress?</li>
+          <li>What is your availability and service area?</li>
+        </ul>
+      `
+    },
+    'functional-behaviour-assessment-process': {
+      title: 'Understanding the Functional Behaviour Assessment Process',
+      description: 'A comprehensive guide to functional behaviour assessment - what it involves, why it is important, and how it forms the foundation of effective behaviour support.',
+      category: 'Assessment',
+      date: '2025-12-20',
+      readTime: '7 min read',
+      tags: ['Assessment', 'Functional Analysis', 'Evidence-Based'],
+      content: `
+        <h2>What is Functional Behaviour Assessment?</h2>
+        <p>Functional Behaviour Assessment (FBA) is a systematic process for understanding why behaviours occur. It forms the foundation of effective behaviour support by identifying the purpose or function that behaviours serve for the individual.</p>
 
-      <h3>Questions to Ask</h3>
-      <ul>
-        <li>What does the assessment process involve?</li>
-        <li>How long does the process typically take?</li>
-        <li>What are the costs involved?</li>
-        <li>How will we measure progress?</li>
-        <li>What is your availability and service area?</li>
-      </ul>
-    `
-  },
-  'functional-behaviour-assessment-process': {
-    title: 'Understanding the Functional Behaviour Assessment Process',
-    description: 'A comprehensive guide to functional behaviour assessment - what it involves, why it is important, and how it forms the foundation of effective behaviour support.',
-    category: 'Assessment',
-    date: '2025-12-20',
-    readTime: '7 min read',
-    tags: ['Assessment', 'Functional Analysis', 'Evidence-Based'],
-    content: `
-      <h2>What is Functional Behaviour Assessment?</h2>
-      <p>Functional Behaviour Assessment (FBA) is a systematic process for understanding why behaviours occur. It forms the foundation of effective behaviour support by identifying the purpose or function that behaviours serve for the individual.</p>
+        <h2>Why is FBA Important?</h2>
+        <p>Without understanding why a behaviour occurs, support strategies may be ineffective or even counterproductive. FBA helps ensure that interventions address the root causes rather than just the surface behaviours.</p>
 
-      <h2>Why is FBA Important?</h2>
-      <p>Without understanding why a behaviour occurs, support strategies may be ineffective or even counterproductive. FBA helps ensure that interventions address the root causes rather than just the surface behaviours.</p>
+        <h2>The FBA Process: Step by Step</h2>
 
-      <h2>The FBA Process: Step by Step</h2>
-      
-      <h3>1. Information Gathering</h3>
-      <p>This involves collecting information from various sources including interviews with the participant, family members, and support workers, as well as reviewing existing documentation.</p>
+        <h3>1. Information Gathering</h3>
+        <p>This involves collecting information from various sources including interviews with the participant, family members, and support workers, as well as reviewing existing documentation.</p>
 
-      <h3>2. Direct Observation</h3>
-      <p>Structured observations are conducted in relevant environments to gather data about when, where, and why behaviours occur.</p>
+        <h3>2. Direct Observation</h3>
+        <p>Structured observations are conducted in relevant environments to gather data about when, where, and why behaviours occur.</p>
 
-      <h3>3. Data Analysis</h3>
-      <p>The collected information is analyzed to identify patterns, triggers, and the likely function of behaviours.</p>
+        <h3>3. Data Analysis</h3>
+        <p>The collected information is analyzed to identify patterns, triggers, and the likely function of behaviours.</p>
 
-      <h3>4. Hypothesis Development</h3>
-      <p>Based on the analysis, hypotheses are developed about why behaviors occur and what maintains them.</p>
+        <h3>4. Hypothesis Development</h3>
+        <p>Based on the analysis, hypotheses are developed about why behaviors occur and what maintains them.</p>
 
-      <h3>5. Report and Recommendations</h3>
-      <p>A comprehensive report is prepared with findings and initial recommendations for support strategies.</p>
-    `
-  }
-};
+        <h3>5. Report and Recommendations</h3>
+        <p>A comprehensive report is prepared with findings and initial recommendations for support strategies.</p>
+      `
+    }
+  };
 
-const post = posts[slug];
-if (!post) {
-  return Astro.redirect('/404');
+  return Object.keys(posts).map(slug => ({
+    params: { slug },
+    props: { posts, slug }   // hand the data down as props
+  }));
 }
 
-const formattedDate = new Date(post.date).toLocaleDateString('en-AU', {
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric'
-});
+/* ------------------------------------------------------------------ */
+/*  2.  Receive props passed from getStaticPaths                      */
+/* ------------------------------------------------------------------ */
+const { posts, slug } = Astro.props;
+const post = posts[slug];
+if (!post) return Astro.redirect('/404');
 
-// Get related posts (excluding current post)
+const pathname = Astro.url.pathname;
+const formattedDate = new Date(post.date).toLocaleDateString('en-AU', {
+  year: 'numeric', month: 'long', day: 'numeric'
+});
 const relatedPosts = Object.values(posts)
-  .filter(p => p.slug !== slug)
+  .filter(p => p !== post)
   .slice(0, 3);
 ---
 
@@ -177,9 +182,9 @@ const relatedPosts = Object.values(posts)
           <span class="article-date">{formattedDate}</span>
           <span class="article-read-time">{post.readTime}</span>
         </div>
-        
+
         <h1 class="article-title">{post.title}</h1>
-        
+
         <div class="article-tags">
           {post.tags.map(tag => (
             <span class="tag">{tag}</span>
@@ -192,9 +197,7 @@ const relatedPosts = Object.values(posts)
     <div class="article-content">
       <div class="container">
         <div class="content-wrapper">
-          <div class="post-content" set:html={post.content}>
-            <!-- Content will be inserted here -->
-          </div>
+          <div class="post-content" set:html={post.content} />
 
           <!-- AUTHOR BIO -->
           <div class="author-bio">
@@ -209,7 +212,7 @@ const relatedPosts = Object.values(posts)
                 <h4>Syed Bokhari</h4>
                 <p class="bio-title">Behaviour Support Practitioner (Under Supervision)</p>
                 <p class="bio-description">
-                  Supporting NDIS participants, families, and provider teams with positive, respectful, 
+                  Supporting NDIS participants, families, and provider teams with positive, respectful,
                   and evidence-informed behaviour support across Australia.
                 </p>
                 <div class="bio-links">
@@ -227,7 +230,7 @@ const relatedPosts = Object.values(posts)
               {relatedPosts.map(relatedPost => (
                 <article class="related-post">
                   <h4>
-                    <a href={`/blog/${relatedPost.slug}`}>
+                    <a href={`/blog/${Object.keys(posts).find(k => posts[k] === relatedPost)}`}>
                       {relatedPost.title}
                     </a>
                   </h4>
@@ -238,398 +241,344 @@ const relatedPosts = Object.values(posts)
           </div>
         </div>
       </div>
-    </article>
+    </div>
+  </article>
 
-    <!-- NAVIGATION -->
-    <nav class="post-navigation">
-      <div class="container">
-        <div class="nav-links">
-          <a href="/blog" class="nav-link back-to-blog">
-            ← Back to Blog
-          </a>
-          
-          <div class="post-share">
-            <span class="share-label">Share this article:</span>
-            <div class="share-buttons">
-              <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(Astro.url.href)}`} 
-                 target="_blank" class="share-btn linkedin">
-                LinkedIn
-              </a>
-              <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(Astro.url.href)}`} 
-                 target="_blank" class="share-btn facebook">
-                Facebook
-              </a>
-            </div>
+  <!-- NAVIGATION -->
+  <nav class="post-navigation">
+    <div class="container">
+      <div class="nav-links">
+        <a href="/blog" class="nav-link back-to-blog">
+          ← Back to Blog
+        </a>
+
+        <div class="post-share">
+          <span class="share-label">Share this article:</span>
+          <div class="share-buttons">
+            <a
+              href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(Astro.url.href)}`}
+              target="_blank"
+              class="share-btn linkedin"
+            >LinkedIn</a>
+            <a
+              href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(Astro.url.href)}`}
+              target="_blank"
+              class="share-btn facebook"
+            >Facebook</a>
           </div>
         </div>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <!-- CTA SECTION -->
-    <section class="post-cta">
-      <div class="container">
-        <div class="cta-card">
-          <h3>Need Behaviour Support?</h3>
-          <p>Let's discuss how I can help you or your loved one achieve your NDIS goals.</p>
-          <div class="cta-buttons">
-            <a href="/contact" class="btn btn-primary">Book Free Consultation</a>
-            <a href="/services" class="btn btn-secondary">View Services</a>
-          </div>
+  <!-- CTA SECTION -->
+  <section class="post-cta">
+    <div class="container">
+      <div class="cta-card">
+        <h3>Need Behaviour Support?</h3>
+        <p>Let's discuss how I can help you or your loved one achieve your NDIS goals.</p>
+        <div class="cta-buttons">
+          <a href="/contact" class="btn btn-primary">Book Free Consultation</a>
+          <a href="/services" class="btn btn-secondary">View Services</a>
         </div>
       </div>
-    </section>
-  </BaseLayout>
+    </div>
+  </section>
+</BaseLayout>
 
-  <style>
-    /* Article Header */
-    .article-header {
-      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-      padding: 3rem 0;
-    }
-    
-    .article-meta {
-      display: flex;
-      gap: 1rem;
-      align-items: center;
-      margin-bottom: 1rem;
-      flex-wrap: wrap;
-    }
-    
-    .article-category {
-      background: #2563eb;
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      font-size: 0.9rem;
-      font-weight: 500;
-    }
-    
-    .article-date {
-      color: #64748b;
-    }
-    
-    .article-read-time {
-      color: #64748b;
-      font-size: 0.9rem;
-    }
-    
+<style>
+  /* Article Header */
+  .article-header {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    padding: 3rem 0;
+  }
+  .article-meta {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+  .article-category {
+    background: #2563eb;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  .article-date,
+  .article-read-time {
+    color: #64748b;
+  }
+  .article-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  .article-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .tag {
+    background: white;
+    color: #64748b;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    border: 1px solid #e2e8f0;
+  }
+
+  /* Article Content */
+  .article-content {
+    padding: 3rem 0;
+  }
+  .content-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .post-content {
+    line-height: 1.7;
+  }
+  .post-content h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #1e293b;
+  }
+  .post-content h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #1e293b;
+  }
+  .post-content p {
+    margin-bottom: 1.5rem;
+  }
+  .post-content ul {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  .post-content li {
+    margin-bottom: 0.5rem;
+  }
+
+  /* Author Bio */
+  .author-bio {
+    background: #f8fafc;
+    border-radius: 16px;
+    padding: 2rem;
+    margin: 3rem 0;
+  }
+  .bio-header {
+    margin-bottom: 1.5rem;
+  }
+  .bio-content {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+  .bio-photo {
+    flex-shrink: 0;
+  }
+  .bio-photo img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .bio-text {
+    flex: 1;
+  }
+  .bio-title {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  .bio-description {
+    margin-bottom: 1rem;
+  }
+  .bio-links {
+    display: flex;
+    gap: 1rem;
+  }
+  .bio-links a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .bio-links a:hover {
+    text-decoration: underline;
+  }
+
+  /* Related Posts */
+  .related-posts {
+    margin: 3rem 0;
+  }
+  .related-posts h3 {
+    margin-bottom: 1.5rem;
+  }
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  .related-post {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .related-post h4 {
+    margin-bottom: 0.5rem;
+  }
+  .related-post h4 a {
+    color: #1e293b;
+    text-decoration: none;
+  }
+  .related-post h4 a:hover {
+    color: #2563eb;
+  }
+  .related-post p {
+    color: #64748b;
+    font-size: 0.9rem;
+  }
+
+  /* Post Navigation */
+  .post-navigation {
+    padding: 2rem 0;
+    border-top: 1px solid #e2e8f0;
+  }
+  .nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .back-to-blog {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .back-to-blog:hover {
+    text-decoration: underline;
+  }
+  .post-share {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .share-label {
+    color: #64748b;
+    font-size: 0.9rem;
+  }
+  .share-buttons {
+    display: flex;
+    gap: 0.5rem;
+  }
+  .share-btn {
+    padding: 0.5rem 1rem;
+    background: #f8fafc;
+    color: #1e293b;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+  }
+  .share-btn:hover {
+    background: #e2e8f0;
+  }
+  .share-btn.linkedin:hover {
+    background: #0077b5;
+    color: white;
+  }
+  .share-btn.facebook:hover {
+    background: #1877f2;
+    color: white;
+  }
+
+  /* Post CTA */
+  .post-cta {
+    padding: 3rem 0;
+    background: #f8fafc;
+  }
+  .cta-card {
+    background: white;
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .cta-card h3 {
+    margin-bottom: 1rem;
+  }
+  .cta-card p {
+    margin-bottom: 2rem;
+    color: #64748b;
+  }
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* Button Styles */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.875rem 1.75rem;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+  }
+  .btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+  }
+  .btn-primary {
+    background: #2563eb;
+    color: white;
+  }
+  .btn-secondary {
+    background: #f8fafc;
+    color: #1e293b;
+    border: 2px solid #e2e8f0;
+  }
+  .btn-secondary:hover {
+    background: #e2e8f0;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
     .article-title {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      line-height: 1.2;
+      font-size: 2rem;
     }
-    
-    .article-tags {
-      display: flex;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-    }
-    
-    .tag {
-      background: white;
-      color: #64748b;
-      padding: 0.25rem 0.75rem;
-      border-radius: 12px;
-      font-size: 0.8rem;
-      border: 1px solid #e2e8f0;
-    }
-
-    /* Article Content */
-    .article-content {
-      padding: 3rem 0;
-    }
-    
-    .content-wrapper {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    
-    .post-content {
-      line-height: 1.7;
-    }
-    
-    .post-content h2 {
-      margin-top: 2rem;
-      margin-bottom: 1rem;
-      color: #1e293b;
-    }
-    
-    .post-content h3 {
-      margin-top: 1.5rem;
-      margin-bottom: 0.75rem;
-      color: #1e293b;
-    }
-    
-    .post-content p {
-      margin-bottom: 1.5rem;
-    }
-    
-    .post-content ul {
-      margin-bottom: 1.5rem;
-      padding-left: 1.5rem;
-    }
-    
-    .post-content li {
-      margin-bottom: 0.5rem;
-    }
-
-    /* Author Bio */
-    .author-bio {
-      background: #f8fafc;
-      border-radius: 16px;
-      padding: 2rem;
-      margin: 3rem 0;
-    }
-    
-    .bio-header {
-      margin-bottom: 1.5rem;
-    }
-    
-    .bio-content {
-      display: flex;
-      gap: 1.5rem;
+    .article-meta {
+      flex-direction: column;
       align-items: flex-start;
     }
-    
-    .bio-photo {
-      flex-shrink: 0;
-    }
-    
-    .bio-photo img {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-    
-    .bio-text {
-      flex: 1;
-    }
-    
-    .bio-title {
-      color: #64748b;
-      font-size: 0.9rem;
-      margin-bottom: 0.5rem;
-    }
-    
-    .bio-description {
-      margin-bottom: 1rem;
-    }
-    
-    .bio-links {
-      display: flex;
-      gap: 1rem;
-    }
-    
-    .bio-links a {
-      color: #2563eb;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    
-    .bio-links a:hover {
-      text-decoration: underline;
-    }
-
-    /* Related Posts */
-    .related-posts {
-      margin: 3rem 0;
-    }
-    
-    .related-posts h3 {
-      margin-bottom: 1.5rem;
-    }
-    
-    .related-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-    }
-    
-    .related-post {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-    
-    .related-post h4 {
-      margin-bottom: 0.5rem;
-    }
-    
-    .related-post h4 a {
-      color: #1e293b;
-      text-decoration: none;
-    }
-    
-    .related-post h4 a:hover {
-      color: #2563eb;
-    }
-    
-    .related-post p {
-      color: #64748b;
-      font-size: 0.9rem;
-    }
-
-    /* Post Navigation */
-    .post-navigation {
-      padding: 2rem 0;
-      border-top: 1px solid #e2e8f0;
-    }
-    
-    .nav-links {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-    
-    .back-to-blog {
-      color: #2563eb;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    
-    .back-to-blog:hover {
-      text-decoration: underline;
-    }
-    
-    .post-share {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-    
-    .share-label {
-      color: #64748b;
-      font-size: 0.9rem;
-    }
-    
-    .share-buttons {
-      display: flex;
-      gap: 0.5rem;
-    }
-    
-    .share-btn {
-      padding: 0.5rem 1rem;
-      background: #f8fafc;
-      color: #1e293b;
-      text-decoration: none;
-      border-radius: 6px;
-      font-size: 0.9rem;
-      transition: all 0.2s ease;
-    }
-    
-    .share-btn:hover {
-      background: #e2e8f0;
-    }
-    
-    .share-btn.linkedin:hover {
-      background: #0077b5;
-      color: white;
-    }
-    
-    .share-btn.facebook:hover {
-      background: #1877f2;
-      color: white;
-    }
-
-    /* Post CTA */
-    .post-cta {
-      padding: 3rem 0;
-      background: #f8fafc;
-    }
-    
-    .cta-card {
-      background: white;
-      padding: 3rem;
-      border-radius: 16px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    .bio-content {
+      flex-direction: column;
       text-align: center;
-      max-width: 600px;
-      margin: 0 auto;
     }
-    
-    .cta-card h3 {
-      margin-bottom: 1rem;
+    .nav-links {
+      flex-direction: column;
+      text-align: center;
     }
-    
-    .cta-card p {
-      margin-bottom: 2rem;
-      color: #64748b;
+    .post-share {
+      flex-direction: column;
     }
-    
     .cta-buttons {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
+      flex-direction: column;
     }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .article-title {
-        font-size: 2rem;
-      }
-      
-      .article-meta {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      
-      .bio-content {
-        flex-direction: column;
-        text-align: center;
-      }
-      
-      .nav-links {
-        flex-direction: column;
-        text-align: center;
-      }
-      
-      .post-share {
-        flex-direction: column;
-      }
-      
-      .cta-buttons {
-        flex-direction: column;
-      }
-    }
-
-    /* Button Styles */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.875rem 1.75rem;
-      background: #2563eb;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: 600;
-      transition: all 0.2s ease;
-      border: none;
-      cursor: pointer;
-    }
-    
-    .btn:hover {
-      background: #1d4ed8;
-      transform: translateY(-1px);
-    }
-    
-    .btn-primary {
-      background: #2563eb;
-      color: white;
-    }
-    
-    .btn-secondary {
-      background: #f8fafc;
-      color: #1e293b;
-      border: 2px solid #e2e8f0;
-    }
-    
-    .btn-secondary:hover {
-      background: #e2e8f0;
-    }
-  </style>
+  }
+</style>
