@@ -13,6 +13,15 @@ const {
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="description" content={description} />
     <title>{title}</title>
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href={`https://syedbokhari.com.au${pathname || ''}`} />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png" />
+    
     <link rel="stylesheet" href="/src/styles/global.css" />
 
     <!-- Sitemap reference -->
@@ -60,6 +69,15 @@ const {
     }
   ]
 }
+    </script>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8F52E8QTN1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8F52E8QTN1');
     </script>
   </head>
 
