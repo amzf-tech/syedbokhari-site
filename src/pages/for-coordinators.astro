@@ -1,0 +1,135 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pathname = Astro.url.pathname;
+
+const title = "Information for Support Coordinators | Syed Bokhari";
+const description = "Specialist NDIS Behaviour Support capacity and referral information for Support Coordinators in Melbourne West.";
+---
+
+<BaseLayout title={title} pathname={pathname} description={description}>
+  <section class="sc-hero">
+    <div class="container">
+      <p class="kicker">Streamlined Referrals</p>
+      <h1 class="h1">Partnering with Support Coordinators</h1>
+      <p class="subtitle">I provide timely, compliant, and evidence-based PBS services so you can ensure your participants get the best outcomes without the waitlist headache.</p>
+    </div>
+  </section>
+
+  <section class="capacity-bar">
+    <div class="container">
+      <div class="status-card">
+        <span class="pulse"></span>
+        <strong>Current Capacity:</strong> Accepting new FBAs and Plan Reviews for Feb/March 2026.
+      </div>
+    </div>
+  </section>
+
+  <section class="sc-details">
+    <div class="container">
+      <div class="sc-grid">
+        <div class="info-group">
+          <h2>Why refer to me?</h2>
+          <div class="value-prop">
+            <h4>✅ Registered Status</h4>
+            <p>I am a Registered Behaviour Support Practitioner. I handle all NDIS Commission reporting and Restrictive Practice requirements internally.</p>
+          </div>
+          <div class="value-prop">
+            <h4>✅ 4-Week Turnaround</h4>
+            <p>I aim to deliver draft Behaviour Support Plans within 4 weeks of completing the Functional Behaviour Assessment.</p>
+          </div>
+          <div class="value-prop">
+            <h4>✅ Travel Transparency</h4>
+            <p>I service Melbourne's West (Tarneit, Werribee, Melton). Travel is billed strictly per NDIS guidelines (MM1) with grouping options available.</p>
+          </div>
+
+          <hr class="divider" />
+
+          <h3>Primary Service Areas</h3>
+          <p class="text-secondary">Providing face-to-face support across the Western Suburbs:</p>
+          <div class="suburb-tags">
+            <span>Tarneit</span> <span>Werribee</span> <span>Hoppers Crossing</span> 
+            <span>Melton</span> <span>Point Cook</span> <span>Wyndham Vale</span>
+          </div>
+        </div>
+
+        <div class="referral-box">
+          <h3>Direct Intake</h3>
+          <p>Skip the initial back-and-forth. Use my clinical intake form to provide all necessary data in one go.</p>
+          
+          <a href="/referrals" class="btn btn-primary full-width">Submit a Referral</a>
+          
+          <div class="contact-divider">OR</div>
+          
+          <div class="direct-contact">
+            <p class="contact-label">Call for Case Discussion</p>
+            <a href="tel:0411072466" class="phone-link">0411 072 466</a>
+          </div>
+
+          <a href="https://calendly.com/syed-syedbokhari/30min" class="btn btn-outline full-width">Book a Case Discussion</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .sc-hero { padding: 5rem 0 3rem; background: #f8fafc; text-align: center; }
+  
+  .capacity-bar { background: #1e293b; color: white; padding: 1rem 0; text-align: center; }
+  
+  .pulse { 
+    height: 10px; width: 10px; background: #22c55e; border-radius: 50%; 
+    display: inline-block; margin-right: 10px; 
+    animation: pulse 2s infinite; 
+  }
+  
+  @keyframes pulse { 
+    0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); } 
+    70% { box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); } 
+    100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); } 
+  }
+
+  .sc-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 4rem; padding: 4rem 0; }
+  
+  .value-prop { margin-bottom: 2rem; }
+  .value-prop h4 { margin-bottom: 0.5rem; color: var(--primary); }
+  
+  .divider { border: 0; border-top: 1px solid #e2e8f0; margin: 2rem 0; }
+
+  .suburb-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+  .suburb-tags span { 
+    background: #f1f5f9; padding: 0.4rem 0.8rem; border-radius: 6px; 
+    font-size: 0.85rem; color: #475569; font-weight: 600; 
+  }
+
+  .referral-box { 
+    background: white; padding: 2.5rem; border-radius: 16px; 
+    border: 2px solid var(--primary); height: fit-content; 
+    position: sticky; top: 100px; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  }
+
+  .contact-divider { 
+    text-align: center; margin: 1.5rem 0; font-size: 0.75rem; 
+    color: #94a3b8; font-weight: 800; text-transform: uppercase; 
+    letter-spacing: 0.05em;
+  }
+
+  .direct-contact { 
+    text-align: center; margin-bottom: 1.5rem; padding: 1.25rem; 
+    background: #f8fafc; border-radius: 12px; border: 1px dashed #cbd5e1;
+  }
+  
+  .contact-label { font-size: 0.85rem; color: #64748b; margin-bottom: 0.25rem; }
+  
+  .phone-link { 
+    font-size: 1.5rem; font-weight: 800; color: var(--primary); 
+    text-decoration: none; display: block;
+  }
+
+  .full-width { width: 100%; margin-bottom: 1rem; display: block; text-align: center; }
+
+  @media (max-width: 992px) {
+    .sc-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .referral-box { position: static; }
+  }
+</style>
