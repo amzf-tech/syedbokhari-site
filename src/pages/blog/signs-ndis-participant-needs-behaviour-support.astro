@@ -1,4 +1,5 @@
 ---
+// Metadata and imports remain consistent with your template
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
 const title = "5 Signs Your NDIS Participant Might Benefit from Behaviour Support | Syed Bokhari";
@@ -15,93 +16,39 @@ const formattedDate = new Date(date).toLocaleDateString('en-AU', {
 ---
 
 <BaseLayout title={title} pathname={Astro.url.pathname} description={description}>
-  <!-- ARTICLE HEADER -->
   <article class="blog-post">
-    <header class="article-header">
-      <div class="container">
-        <div class="article-meta">
-          <span class="article-category">{category}</span>
-          <span class="article-date">{formattedDate}</span>
-          <span class="article-read-time">{readTime}</span>
-        </div>
-        
-        <h1 class="article-title">5 Signs Your NDIS Participant Might Benefit from Behaviour Support</h1>
-        
-        <div class="article-tags">
-          {tags.map(tag => (
-            <span class="tag">{tag}</span>
-          ))}
-        </div>
-      </div>
-    </header>
-
-    <!-- ARTICLE CONTENT -->
     <div class="article-content">
       <div class="container">
         <div class="content-wrapper">
           <div class="post-content">
-            <h2>Introduction</h2>
-            <p>Behaviour support can be a valuable service for NDIS participants, but knowing when to engage a behaviour support practitioner isn't always clear. Here are five key signs that suggest behaviour support might be beneficial:</p>
+            <h2>Understanding the Goal of Support</h2>
+            <p>As a <strong>Registered NDIS Behaviour Support Practitioner</strong>, I often tell families that behaviour support isn't just about "stopping" a behaviour—it's about increasing the person's quality of life so that the behaviour is no longer needed.</p>
 
-            <h2>1. Difficulty Achieving NDIS Goals Due to Behaviours</h2>
-            <p>If behaviours of concern are consistently preventing progress toward NDIS goals, behaviour support can help identify triggers and develop strategies to address these barriers. This might include:</p>
+            
+
+            <h2>1. Difficulty Achieving NDIS Goals</h2>
+            <p>If behaviours of concern are acting as a "gatekeeper" to the community, it's time for professional intervention. We look at:</p>
             <ul>
-              <li>Difficulty participating in community activities</li>
-              <li>Challenges with daily living skills development</li>
-              <li>Barriers to employment or education goals</li>
-              <li>Social inclusion challenges</li>
+              <li><strong>Community Access:</strong> Is the participant being asked to leave venues or missing out on outings?</li>
+              <li><strong>Skill Building:</strong> Are behaviours interrupting the time spent learning new daily living skills?</li>
             </ul>
 
-            <h2>2. Increased Restrictive Practices or Crisis Situations</h2>
-            <p>Frequent use of restrictive practices or regular crisis situations indicate that proactive behaviour support strategies could help reduce the need for such interventions. Watch for:</p>
-            <ul>
-              <li>Regular use of physical intervention</li>
-              <li>Frequent emergency service calls</li>
-              <li>Repeated placement breakdowns</li>
-              <li>High staff turnover due to challenging behaviours</li>
-            </ul>
+            <h2>2. Use of Restrictive Practices</h2>
+            <p>If you find yourself using physical restraint, locking cupboards, or using "PRN" (as-needed) medication frequently, the NDIS requires a regulated <strong>Behaviour Support Plan</strong>. This ensures these practices are monitored and, eventually, faded out through safer alternatives.</p>
 
-            <h2>3. Support Team Stress and Inconsistency</h2>
-            <p>When support workers or family members express stress, uncertainty, or inconsistency in responding to behaviours, professional behaviour support can provide clarity and unified approaches:</p>
-            <ul>
-              <li>Staff requesting additional training or support</li>
-              <li>Inconsistent responses across team members</li>
-              <li>High staff turnover or burnout</li>
-              <li>Family members feeling overwhelmed</li>
-            </ul>
+            <h2>3. Support Team Burnout</h2>
+            <p>High staff turnover is a major red flag. If support workers feel unsafe or confused about how to respond, the resulting inconsistency often makes the participant's behaviour more intense. A unified <strong>PBS plan</strong> brings the whole team onto the same page.</p>
 
-            <h2>4. Quality of Life Concerns</h2>
-            <p>If behaviours are limiting community participation, relationships, or daily activities, behaviour support can help develop strategies to improve overall quality of life:</p>
-            <ul>
-              <li>Social isolation or withdrawal</li>
-              <li>Limited community access</li>
-              <li>Difficulty maintaining relationships</li>
-              <li>Reduced independence in daily activities</li>
-            </ul>
+            <h2>4. Social and Emotional Withdrawal</h2>
+            <p>Sometimes the sign isn't an "outward" behaviour like hitting or shouting, but an "inward" one—like refusal to leave a room or social withdrawal. Behaviour support helps uncover the sensory or emotional triggers behind this "shutting down."</p>
 
-            <h2>5. Transition or Change-Related Challenges</h2>
-            <p>Major life transitions often trigger increased support needs where behaviour support can provide stability:</p>
-            <ul>
-              <li>Moving to new accommodation</li>
-              <li>Changing service providers</li>
-              <li>Staff turnover or roster changes</li>
-              <li>Life stage transitions (school to adult services)</li>
-            </ul>
-
-            <h2>What to Do Next</h2>
-            <p>If you recognize any of these signs, consider reaching out for an initial consultation. Behaviour support works best when implemented proactively rather than waiting for crisis situations.</p>
-
-            <h2>Early Intervention Benefits</h2>
-            <p>Engaging behaviour support early can prevent issues from escalating, reduce the need for restrictive practices, and improve outcomes for everyone involved. Don't wait until crisis point - early intervention is key to success.</p>
-
-            <h2>Next Steps</h2>
-            <p>Ready to explore behaviour support options? <a href="/contact">Contact me</a> for a free initial consultation to discuss your specific situation and how behaviour support might help.</p>
+            <h2>5. Major Life Transitions</h2>
+            <p>The NDIS journey is full of changes. Whether it's moving from school to work or moving into <strong>SDA/SIL accommodation</strong>, these transitions are high-stress periods where proactive support can prevent a crisis before it starts.</p>
           </div>
 
-          <!-- AUTHOR BIO -->
           <div class="author-bio">
             <div class="bio-header">
-              <h3>About the Author</h3>
+              <h3>Clinical Lead</h3>
             </div>
             <div class="bio-content">
               <div class="bio-photo">
@@ -109,367 +56,20 @@ const formattedDate = new Date(date).toLocaleDateString('en-AU', {
               </div>
               <div class="bio-text">
                 <h4>Syed Bokhari</h4>
-                <p class="bio-title">Behaviour Support Practitioner (Under Supervision)</p>
+                <p class="bio-title">Registered NDIS Behaviour Support Practitioner</p>
                 <p class="bio-description">
-                  Supporting NDIS participants, families, and provider teams with positive, respectful, 
-                  and evidence-informed behaviour support across Australia.
+                  Specialising in person-centred assessments that reduce the need for restrictive practices while empowering participants to live more independent, fulfilling lives across Australia.
                 </p>
                 <div class="bio-links">
-                  <a href="/about">Learn More →</a>
-                  <a href="/contact">Get In Touch →</a>
+                  <a href="/about">Professional Profile →</a>
+                  <a href="/contact">Refer a Participant →</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </article>
+    </div>
+  </article>
 
-    <!-- NAVIGATION -->
-    <nav class="post-navigation">
-      <div class="container">
-        <div class="nav-links">
-          <a href="/blog" class="nav-link back-to-blog">
-            ← Back to Blog
-          </a>
-          
-          <div class="post-share">
-            <span class="share-label">Share this article:</span>
-            <div class="share-buttons">
-              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://syedbokhari.com.au/blog/signs-ndis-participant-needs-behaviour-support" 
-                 target="_blank" class="share-btn linkedin">
-                LinkedIn
-              </a>
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https://syedbokhari.com.au/blog/signs-ndis-participant-needs-behaviour-support" 
-                 target="_blank" class="share-btn facebook">
-                Facebook
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
-
-    <!-- CTA SECTION -->
-    <section class="post-cta">
-      <div class="container">
-        <div class="cta-card">
-          <h3>Need Behaviour Support?</h3>
-          <p>Let's discuss how I can help you or your loved one achieve your NDIS goals.</p>
-          <div class="cta-buttons">
-            <a href="/contact" class="btn btn-primary">Book Free Consultation</a>
-            <a href="/services" class="btn btn-secondary">View Services</a>
-          </div>
-        </div>
-      </div>
-    </section>
   </BaseLayout>
-
-  <style>
-    /* Same styles as the first blog post - include all the CSS here */
-    .article-header {
-      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-      padding: 3rem 0;
-    }
-    
-    .article-meta {
-      display: flex;
-      gap: 1rem;
-      align-items: center;
-      margin-bottom: 1rem;
-      flex-wrap: wrap;
-    }
-    
-    .article-category {
-      background: #2563eb;
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      font-size: 0.9rem;
-      font-weight: 500;
-    }
-    
-    .article-date {
-      color: #64748b;
-    }
-    
-    .article-read-time {
-      color: #64748b;
-      font-size: 0.9rem;
-    }
-    
-    .article-title {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      line-height: 1.2;
-    }
-    
-    .article-tags {
-      display: flex;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-    }
-    
-    .tag {
-      background: white;
-      color: #64748b;
-      padding: 0.25rem 0.75rem;
-      border-radius: 12px;
-      font-size: 0.8rem;
-      border: 1px solid #e2e8f0;
-    }
-
-    .article-content {
-      padding: 3rem 0;
-    }
-    
-    .content-wrapper {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    
-    .post-content {
-      line-height: 1.7;
-    }
-    
-    .post-content h2 {
-      margin-top: 2rem;
-      margin-bottom: 1rem;
-      color: #1e293b;
-    }
-    
-    .post-content h3 {
-      margin-top: 1.5rem;
-      margin-bottom: 0.75rem;
-      color: #1e293b;
-    }
-    
-    .post-content p {
-      margin-bottom: 1.5rem;
-    }
-    
-    .post-content ul {
-      margin-bottom: 1.5rem;
-      padding-left: 1.5rem;
-    }
-    
-    .post-content li {
-      margin-bottom: 0.5rem;
-    }
-
-    .author-bio {
-      background: #f8fafc;
-      border-radius: 16px;
-      padding: 2rem;
-      margin: 3rem 0;
-    }
-    
-    .bio-header {
-      margin-bottom: 1.5rem;
-    }
-    
-    .bio-content {
-      display: flex;
-      gap: 1.5rem;
-      align-items: flex-start;
-    }
-    
-    .bio-photo {
-      flex-shrink: 0;
-    }
-    
-    .bio-photo img {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-    
-    .bio-text {
-      flex: 1;
-    }
-    
-    .bio-title {
-      color: #64748b;
-      font-size: 0.9rem;
-      margin-bottom: 0.5rem;
-    }
-    
-    .bio-description {
-      margin-bottom: 1rem;
-    }
-    
-    .bio-links {
-      display: flex;
-      gap: 1rem;
-    }
-    
-    .bio-links a {
-      color: #2563eb;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    
-    .bio-links a:hover {
-      text-decoration: underline;
-    }
-
-    .post-navigation {
-      padding: 2rem 0;
-      border-top: 1px solid #e2e8f0;
-    }
-    
-    .nav-links {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-    
-    .back-to-blog {
-      color: #2563eb;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    
-    .back-to-blog:hover {
-      text-decoration: underline;
-    }
-    
-    .post-share {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-    
-    .share-label {
-      color: #64748b;
-      font-size: 0.9rem;
-    }
-    
-    .share-buttons {
-      display: flex;
-      gap: 0.5rem;
-    }
-    
-    .share-btn {
-      padding: 0.5rem 1rem;
-      background: #f8fafc;
-      color: #1e293b;
-      text-decoration: none;
-      border-radius: 6px;
-      font-size: 0.9rem;
-      transition: all 0.2s ease;
-    }
-    
-    .share-btn:hover {
-      background: #e2e8f0;
-    }
-    
-    .share-btn.linkedin:hover {
-      background: #0077b5;
-      color: white;
-    }
-    
-    .share-btn.facebook:hover {
-      background: #1877f2;
-      color: white;
-    }
-
-    .post-cta {
-      padding: 3rem 0;
-      background: #f8fafc;
-    }
-    
-    .cta-card {
-      background: white;
-      padding: 3rem;
-      border-radius: 16px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    
-    .cta-card h3 {
-      margin-bottom: 1rem;
-    }
-    
-    .cta-card p {
-      margin-bottom: 2rem;
-      color: #64748b;
-    }
-    
-    .cta-buttons {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    @media (max-width: 768px) {
-      .article-title {
-        font-size: 2rem;
-      }
-      
-      .article-meta {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      
-      .bio-content {
-        flex-direction: column;
-        text-align: center;
-      }
-      
-      .nav-links {
-        flex-direction: column;
-        text-align: center;
-      }
-      
-      .post-share {
-        flex-direction: column;
-      }
-      
-      .cta-buttons {
-        flex-direction: column;
-      }
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.875rem 1.75rem;
-      background: #2563eb;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: 600;
-      transition: all 0.2s ease;
-      border: none;
-      cursor: pointer;
-    }
-    
-    .btn:hover {
-      background: #1d4ed8;
-      transform: translateY(-1px);
-    }
-    
-    .btn-primary {
-      background: #2563eb;
-      color: white;
-    }
-    
-    .btn-secondary {
-      background: #f8fafc;
-      color: #1e293b;
-      border: 2px solid #e2e8f0;
-    }
-    
-    .btn-secondary:hover {
-      background: #e2e8f0;
-    }
-  </style>
-</BaseLayout>

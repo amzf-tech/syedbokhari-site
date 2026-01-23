@@ -2,757 +2,190 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pathname = Astro.url.pathname;
 
-const title = "Contact Syed Bokhari | NDIS Behaviour Support Enquiries";
-const description = "Get in touch with Syed Bokhari for professional behaviour support enquiries. Free consultation available. Phone: 0411 072 466, Email: syed@syedbokhari.com.au";
+const title = "Contact Syed Bokhari | NDIS Behaviour Support Enquiry";
+const description = "Get in touch for NDIS behaviour support enquiries, referrals, or administrative support across Australia.";
 ---
 
 <BaseLayout title={title} pathname={pathname} description={description}>
-  <!-- PAGE HEADER -->
-  <section class="page-header">
+  <section class="contact-header">
     <div class="container">
-      <h1 class="h1">Get In Touch</h1>
-      <p class="subtitle">Ready to discuss behaviour support options? Let's talk.</p>
+      <p class="kicker">Get In Touch</p>
+      <h1 class="h1">How can I help you today?</h1>
+      <p class="subtitle">Please select the most relevant contact method below to ensure a timely response.</p>
     </div>
   </section>
 
-  <!-- CONTACT OVERVIEW -->
-  <section class="contact-overview">
+  <section class="contact-channels">
     <div class="container">
-      <div class="overview-content">
-        <h2 class="h2">Professional Behaviour Support Enquiries</h2>
-        <p class="p lead">
-          I'm here to discuss how behaviour support can help achieve your NDIS goals. 
-          Whether you're a participant, family member, or provider, I offer a free initial consultation 
-          to explore your needs and how I can support you.
-        </p>
+      <div class="channels-grid">
         
-        <div class="contact-highlights">
-          <div class="highlight">
-            <div class="highlight-icon">🎯</div>
-            <div>
-              <h4>Free Initial Consultation</h4>
-              <p>30-minute discussion to understand your needs</p>
-            </div>
-          </div>
-          
-          <div class="highlight">
-            <div class="highlight-icon">⚡</div>
-            <div>
-              <h4>Quick Response</h4>
-              <p>I'll get back to you within 24-48 hours</p>
-            </div>
-          </div>
-          
-          <div class="highlight">
-            <div class="highlight-icon">🌏</div>
-            <div>
-              <h4>Australia-Wide Service</h4>
-              <p>Remote and in-person support available</p>
-            </div>
-          </div>
+        <div class="channel-card highlight">
+          <div class="channel-icon">📝</div>
+          <h3>New Referrals</h3>
+          <p>Support Coordinators or families looking to start services for a new participant.</p>
+          <a href="/referrals" class="btn btn-primary">Go to Referral Form</a>
+          <span class="email-link">referrals@syedbokhari.com.au</span>
         </div>
+
+        <div class="channel-card">
+          <div class="channel-icon">💬</div>
+          <h3>General Enquiries</h3>
+          <p>General questions about PBS, my approach, or service availability.</p>
+          <a href="mailto:enquiries@syedbokhari.com.au" class="btn btn-outline">Email Enquiries</a>
+          <span class="email-link">enquiries@syedbokhari.com.au</span>
+        </div>
+
+        <div class="channel-card">
+          <div class="channel-icon">🛠️</div>
+          <h3>Existing Support</h3>
+          <p>For current participants, provider teams, or family members already working with me.</p>
+          <a href="mailto:support@syedbokhari.com.au" class="btn btn-outline">Email Support</a>
+          <span class="email-link">support@syedbokhari.com.au</span>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- CONTACT METHODS -->
-  <section class="contact-methods">
+  <section class="booking-form-section">
     <div class="container">
-      <h2 class="h2 text-center">How Would You Like to Connect?</h2>
-      
-      <div class="methods-grid">
-        <!-- Direct Contact -->
-        <div class="method-card direct-contact">
-          <div class="method-icon">📞</div>
-          <h3>Direct Contact</h3>
-          <p>Get in touch immediately for urgent enquiries</p>
+      <div class="dual-column">
+        
+        <div class="calendly-intro">
+          <h2>Book a 30-Min Consultation</h2>
+          <p>Prefer to speak directly? Schedule a 30-minute introductory meeting via Calendly to discuss your needs in detail.</p>
           
-          <div class="contact-details">
-            <div class="contact-item">
-              <div class="contact-icon">📧</div>
-              <div>
-                <strong>Email</strong>
-                <a href="mailto:syed@syedbokhari.com.au">syed@syedbokhari.com.au</a>
-              </div>
-            </div>
+          <div class="calendly-embed-container">
+            <a href="https://calendly.com/syed-syedbokhari/30min" target="_blank" class="btn btn-primary btn-large">Schedule Meeting on Calendly</a>
+            <p class="small-note">Opens in a new tab</p>
+          </div>
+
+          <div class="admin-note">
+            <strong>Admin & Billing:</strong> For accounts or invoicing, please contact <a href="mailto:admin@syedbokhari.com.au">admin@syedbokhari.com.au</a>
+          </div>
+        </div>
+
+        <div class="form-wrapper">
+          <div class="contact-form-card">
+            <h3>Quick Message</h3>
+            <p>Send a quick enquiry and I will respond via email within 2 business days.</p>
             
-            <div class="contact-item">
-              <div class="contact-icon">📱</div>
-              <div>
-                <strong>Phone</strong>
-                <a href="tel:0411072466">0411 072 466</a>
+            <form action="https://formspree.io/f/mykegzwn" method="POST" class="contact-form">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required placeholder="Full Name" />
               </div>
-            </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="_replyto" required placeholder="email@example.com" />
+              </div>
+              <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="5" required placeholder="How can I help?"></textarea>
+              </div>
+              
+              <input type="hidden" name="_next" value="https://syedbokhari.com.au/thank-you" />
+              <input type="hidden" name="_subject" value="New Website General Enquiry" />
+              
+              <button type="submit" class="btn btn-primary full-width">Send Message</button>
+            </form>
           </div>
-          
-          <div class="availability">
-            <strong>Availability:</strong>
-            <p>Monday - Friday: 9:00 AM - 5:00 PM (AEST)</p>
-            <p>After hours by appointment</p>
-          </div>
         </div>
 
-        <!-- Contact Form -->
-        <div class="method-card contact-form-card">
-          <div class="method-icon">✉️</div>
-          <h3>Send a Message</h3>
-          <p>Use the form below and I'll respond within 24-48 hours</p>
-          
-          <form
-            class="contact-form"
-            method="POST"
-            action="https://formspree.io/f/xvzpgpqo"
-            id="contact-form"
-          >
-            <div class="form-group">
-              <label for="name">
-                <span>Your Name *</span>
-                <input 
-                  type="text" 
-                  id="name" 
-                  name="name" 
-                  required 
-                  autocomplete="name"
-                  placeholder="Enter your full name"
-                />
-              </label>
-            </div>
-
-            <div class="form-group">
-              <label for="email">
-                <span>Email Address *</span>
-                <input 
-                  type="email" 
-                  id="email" 
-                  name="email" 
-                  required 
-                  autocomplete="email"
-                  placeholder="your.email@example.com"
-                />
-              </label>
-            </div>
-
-            <div class="form-group">
-              <label for="phone">
-                <span>Phone Number (optional)</span>
-                <input 
-                  type="tel" 
-                  id="phone" 
-                  name="phone" 
-                  autocomplete="tel"
-                  placeholder="04XX XXX XXX"
-                />
-              </label>
-            </div>
-
-            <div class="form-group">
-              <label for="enquiry-type">
-                <span>Type of Enquiry *</span>
-                <select id="enquiry-type" name="enquiry-type" required>
-                  <option value="">Please select...</option>
-                  <option value="participant">NDIS Participant/Family</option>
-                  <option value="provider">Service Provider</option>
-                  <option value="general">General Enquiry</option>
-                  <option value="supervision">Supervision Arrangement</option>
-                </select>
-              </label>
-            </div>
-
-            <div class="form-group">
-              <label for="message">
-                <span>Your Message *</span>
-                <textarea 
-                  id="message" 
-                  name="message" 
-                  rows="6" 
-                  required
-                  placeholder="Tell me about your situation and how I can help..."
-                ></textarea>
-              </label>
-            </div>
-
-            <!-- Spam protection -->
-            <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off" />
-
-            <!-- Email subject -->
-            <input
-              type="hidden"
-              name="_subject"
-              value="New website enquiry — syedbokhari.com.au"
-            />
-
-            <!-- Redirect after submission -->
-            <input type="hidden" name="_next" value="/thank-you" />
-
-            <button class="btn btn-primary btn-large" type="submit">
-              Send Message
-              <span class="btn-icon">→</span>
-            </button>
-
-            <div class="form-notice">
-              <p class="small">
-                <strong>Please note:</strong> This form is for professional enquiries only. 
-                Please do not include sensitive personal information. 
-                This website is not monitored for urgent matters. 
-                If there is immediate risk or emergency, call 000.
-              </p>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- QUICK QUESTIONS -->
-  <section class="quick-questions">
-    <div class="container">
-      <h2 class="h2 text-center">Frequently Asked Questions</h2>
-      
-      <div class="questions-grid">
-        <div class="question-card">
-          <h4>How quickly will you respond?</h4>
-          <p>I typically respond to enquiries within 24-48 hours during business days.</p>
-        </div>
-        
-        <div class="question-card">
-          <h4>Do you offer free consultations?</h4>
-          <p>Yes, I offer a free 30-minute initial consultation to discuss your needs and how I can help.</p>
-        </div>
-        
-        <div class="question-card">
-          <h4>What areas do you service?</h4>
-          <p>I provide behaviour support services across Australia, both remotely and in-person where possible.</p>
-        </div>
-        
-        <div class="question-card">
-          <h4>Can I contact you after hours?</h4>
-          <p>My standard hours are 9-5 AEST, but I can arrange after-hours appointments for urgent matters.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- REGISTRATION NOTICE -->
-  <section class="registration-notice">
-    <div class="container">
-      <div class="notice-card">
-        <div class="notice-icon">ℹ️</div>
-        <div class="notice-content">
-          <h3>Registration & Service Delivery</h3>
-          <p>
-            My application is currently under assessment by the NDIS Quality and Safeguards Commission 
-            (Alternate Pathway). Where services are delivered, they are delivered under supervision and 
-            through an appropriately registered organisation, in line with applicable NDIS requirements. 
-            Independent delivery under my own NDIS registration will commence following approval.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SOCIAL PROOF -->
-  <section class="social-proof">
-    <div class="container">
-      <h2 class="h2 text-center">Connect With Me</h2>
-      <p class="text-center text-secondary mb-4">
-        Stay updated with behaviour support insights and professional updates
-      </p>
-      
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/syed-fr-bokhari/" target="_blank" rel="noopener noreferrer" class="social-card linkedin">
-          <div class="social-icon">💼</div>
-          <h4>LinkedIn</h4>
-          <p>Professional updates and industry insights</p>
-          <span class="social-handle">@syed-fr-bokhari</span>
-        </a>
-        
-        <a href="https://www.facebook.com/syedbokharibsp" target="_blank" rel="noopener noreferrer" class="social-card facebook">
-          <div class="social-icon">📘</div>
-          <h4>Facebook</h4>
-          <p>Community updates and behaviour support tips</p>
-          <span class="social-handle">@syedbokharibsp</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- EMERGENCY NOTICE -->
-  <section class="emergency-notice">
-    <div class="container">
-      <div class="emergency-card">
-        <div class="emergency-icon">🚨</div>
-        <div class="emergency-content">
-          <h3>Emergency Situations</h3>
-          <p>
-            <strong>This website is not monitored for urgent matters.</strong> 
-            If there is immediate risk to someone's safety or an emergency situation, 
-            please call 000 for emergency services.
-          </p>
-          <p>
-            For urgent behaviour support needs, contact your current service provider 
-            or the NDIS Quality and Safeguards Commission on 1800 035 544.
-          </p>
-        </div>
       </div>
     </div>
   </section>
 </BaseLayout>
 
 <style>
-  /* Page Header */
-  .page-header {
-    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
-    color: white;
-    padding: 3rem 0;
-    text-align: center;
-  }
-  
-  .page-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .subtitle {
-    font-size: 1.2rem;
-    opacity: 0.9;
-  }
-
-  /* Contact Overview */
-  .contact-overview {
-    padding: 3rem 0;
+  .contact-header {
     background: #f8fafc;
-  }
-  
-  .overview-content {
-    max-width: 800px;
-    margin: 0 auto;
+    padding: 5rem 0 3rem;
     text-align: center;
   }
-  
-  .lead {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    margin-bottom: 2rem;
-  }
-  
-  .contact-highlights {
+
+  .channels-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    margin-top: 2rem;
-  }
-  
-  .highlight {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    text-align: left;
-  }
-  
-  .highlight-icon {
-    font-size: 2rem;
-    flex-shrink: 0;
-  }
-  
-  .highlight h4 {
-    margin-bottom: 0.5rem;
-    color: #1e293b;
+    margin: -2rem 0 4rem;
   }
 
-  /* Contact Methods */
-  .contact-methods {
-    padding: 3rem 0;
+  .channel-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease;
   }
-  
-  .methods-grid {
+
+  .channel-card.highlight {
+    border: 2px solid var(--primary);
+    transform: scale(1.05);
+    z-index: 10;
+  }
+
+  .channel-icon { font-size: 3rem; margin-bottom: 1rem; }
+
+  .email-link {
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-family: monospace;
+  }
+
+  .booking-form-section { padding: 5rem 0; background: #fff; }
+
+  .dual-column {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    margin-top: 2rem;
-  }
-  
-  .method-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 16px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .method-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-  
-  .method-card h3 {
-    margin-bottom: 0.5rem;
-  }
-  
-  .contact-details {
-    margin: 2rem 0;
-  }
-  
-  .contact-item {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin: 1rem 0;
-  }
-  
-  .contact-icon {
-    font-size: 1.5rem;
-    width: 30px;
-    text-align: center;
-  }
-  
-  .contact-item strong {
-    display: block;
-    margin-bottom: 0.25rem;
-  }
-  
-  .contact-item a {
-    color: #2563eb;
-    text-decoration: none;
-  }
-  
-  .contact-item a:hover {
-    text-decoration: underline;
-  }
-  
-  .availability {
-    background: #f8fafc;
-    padding: 1rem;
-    border-radius: 8px;
-    margin-top: 1rem;
-  }
-  
-  .availability strong {
-    color: #1e293b;
+    gap: 4rem;
+    align-items: start;
   }
 
-  /* Contact Form */
+  .calendly-intro h2 { margin-bottom: 1.5rem; }
+  .calendly-embed-container { margin: 2rem 0; }
+  .small-note { font-size: 0.8rem; color: var(--muted); margin-top: 0.5rem; }
+
+  .admin-note {
+    margin-top: 3rem;
+    padding: 1.5rem;
+    background: #f1f5f9;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    border-left: 4px solid var(--primary);
+  }
+
   .contact-form-card {
-    background: white;
-    padding: 2rem;
+    background: #f8fafc;
+    padding: 2.5rem;
     border-radius: 16px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border);
   }
+
+  .contact-form-card h3 { margin-bottom: 0.5rem; }
+
+  .form-group { margin-bottom: 1.5rem; }
   
-  .contact-form {
-    display: grid;
-    gap: 1.25rem;
-  }
-  
-  .form-group label {
-    display: grid;
-    gap: 0.5rem;
-  }
-  
-  .form-group label span {
-    font-weight: 600;
-    color: #1e293b;
-  }
-  
-  .form-group input,
-  .form-group select,
-  .form-group textarea {
+  label { display: block; margin-bottom: 0.5rem; font-weight: 600; color: #1e293b; }
+
+  input, textarea {
     width: 100%;
-    padding: 0.875rem;
-    border: 2px solid #e2e8f0;
-    border-radius: 8px;
-    background: white;
-    font: inherit;
-    transition: border-color 0.2s ease;
-  }
-  
-  .form-group input:focus,
-  .form-group select:focus,
-  .form-group textarea:focus {
-    outline: none;
-    border-color: #2563eb;
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
-  }
-  
-  .form-group textarea {
-    resize: vertical;
-    min-height: 120px;
-  }
-  
-  .btn-large {
-    padding: 1rem 2rem;
-    font-size: 1.1rem;
-  }
-  
-  .btn-icon {
-    margin-left: 0.5rem;
-  }
-  
-  .form-notice {
-    background: #f8fafc;
-    padding: 1rem;
-    border-radius: 8px;
-    margin-top: 1rem;
-  }
-  
-  .form-notice .small {
-    color: #64748b;
-    font-size: 0.875rem;
-    line-height: 1.5;
-  }
-  
-  .honeypot {
-    display: none;
+    padding: 0.75rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-family: inherit;
   }
 
-  /* Quick Questions */
-  .quick-questions {
-    padding: 3rem 0;
-    background: #f8fafc;
-  }
-  
-  .questions-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-  }
-  
-  .question-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .question-card h4 {
-    color: #2563eb;
-    margin-bottom: 0.5rem;
-  }
+  .full-width { width: 100%; }
 
-  /* Registration Notice */
-  .registration-notice {
-    padding: 3rem 0;
-  }
-  
-  .notice-card {
-    background: #eff6ff;
-    border: 2px solid #2563eb;
-    border-radius: 16px;
-    padding: 2rem;
-    display: flex;
-    gap: 1.5rem;
-    align-items: flex-start;
-  }
-  
-  .notice-icon {
-    font-size: 2rem;
-    flex-shrink: 0;
-  }
-  
-  .notice-content h3 {
-    color: #1e293b;
-    margin-bottom: 0.5rem;
-  }
-
-  /* Social Proof */
-  .social-proof {
-    padding: 3rem 0;
-    background: #f8fafc;
-  }
-  
-  .social-links {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-  }
-  
-  .social-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-decoration: none;
-    color: inherit;
-    text-align: center;
-    transition: all 0.2s ease;
-  }
-  
-  .social-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-  }
-  
-  .social-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-  
-  .social-card h4 {
-    margin-bottom: 0.5rem;
-  }
-  
-  .social-handle {
-    color: #2563eb;
-    font-size: 0.9rem;
-    font-weight: 500;
-  }
-  
-  .linkedin:hover {
-    border-color: #0077b5;
-    background: #0077b5;
-    color: white;
-  }
-  
-  .facebook:hover {
-    border-color: #1877f2;
-    background: #1877f2;
-    color: white;
-  }
-
-  /* Emergency Notice */
-  .emergency-notice {
-    padding: 3rem 0;
-    background: #fef2f2;
-  }
-  
-  .emergency-card {
-    background: white;
-    border: 2px solid #ef4444;
-    border-radius: 16px;
-    padding: 2rem;
-    display: flex;
-    gap: 1.5rem;
-    align-items: flex-start;
-  }
-  
-  .emergency-icon {
-    font-size: 2rem;
-    color: #ef4444;
-    flex-shrink: 0;
-  }
-  
-  .emergency-content h3 {
-    color: #dc2626;
-    margin-bottom: 0.5rem;
-  }
-  
-  .emergency-content p {
-    margin-bottom: 1rem;
-    color: #1e293b;
-  }
-
-  /* Responsive */
-  @media (max-width: 768px) {
-    .methods-grid {
-      grid-template-columns: 1fr;
-    }
-    
-    .notice-card,
-    .emergency-card {
-      flex-direction: column;
-      text-align: center;
-    }
-    
-    .social-links {
-      grid-template-columns: 1fr;
-    }
-    
-    .contact-highlights {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  /* Button Styles */
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.875rem 1.75rem;
-    background: #2563eb;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: all 0.2s ease;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .btn:hover {
-    background: #1d4ed8;
-    transform: translateY(-1px);
-  }
-  
-  .btn-secondary {
-    background: #f8fafc;
-    color: #1e293b;
-    border: 2px solid #e2e8f0;
-  }
-  
-  .btn-secondary:hover {
-    background: #e2e8f0;
-  }
-  
-  .btn-outline {
-    background: transparent;
-    color: #2563eb;
-    border: 2px solid #2563eb;
-  }
-  
-  .btn-outline:hover {
-    background: #2563eb;
-    color: white;
+  @media (max-width: 992px) {
+    .dual-column { grid-template-columns: 1fr; gap: 3rem; }
+    .channel-card.highlight { transform: none; }
   }
 </style>
-
-<script>
-  // Form validation and enhancement
-  const contactForm = document.getElementById('contact-form');
-  
-  if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-      // Basic validation
-      const requiredFields = this.querySelectorAll('[required]');
-      let isValid = true;
-      
-      requiredFields.forEach(field => {
-        if (!field.value.trim()) {
-          isValid = false;
-          field.style.borderColor = '#ef4444';
-        } else {
-          field.style.borderColor = '#e2e8f0';
-        }
-      });
-      
-      if (!isValid) {
-        e.preventDefault();
-        alert('Please fill in all required fields.');
-        return;
-      }
-      
-      // Show loading state
-      const submitBtn = this.querySelector('button[type="submit"]');
-      const originalText = submitBtn.innerHTML;
-      submitBtn.innerHTML = 'Sending...';
-      submitBtn.disabled = true;
-      
-      // Re-enable button after 3 seconds (in case of error)
-      setTimeout(() => {
-        submitBtn.innerHTML = originalText;
-        submitBtn.disabled = false;
-      }, 3000);
-    });
-    
-    // Real-time validation
-    const inputs = contactForm.querySelectorAll('input, textarea');
-    inputs.forEach(input => {
-      input.addEventListener('blur', function() {
-        if (this.value.trim()) {
-          this.style.borderColor = '#10b981';
-        } else if (this.hasAttribute('required')) {
-          this.style.borderColor = '#ef4444';
-        }
-      });
-    });
-  }
-</script>

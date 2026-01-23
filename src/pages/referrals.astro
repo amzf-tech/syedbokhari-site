@@ -1,0 +1,198 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pathname = Astro.url.pathname;
+
+const title = "NDIS Referral Form | Syed Bokhari Behaviour Support";
+const description = "Submit a referral for NDIS Positive Behaviour Support. Secure intake for Support Coordinators and families.";
+---
+
+<BaseLayout title={title} pathname={pathname} description={description}>
+  <section class="referral-header">
+    <div class="container">
+      <p class="kicker">NDIS Intake</p>
+      <h1 class="h1">New Participant Referral</h1>
+      <p class="subtitle">Please provide the initial details below. This information is sent securely to <strong>referrals@syedbokhari.com.au</strong>.</p>
+    </div>
+  </section>
+
+  <section class="referral-section">
+    <div class="container">
+      <div class="referral-grid">
+        
+        <div class="form-container">
+          <div class="card">
+            <form action="https://formspree.io/f/mykegzwn" method="POST" class="intake-form">
+              <input type="hidden" name="_subject" value="NEW REFERRAL: NDIS Intake Form Submission" />
+              <input type="hidden" name="_next" value="https://syedbokhari.com.au/thank-you" />
+
+              <h2 class="form-section-title">1. Participant Information</h2>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="p-name">Participant Name</label>
+                  <input type="text" name="Participant Name" id="p-name" required placeholder="Full Name" />
+                </div>
+                <div class="form-group">
+                  <label for="p-age">Age</label>
+                  <input type="number" name="Participant Age" id="p-age" required placeholder="Years" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="suburb">Location (Suburb & Postcode)</label>
+                <input type="text" name="Location" id="suburb" required placeholder="e.g. Tarneit, VIC 3029" />
+              </div>
+
+              <div class="form-group">
+                <label for="funding">NDIS Funding Management</label>
+                <select name="Funding Type" id="funding" required>
+                  <option value="" disabled selected>Select an option</option>
+                  <option value="Plan Managed">Plan Managed</option>
+                  <option value="Self Managed">Self Managed</option>
+                  <option value="NDIA Managed">NDIA Managed (Requires Registered Provider)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="behaviours">Behaviours of Concern / Primary Goals</label>
+                <textarea name="Behaviours or Goals" id="behaviours" rows="4" placeholder="Briefly describe the primary reasons for referral..."></textarea>
+              </div>
+
+              <hr class="divider" />
+
+              <h2 class="form-section-title">2. Referrer Details</h2>
+              <div class="form-group">
+                <label for="r-name">Your Name</label>
+                <input type="text" name="Referrer Name" id="r-name" required placeholder="Full Name" />
+              </div>
+              <div class="form-group">
+                <label for="r-role">Your Role</label>
+                <input type="text" name="Referrer Role" id="r-role" required placeholder="e.g. Support Coordinator, Parent, OT" />
+              </div>
+              <div class="form-group">
+                <label for="r-email">Your Email Address</label>
+                <input type="email" name="_replyto" id="r-email" required placeholder="email@example.com" />
+              </div>
+
+              <button type="submit" class="btn btn-primary full-width btn-large">Submit Referral</button>
+              <p class="privacy-note">By submitting, you agree to our <a href="/privacy">Privacy Policy</a>. Clinical data is handled with strict confidentiality.</p>
+            </form>
+          </div>
+        </div>
+
+        <div class="sidebar">
+          <div class="sticky-sidebar">
+            <div class="card highlight-card">
+              <h3>Speed up the process</h3>
+              <p>After submitting the form, you can book a 30-minute intake call to discuss the case details immediately.</p>
+              <a href="https://calendly.com/syed-syedbokhari/30min" target="_blank" class="btn btn-outline full-width">Book Intake Meeting</a>
+            </div>
+
+            <div class="info-box">
+              <h4>Current Availability</h4>
+              <p>I am currently accepting new referrals for <strong>Home-Based</strong> and <strong>School-Based</strong> behaviour support in Melbourne's West.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .referral-header {
+    background: #f8fafc;
+    padding: 5rem 0 3rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .referral-section { padding: 4rem 0; background: #fff; }
+
+  .referral-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+
+  .form-section-title {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+    border-bottom: 2px solid #eff6ff;
+    padding-bottom: 0.5rem;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 0.4fr;
+    gap: 1.5rem;
+  }
+
+  .form-group { margin-bottom: 1.5rem; }
+
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text);
+  }
+
+  input, select, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+  }
+
+  input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+  }
+
+  .divider { margin: 2rem 0; border: 0; border-top: 1px solid var(--border); }
+
+  .privacy-note {
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+    text-align: center;
+  }
+
+  .sticky-sidebar { position: sticky; top: 120px; }
+
+  .highlight-card {
+    background: #f8fafc;
+    border: 2px solid var(--primary);
+    margin-bottom: 2rem;
+  }
+
+  .highlight-card h3 { margin-bottom: 1rem; font-size: 1.2rem; }
+
+  .info-box {
+    padding: 1.5rem;
+    background: #eff6ff;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    color: #1e40af;
+  }
+
+  .info-box h4 { margin-bottom: 0.5rem; color: #1e3a8a; }
+
+  @media (max-width: 992px) {
+    .referral-grid { grid-template-columns: 1fr; }
+    .sticky-sidebar { position: static; }
+  }
+</style>

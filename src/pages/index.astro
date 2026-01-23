@@ -2,36 +2,46 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pathname = Astro.url.pathname;
 
-const title = "Syed Bokhari | NDIS Behaviour Support Practitioner (Under Supervision)";
-const description = "Professional NDIS behaviour support services across Australia. Functional behaviour assessment, BSP development & implementation support. Currently under professional supervision while NDIS registration is assessed.";
+const title = "Syed Bokhari | Registered Behaviour Support Practitioner | NDIS PBS";
+const description = "Registered NDIS behaviour support services across Australia. Specialist in Functional Behaviour Assessment (FBA) and evidence-based PBS plans.";
+const gaId = "G-8F52E8QTN1";
 ---
 
 <BaseLayout title={title} pathname={pathname} description={description}>
-  <!-- HERO -->
+  <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} slot="head"></script>
+  <script is:inline define:vars={{ gaId }} slot="head">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', gaId);
+  </script>
+
+  <div class="capacity-banner">
+    <span class="pulse">●</span> Currently Accepting New Referrals — Immediate Capacity Australia-Wide
+  </div>
+
   <section class="hero">
     <div class="container">
       <div class="hero-grid">
-        <!-- TEXT -->
         <div class="hero-content">
-          <p class="kicker">NDIS Behaviour Support Practitioner</p>
+          <p class="kicker">Registered NDIS Practitioner</p>
           <h1 class="h1">Syed Bokhari</h1>
           <p class="p hero-description">
-            I work under professional supervision to support NDIS participants, families, and provider teams
-            with positive, respectful, and evidence-informed behaviour support across Australia.
+            I provide positive, respectful, and evidence-informed behaviour support to NDIS participants, families, and provider teams across Australia.
           </p>
 
           <div class="hero-highlights">
             <div class="highlight">
               <span class="check">✓</span>
-              <span>NDIS Quality & Safeguards Commission - Alternate Pathway</span>
+              <span><strong>Registered Practitioner</strong> - NDIS Quality & Safeguards Commission</span>
             </div>
             <div class="highlight">
               <span class="check">✓</span>
-              <span>Australia-wide service delivery</span>
+              <span><strong>Evidence-Based</strong> - Functional Behaviour Assessments (FBA)</span>
             </div>
             <div class="highlight">
               <span class="check">✓</span>
-              <span>Enhanced oversight through professional supervision</span>
+              <span><strong>Australia-Wide</strong> - Available via Telehealth & On-site</span>
             </div>
           </div>
 
@@ -43,35 +53,29 @@ const description = "Professional NDIS behaviour support services across Austral
           <div class="contact-info">
             <p class="small">
               📧 <a href="mailto:syed@syedbokhari.com.au">syed@syedbokhari.com.au</a> | 
-              📱 <a href="tel:0411072466">0411 072 466</a> |
-              <a href="https://www.linkedin.com/in/syed-fr-bokhari/ " target="_blank" rel="noopener noreferrer">
-                LinkedIn Profile
-              </a>
+              📱 <a href="tel:0411072466">0411 072 466</a>
             </p>
           </div>
 
-          <div class="notice">
-            <strong>📝 Current Status:</strong>
-            <span class="small">
-              My application is currently under assessment by the NDIS Quality and Safeguards Commission
-              (Alternate Pathway). During this period, behaviour support services are delivered under
-              professional supervision and through an appropriately registered organisation, ensuring
-              full compliance with NDIS requirements.
-            </span>
+          <div class="notice registration-box">
+            <strong>✅ Registration & Compliance:</strong>
+            <p class="small">
+              I am a <strong>Registered Behaviour Support Practitioner</strong> regulated by the NDIS Quality and Safeguards Commission. 
+              My services are delivered with professional supervision through registered providers, ensuring full NDIS compliance and clinical excellence.
+            </p>
           </div>
         </div>
 
-        <!-- IMAGE -->
         <div class="hero-image">
           <div class="photo-card">
             <img
               src="/images/headshot.jpg"
-              alt="Syed Bokhari - NDIS Behaviour Support Practitioner"
+              alt="Syed Bokhari - NDIS Behaviour Support"
               loading="eager"
             />
             <div class="photo-caption">
               <strong>Syed Bokhari</strong><br>
-              <small>Behaviour Support Practitioner (Under Supervision)</small>
+              <small>Registered Behaviour Support Practitioner</small>
             </div>
           </div>
         </div>
@@ -79,490 +83,138 @@ const description = "Professional NDIS behaviour support services across Austral
     </div>
   </section>
 
-  <!-- SERVICES OVERVIEW -->
   <section class="services-overview">
     <div class="container">
-      <h2 class="text-center h2 mb-3">Comprehensive Behaviour Support Services</h2>
-      <p class="text-center text-secondary mb-4">
-        Evidence-based behaviour support delivered under professional supervision
-      </p>
-      
-      <div class="grid cols-3">
-        <div class="card pad service-card">
+      <h2 class="text-center h2 mb-3">Professional Support Services</h2>
+      <div class="grid-three">
+        <div class="card service-card">
           <div class="service-icon">🔍</div>
-          <h3 class="h3">Functional Behaviour Assessment</h3>
-          <p class="p">
-            Comprehensive assessment to understand behaviour within its context, 
-            identifying triggers, functions, and maintaining factors.
-          </p>
-          <ul class="service-features">
-            <li>Detailed information gathering</li>
-            <li>Evidence-based assessment tools</li>
-            <li>Collaborative approach with stakeholders</li>
-          </ul>
+          <h3>Functional Assessment</h3>
+          <p>Comprehensive assessments to understand behaviour triggers and functions.</p>
         </div>
-
-        <div class="card pad service-card">
+        <div class="card service-card">
           <div class="service-icon">📋</div>
-          <h3 class="h3">Behaviour Support Plan Development</h3>
-          <p class="p">
-            Creating comprehensive, NDIS-aligned behaviour support plans that 
-            focus on quality of life and skill development.
-          </p>
-          <ul class="service-features">
-            <li>NDIS compliant documentation</li>
-            <li>Strength-based approach</li>
-            <li>Measurable outcomes and goals</li>
-          </ul>
+          <h3>PBS Plan Development</h3>
+          <p>NDIS-aligned plans focused on quality of life and skill development.</p>
         </div>
-
-        <div class="card pad service-card">
+        <div class="card service-card">
           <div class="service-icon">🤝</div>
-          <h3 class="h3">Implementation Support</h3>
-          <p class="p">
-            Ongoing coaching and guidance for families and support teams to 
-            ensure consistent and effective plan implementation.
-          </p>
-          <ul class="service-features">
-            <li>Team training and coaching</li>
-            <li>Progress monitoring and review</li>
-            <li>Plan adjustments as needed</li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="text-center mt-4">
-        <a href="/services" class="btn btn-outline">Learn More About Services</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHY CHOOSE SUPERVISED PRACTICE -->
-  <section class="supervision-info">
-    <div class="container">
-      <h2 class="h2 text-center">Why Work With a Practitioner Under Supervision?</h2>
-      <p class="text-center text-secondary mb-4">
-        Enhanced oversight means better outcomes for participants and families
-      </p>
-      
-      <div class="benefits-grid">
-        <div class="benefit-item">
-          <div class="benefit-icon">🛡️</div>
-          <div>
-            <h4>Enhanced Quality Assurance</h4>
-            <p>Double the expertise with regular supervisor oversight ensuring best practice delivery</p>
-          </div>
-        </div>
-        
-        <div class="benefit-item">
-          <div class="benefit-icon">🧠</div>
-          <div>
-            <h4>Fresh Perspectives</h4>
-            <p>Access to broader knowledge base through collaborative supervision approach</p>
-          </div>
-        </div>
-        
-        <div class="benefit-item">
-          <div class="benefit-icon">✅</div>
-          <div>
-            <h4>NDIS Compliance</h4>
-            <p>Full adherence to NDIS Quality and Safeguards Commission requirements</p>
-          </div>
-        </div>
-        
-        <div class="benefit-item">
-          <div class="benefit-icon">📈</div>
-          <div>
-            <h4>Continuous Learning</h4>
-            <p>Practitioner stays current with latest evidence-based practices</p>
-          </div>
+          <h3>Implementation Support</h3>
+          <p>Coaching and training for families and support teams.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA SECTION -->
   <section class="cta-section">
-    <div class="container">
-      <div class="cta-card">
-        <h3 class="h3">Ready to Improve Quality of Life?</h3>
-        <p class="p">Let's discuss how behaviour support can help achieve your NDIS goals.</p>
-        
-        <div class="cta-features">
-          <span class="feature-tag">✓ Free Initial Consultation</span>
-          <span class="feature-tag">✓ Australia-wide Service</span>
-          <span class="feature-tag">✓ NDIS Experienced</span>
-        </div>
-        
-        <div class="cta-actions">
-          <a href="/contact" class="btn btn-primary">Book Free Consultation</a>
-          <a href="tel:0411072466" class="btn btn-secondary">Call Now: 0411 072 466</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- LATEST BLOG PREVIEW -->
-  <section class="blog-preview">
-    <div class="container">
-      <h2 class="h2 text-center mb-3">Latest Behaviour Support Insights</h2>
-      <p class="text-center text-secondary mb-4">Stay updated with NDIS behaviour support best practices</p>
-      
-      <div class="blog-grid">
-        <article class="blog-card">
-          <h4>Understanding Behaviour Support Under Supervision</h4>
-          <p>Discover the benefits of working with a practitioner under professional supervision...</p>
-          <a href="/blog/understanding-behaviour-support-under-supervision" class="read-more">Read More →</a>
-        </article>
-        
-        <article class="blog-card">
-          <h4>5 Signs Your NDIS Participant Needs Behaviour Support</h4>
-          <p>Key indicators that suggest behaviour support could improve quality of life...</p>
-          <a href="/blog/signs-ndis-participant-needs-behaviour-support" class="read-more">Read More →</a>
-        </article>
-        
-        <article class="blog-card">
-          <h4>Preparing for Your First Behaviour Support Meeting</h4>
-          <p>What to expect and how to prepare for your initial consultation...</p>
-          <a href="/blog/preparing-first-behaviour-support-meeting" class="read-more">Read More →</a>
-        </article>
-      </div>
-      
-      <div class="text-center mt-4">
-        <a href="/blog" class="btn btn-outline">View All Blog Posts</a>
+    <div class="container text-center">
+      <h2>Ready to Improve Quality of Life?</h2>
+      <p>Contact me today for a free initial consultation regarding your NDIS goals.</p>
+      <div class="cta-actions">
+        <a href="/contact" class="btn btn-white">Get Started</a>
+        <a href="tel:0411072466" class="btn btn-outline-white">Call 0411 072 466</a>
       </div>
     </div>
   </section>
 
   <style>
-    /* Hero Section - Fixed Alignment */
-    .hero {
-      padding: 2rem 0;
-      min-height: auto;
+    /* UNIFIED PROFESSIONAL STYLES */
+    :root {
+      --primary: #1a365d;    /* Professional Navy */
+      --secondary: #2c7a7b;  /* Calming Teal */
+      --success: #10b981;    /* "Capacity" Green */
+      --bg-light: #f8fafc;   /* Light gray/blue bg */
+      --white: #ffffff;
+      --text: #334155;
     }
 
+    body { color: var(--text); }
+
+    .capacity-banner {
+      background: var(--success);
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    .pulse { animation: opacityPulse 2s infinite; margin-right: 5px; color: white; }
+    @keyframes opacityPulse { 0% { opacity: 1; } 50% { opacity: 0.4; } 100% { opacity: 1; } }
+
+    .hero { padding: 4rem 0; background: white; }
+    .kicker { color: var(--secondary); font-weight: bold; text-transform: uppercase; margin-bottom: 0.5rem; }
+    
     .hero-grid {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 3rem;
       align-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
     }
 
-    .hero-content {
-      max-width: 100%;
-      text-align: left;
-    }
-
-    .hero-description {
-      font-size: 1.1rem;
-      margin-bottom: 1.5rem;
-      line-height: 1.6;
-    }
-
-    .hero-highlights {
-      margin: 1.5rem 0;
-    }
-
-    .highlight {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin: 0.75rem 0;
-      font-size: 0.95rem;
-    }
-
-    .check {
-      color: #10b981;
-      font-weight: bold;
-      font-size: 1.1rem;
-    }
-
-    .actions {
-      display: flex;
-      gap: 1rem;
-      margin-top: 1.25rem;
-      flex-wrap: wrap;
-    }
-
-    .hero-image {
-      display: flex;
-      justify-content: center;
+    .registration-box {
+      background: #f1f5f9;
+      border-left: 4px solid var(--primary);
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-top: 2rem;
     }
 
     .photo-card {
       background: white;
-      border-radius: 16px;
       padding: 1rem;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      max-width: 400px;
-    }
-
-    .photo-card img {
-      width: 100%;
-      height: auto;
       border-radius: 12px;
-    }
-
-    .photo-caption {
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
       text-align: center;
-      margin-top: 1rem;
-      font-size: 0.9rem;
-      color: #64748b;
     }
 
-    .contact-info {
-      margin: 1.5rem 0;
-      padding: 1rem;
-      background: #f8fafc;
-      border-radius: 8px;
-    }
+    .photo-card img { width: 100%; border-radius: 8px; }
 
-    .contact-info a {
-      color: #2563eb;
+    .btn {
+      padding: 0.8rem 1.8rem;
+      border-radius: 6px;
       text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      transition: 0.3s;
     }
 
-    .contact-info a:hover {
-      text-decoration: underline;
-    }
+    .btn-primary { background: var(--primary); color: white; }
+    .btn-secondary { border: 2px solid var(--primary); color: var(--primary); }
+    .btn-white { background: white; color: var(--primary); }
+    .btn-outline-white { border: 2px solid white; color: white; }
 
-    .notice {
-      margin-top: 1.5rem;
-      padding: 1rem;
-      background: #eff6ff;
-      border-left: 4px solid #2563eb;
-      border-radius: 8px;
-    }
-
-    /* Services Overview */
-    .services-overview {
-      padding: 3rem 0;
-      background: #f8fafc;
-    }
-
-    .service-card {
-      text-align: center;
-      transition: transform 0.2s ease;
-    }
-
-    .service-card:hover {
-      transform: translateY(-3px);
-    }
-
-    .service-icon {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-
-    .service-features {
-      text-align: left;
-      margin-top: 1rem;
-      font-size: 0.9rem;
-    }
-
-    .service-features li {
-      margin: 0.5rem 0;
-      color: #64748b;
-    }
-
-    /* Supervision Info */
-    .supervision-info {
-      padding: 3rem 0;
-    }
-
-    .benefits-grid {
+    .grid-three {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 2rem;
       margin-top: 2rem;
     }
 
-    .benefit-item {
-      text-align: center;
-      padding: 1.5rem;
-    }
-
-    .benefit-icon {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .benefit-item h4 {
-      margin-bottom: 0.5rem;
-      color: #1e293b;
-    }
-
-    /* CTA Section */
-    .cta-section {
-      padding: 3rem 0;
-      background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
-      color: white;
-    }
-
-    .cta-card {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 3rem;
-      border-radius: 16px;
-      text-align: center;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .cta-features {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin: 2rem 0;
-      flex-wrap: wrap;
-    }
-
-    .feature-tag {
-      background: rgba(255, 255, 255, 0.2);
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      font-size: 0.9rem;
-    }
-
-    .cta-actions {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      margin-top: 2rem;
-      flex-wrap: wrap;
-    }
-
-    /* Blog Preview */
-    .blog-preview {
-      padding: 3rem 0;
-      background: #f8fafc;
-    }
-
-    .blog-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .blog-card {
-      background: white;
-      padding: 1.5rem;
+    .service-card {
+      background: var(--bg-light);
+      padding: 2rem;
       border-radius: 12px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
     }
 
-    .blog-card h4 {
-      margin-bottom: 0.5rem;
-      color: #1e293b;
-    }
-
-    .blog-card p {
-      color: #64748b;
-      margin-bottom: 1rem;
-      font-size: 0.9rem;
-    }
-
-    .read-more {
-      color: #2563eb;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .read-more:hover {
-      text-decoration: underline;
-    }
-
-    /* Button Styles */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.875rem 1.75rem;
-      background: #2563eb;
+    .cta-section {
+      background: var(--primary);
       color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: 600;
-      transition: all 0.2s ease;
-      border: none;
-      cursor: pointer;
+      padding: 4rem 0;
+      margin-top: 3rem;
     }
 
-    .btn:hover {
-      background: #1d4ed8;
-      transform: translateY(-1px);
-    }
-
-    .btn-primary {
-      background: #2563eb;
-      color: white;
-    }
-
-    .btn-secondary {
-      background: #f8fafc;
-      color: #1e293b;
-      border: 2px solid #e2e8f0;
-    }
-
-    .btn-secondary:hover {
-      background: #e2e8f0;
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: #2563eb;
-      border: 2px solid #2563eb;
-    }
-
-    .btn-outline:hover {
-      background: #2563eb;
-      color: white;
-    }
-
-    @media (min-width: 768px) {
-      .hero-grid {
-        grid-template-columns: 2fr 1fr;
-      }
-    }
+    .cta-actions { display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; }
 
     @media (max-width: 768px) {
-      .hero-grid {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-      
-      .actions {
-        justify-content: center;
-      }
-      
-      .hero-image {
-        order: -1;
-      }
-      
-      .benefits-grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .cta-features {
-        flex-direction: column;
-        gap: 1rem;
-      }
-      
-      .blog-grid {
-        grid-template-columns: 1fr;
-      }
+      .hero-grid { grid-template-columns: 1fr; text-align: center; }
+      .hero-image { order: -1; }
+      .cta-actions { flex-direction: column; }
     }
 
-    /* Utility Classes */
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
     .text-center { text-align: center; }
-    .text-secondary { color: #64748b; }
-    .mb-3 { margin-bottom: 1.5rem; }
-    .mb-4 { margin-bottom: 2rem; }
-    .small {
-      font-size: 0.875rem;
-      color: #64748b;
-    }
+    .small { font-size: 0.85rem; line-height: 1.4; }
   </style>
 </BaseLayout>
