@@ -1,7 +1,7 @@
 ---
 const {
-  title = "Syed Bokhari | Registered Behaviour Support Practitioner | NDIS",
-  description = "Professional NDIS behaviour support services across Australia. Registered Behaviour Support Practitioner specializing in Functional Behaviour Assessment (FBA) and PBS plans.",
+  title = "Syed Bokhari | NDIS Suitable Behaviour Support Practitioner",
+  description = "Official NDIS Suitable Behaviour Support Practitioner (ID: P1636047). Specializing in Functional Behaviour Assessment (FBA) and clinical PBS plans in Melbourne West.",
   pathname,
 } = Astro.props;
 ---
@@ -31,7 +31,8 @@ const {
           "@type": "Person",
           "@id": "https://syedbokhari.com.au/#person",
           "name": "Syed Bokhari",
-          "jobTitle": "Registered Behaviour Support Practitioner",
+          "jobTitle": "NDIS Suitable Behaviour Support Practitioner",
+          "identifier": "P1636047",
           "url": "https://syedbokhari.com.au",
           "sameAs": ["https://www.linkedin.com/in/syed-fr-bokhari/"],
           "contactPoint": {
@@ -47,8 +48,11 @@ const {
           "name": "Syed Bokhari Behaviour Support",
           "url": "https://syedbokhari.com.au",
           "provider": { "@id": "https://syedbokhari.com.au/#person" },
-          "areaServed": { "@type": "Country", "name": "Australia" },
-          "knowsAbout": ["Positive Behaviour Support", "Functional Behaviour Assessment", "Behaviour Support Plans"]
+          "areaServed": { 
+            "@type": "City", 
+            "name": "Melbourne" 
+          },
+          "knowsAbout": ["Positive Behaviour Support", "Functional Behaviour Assessment", "NDIS Restrictive Practices", "PBS Plans"]
         }
       ]
     }
@@ -88,25 +92,29 @@ const {
 
       <footer class="site-footer">
         <div class="container footer-inner">
-          <div>
-            <div class="kicker">NDIS Behaviour Support</div>
+          <div class="footer-info">
+            <div class="kicker">NDIS Practitioner ID: P1636047</div>
             <div class="p footer-description">
-              <strong>Registered Behaviour Support Practitioner</strong><br />
-              Regulated by the NDIS Quality and Safeguards Commission. Delivering evidence-based PBS services under professional supervision.
+              <strong>Suitable Behaviour Support Practitioner</strong><br />
+              Regulated by the NDIS Quality and Safeguards Commission. Delivering evidence-based Positive Behaviour Support (PBS) across Melbourne West.
             </div>
           </div>
 
-          <div class="footer-links">
-            <a href="https://www.linkedin.com/in/syed-fr-bokhari/" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="/privacy">Privacy</a>
-            <a href="/contact">Contact</a>
-            <a href="/sitemap">Sitemap</a>
+          <div class="footer-meta">
+            <div class="footer-links">
+              <a href="https://www.linkedin.com/in/syed-fr-bokhari/" target="_blank" rel="noopener">LinkedIn</a>
+              <a href="/privacy">Privacy Policy</a>
+              <a href="/sitemap">Sitemap</a>
+              <a href="/contact">Contact</a>
+            </div>
+            <p class="copyright">© {new Date().getFullYear()} Syed Bokhari. All rights reserved.</p>
           </div>
         </div>
       </footer>
     </div>
 
     <style is:global>
+      /* ... (Keeping your existing styles but adding footer improvements) ... */
       :root {
         --primary: #2563eb;
         --primary-hover: #1d4ed8;
@@ -131,36 +139,8 @@ const {
         border: 2px solid transparent;
       }
 
-      .btn-primary {
-        background-color: var(--primary);
-        color: var(--white);
-      }
-
-      .btn-primary:hover {
-        background-color: var(--primary-hover);
-        transform: translateY(-1px);
-      }
-
-      .btn-outline {
-        background-color: transparent;
-        border-color: var(--primary);
-        color: var(--primary);
-      }
-
-      .btn-outline:hover {
-        background-color: #eff6ff;
-        border-color: var(--primary-hover);
-        color: var(--primary-hover);
-      }
-
-      .btn-large {
-        padding: 1rem 2rem;
-        font-size: 1.125rem;
-      }
-
-      .full-width {
-        width: 100%;
-      }
+      .btn-primary { background-color: var(--primary); color: var(--white); }
+      .btn-primary:hover { background-color: var(--primary-hover); transform: translateY(-1px); }
 
       /* Layout Styling */
       .bg {
@@ -190,14 +170,7 @@ const {
         padding: 0.75rem 0;
       }
 
-      .brand {
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-        text-decoration: none;
-        color: var(--text);
-      }
-
+      .brand { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--text); }
       .brand-text { font-weight: 700; font-size: 1.25rem; }
 
       .nav { display: flex; align-items: center; gap: 1.5rem; }
@@ -210,19 +183,31 @@ const {
         border-radius: 999px;
         color: var(--text);
         background: var(--white);
-        transition: border-color 0.2s;
       }
-      
-      .nav a.pill:hover { border-color: var(--primary); }
 
-      .footer-description { margin-top: 0.5rem; max-width: 500px; color: var(--muted); font-size: 0.9rem; }
-      .footer-links { display: flex; gap: 1.5rem; margin-top: 1rem; }
-      .footer-links a { text-decoration: none; color: var(--muted); font-size: 0.9rem; }
-      .footer-links a:hover { color: var(--primary); }
+      /* Footer Styling */
+      .site-footer {
+        border-top: 1px solid var(--border);
+        padding: 4rem 0 2rem;
+        margin-top: 5rem;
+        background: rgba(255,255,255,0.5);
+      }
+      .footer-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 2rem;
+      }
+      .footer-description { margin-top: 0.75rem; max-width: 450px; line-height: 1.6; }
+      .footer-links { display: flex; gap: 1.5rem; margin-bottom: 1rem; }
+      .footer-links a { text-decoration: none; color: var(--text); font-weight: 600; font-size: 0.9rem; }
+      .copyright { color: var(--muted); font-size: 0.85rem; }
 
       @media (max-width: 768px) {
         .header-inner { flex-direction: column; gap: 1rem; }
-        .nav { gap: 1rem; flex-wrap: wrap; justify-content: center; }
+        .footer-inner { flex-direction: column; text-align: center; align-items: center; }
+        .footer-links { justify-content: center; }
       }
     </style>
   </body>

@@ -2,16 +2,16 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pathname = Astro.url.pathname;
 
-const title = "NDIS Referral Form | Syed Bokhari Behaviour Support";
-const description = "Submit a referral for NDIS Positive Behaviour Support. Secure intake for Support Coordinators and families.";
+const title = "NDIS Referral Form | Syed Bokhari | ID: P1636047";
+const description = "Submit a referral for NDIS Positive Behaviour Support. Immediate capacity for FBAs and PBS Plans by a Suitable Practitioner.";
 ---
 
 <BaseLayout title={title} pathname={pathname} description={description}>
   <section class="referral-header">
     <div class="container">
-      <p class="kicker">NDIS Intake</p>
+      <p class="kicker">NDIS Intake • Practitioner ID: P1636047</p>
       <h1 class="h1">New Participant Referral</h1>
-      <p class="subtitle">Please provide the initial details below. This information is sent securely to <strong>referrals@syedbokhari.com.au</strong>.</p>
+      <p class="subtitle">Secure intake for Support Coordinators and families. All information is handled in accordance with NDIS privacy standards.</p>
     </div>
   </section>
 
@@ -22,7 +22,7 @@ const description = "Submit a referral for NDIS Positive Behaviour Support. Secu
         <div class="form-container">
           <div class="card">
             <form action="https://formspree.io/f/mykegzwn" method="POST" class="intake-form">
-              <input type="hidden" name="_subject" value="NEW REFERRAL: NDIS Intake Form Submission" />
+              <input type="hidden" name="_subject" value="URGENT REFERRAL: New Intake Form Submission" />
               <input type="hidden" name="_next" value="https://syedbokhari.com.au/thank-you" />
 
               <h2 class="form-section-title">1. Participant Information</h2>
@@ -48,13 +48,22 @@ const description = "Submit a referral for NDIS Positive Behaviour Support. Secu
                   <option value="" disabled selected>Select an option</option>
                   <option value="Plan Managed">Plan Managed</option>
                   <option value="Self Managed">Self Managed</option>
-                  <option value="NDIA Managed">NDIA Managed (Requires Registered Provider)</option>
+                  <option value="NDIA Managed">NDIA Managed (Suitable Practitioner Required)</option>
                 </select>
               </div>
 
               <div class="form-group">
-                <label for="behaviours">Behaviours of Concern / Primary Goals</label>
-                <textarea name="Behaviours or Goals" id="behaviours" rows="4" placeholder="Briefly describe the primary reasons for referral..."></textarea>
+                <label for="rrp">Are there Regulated Restrictive Practices in place?</label>
+                <select name="Restrictive Practices" id="rrp">
+                  <option value="Unknown">Not Sure / Unknown</option>
+                  <option value="Yes">Yes (Requires urgent compliance review)</option>
+                  <option value="No">No</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="behaviours">Primary Goals / Behaviours of Concern</label>
+                <textarea name="Behaviours or Goals" id="behaviours" rows="4" placeholder="Briefly describe the support needed..."></textarea>
               </div>
 
               <hr class="divider" />
@@ -66,15 +75,15 @@ const description = "Submit a referral for NDIS Positive Behaviour Support. Secu
               </div>
               <div class="form-group">
                 <label for="r-role">Your Role</label>
-                <input type="text" name="Referrer Role" id="r-role" required placeholder="e.g. Support Coordinator, Parent, OT" />
+                <input type="text" name="Referrer Role" id="r-role" required placeholder="e.g. Support Coordinator, Parent, Plan Manager" />
               </div>
               <div class="form-group">
                 <label for="r-email">Your Email Address</label>
                 <input type="email" name="_replyto" id="r-email" required placeholder="email@example.com" />
               </div>
 
-              <button type="submit" class="btn btn-primary full-width btn-large">Submit Referral</button>
-              <p class="privacy-note">By submitting, you agree to our <a href="/privacy">Privacy Policy</a>. Clinical data is handled with strict confidentiality.</p>
+              <button type="submit" class="btn btn-primary full-width btn-large">Submit Referral to Syed</button>
+              <p class="privacy-note">Secure Submission. Data is encrypted and sent directly to <strong>referrals@syedbokhari.com.au</strong>.</p>
             </form>
           </div>
         </div>
@@ -82,15 +91,23 @@ const description = "Submit a referral for NDIS Positive Behaviour Support. Secu
         <div class="sidebar">
           <div class="sticky-sidebar">
             <div class="card highlight-card">
-              <h3>Speed up the process</h3>
-              <p>After submitting the form, you can book a 30-minute intake call to discuss the case details immediately.</p>
-              <a href="https://calendly.com/syed-syedbokhari/30min" target="_blank" class="btn btn-outline full-width">Book Intake Meeting</a>
+              <h3>Direct Case Discussion</h3>
+              <p>Skip the email back-and-forth. Book a 20-minute discussion regarding this participant immediately.</p>
+              <a href="https://calendly.com/syed-syedbokhari/30min" target="_blank" class="btn btn-outline full-width">Book Consultation Call</a>
             </div>
 
             <div class="info-box">
-              <h4>Current Availability</h4>
-              <p>I am currently accepting new referrals for <strong>Home-Based</strong> and <strong>School-Based</strong> behaviour support in Melbourne's West.</p>
+              <h4>Current Intake Status</h4>
+              <p>✅ <strong>Immediate Capacity</strong> for:</p>
+              <ul style="margin-top: 0.5rem; padding-left: 1rem;">
+                <li>Functional Assessments (FBA)</li>
+                <li>Comprehensive PBS Plans</li>
+                <li>Restrictive Practice Reviews</li>
+              </ul>
+              <p style="margin-top:0.5rem"><em>Serving Melbourne West & Telehealth Australia-wide.</em></p>
             </div>
+
+            
           </div>
         </div>
 
@@ -100,12 +117,22 @@ const description = "Submit a referral for NDIS Positive Behaviour Support. Secu
 </BaseLayout>
 
 <style>
+  :root {
+    --primary: #1a365d;
+    --secondary: #2c7a7b;
+    --border: #e2e8f0;
+    --text: #334155;
+    --muted: #64748b;
+  }
+
   .referral-header {
     background: #f8fafc;
     padding: 5rem 0 3rem;
     text-align: center;
     border-bottom: 1px solid var(--border);
   }
+
+  .kicker { color: var(--secondary); font-weight: bold; text-transform: uppercase; margin-bottom: 1rem; }
 
   .referral-section { padding: 4rem 0; background: #fff; }
 
@@ -130,6 +157,7 @@ const description = "Submit a referral for NDIS Positive Behaviour Support. Secu
     color: var(--primary);
     border-bottom: 2px solid #eff6ff;
     padding-bottom: 0.5rem;
+    font-weight: 700;
   }
 
   .form-row {
@@ -150,17 +178,24 @@ const description = "Submit a referral for NDIS Positive Behaviour Support. Secu
 
   input, select, textarea {
     width: 100%;
-    padding: 0.75rem;
+    padding: 0.85rem;
     border: 1px solid #cbd5e1;
     border-radius: 8px;
     font-size: 1rem;
-    transition: border-color 0.2s;
+    transition: all 0.2s;
   }
 
   input:focus, select:focus, textarea:focus {
     outline: none;
-    border-color: var(--primary);
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 3px rgba(44, 122, 123, 0.1);
   }
+
+  .btn { padding: 1rem; border-radius: 8px; font-weight: 700; text-decoration: none; display: block; text-align: center; cursor: pointer; border: none; font-size: 1rem; }
+  .btn-primary { background: var(--primary); color: white; }
+  .btn-outline { border: 2px solid var(--primary); color: var(--primary); background: transparent; }
+  .full-width { width: 100%; }
+  .btn:hover { opacity: 0.9; transform: translateY(-1px); }
 
   .divider { margin: 2rem 0; border: 0; border-top: 1px solid var(--border); }
 
@@ -171,28 +206,28 @@ const description = "Submit a referral for NDIS Positive Behaviour Support. Secu
     text-align: center;
   }
 
-  .sticky-sidebar { position: sticky; top: 120px; }
+  .sticky-sidebar { position: sticky; top: 40px; }
 
   .highlight-card {
     background: #f8fafc;
-    border: 2px solid var(--primary);
+    border: 2px solid var(--secondary);
     margin-bottom: 2rem;
   }
 
-  .highlight-card h3 { margin-bottom: 1rem; font-size: 1.2rem; }
-
   .info-box {
     padding: 1.5rem;
-    background: #eff6ff;
+    background: #f0fdfa;
     border-radius: 12px;
     font-size: 0.95rem;
-    color: #1e40af;
+    color: #134e4a;
+    border: 1px solid #ccfbf1;
   }
 
-  .info-box h4 { margin-bottom: 0.5rem; color: #1e3a8a; }
+  .info-box h4 { margin-bottom: 0.5rem; color: var(--secondary); }
 
   @media (max-width: 992px) {
     .referral-grid { grid-template-columns: 1fr; }
     .sticky-sidebar { position: static; }
+    .form-row { grid-template-columns: 1fr; }
   }
 </style>

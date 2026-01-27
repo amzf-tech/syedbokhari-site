@@ -2,93 +2,81 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 const title = "Sitemap | Syed Bokhari - Complete Website Navigation";
-const description = "Complete sitemap of syedbokhari.com.au including all pages, blog posts, and services. Easy navigation for visitors and search engines.";
+const description = "Complete sitemap of syedbokhari.com.au including all pages, blog posts, and NDIS service information. Easy navigation for visitors and search engines.";
 ---
 
 <BaseLayout title={title} pathname={Astro.url.pathname} description={description}>
-  <!-- PAGE HEADER -->
   <section class="page-header">
     <div class="container">
       <h1 class="h1">Website Sitemap</h1>
-      <p class="subtitle">Complete navigation guide for syedbokhari.com.au</p>
+      <p class="subtitle">A complete guide to NDIS Behaviour Support resources on syedbokhari.com.au</p>
     </div>
   </section>
 
-  <!-- MAIN PAGES SECTION -->
   <section class="sitemap-section">
     <div class="container">
-      <h2 class="h2">Main Pages</h2>
+      <h2 class="h2">Primary Navigation</h2>
       <div class="sitemap-grid">
         <div class="sitemap-item">
           <h3><a href="/">Home</a></h3>
-          <p>Professional NDIS behaviour support services under supervision</p>
+          <p>Overview of PBS services and practitioner credentials (ID: P1636047).</p>
         </div>
         
         <div class="sitemap-item">
           <h3><a href="/services">Services</a></h3>
-          <p>Comprehensive behaviour support services including assessment, plan development, and implementation</p>
+          <p>Details on FBAs, Behaviour Support Plans, and Restrictive Practice reviews.</p>
         </div>
         
         <div class="sitemap-item">
           <h3><a href="/about">About</a></h3>
-          <p>Learn about Syed Bokhari's qualifications and approach to behaviour support</p>
+          <p>Syed’s background as a Senior Planner and current PBS practitioner approach.</p>
+        </div>
+
+        <div class="sitemap-item">
+          <h3><a href="/coordinators">Support Coordinators</a></h3>
+          <p>B2B information for NDIS professionals seeking timely PBS intake.</p>
         </div>
         
         <div class="sitemap-item">
-          <h3><a href="/blog">Blog</a></h3>
-          <p>Latest insights and articles about NDIS behaviour support</p>
+          <h3><a href="/referrals">Referral Portal</a></h3>
+          <p>Secure intake form for new NDIS participant referrals.</p>
         </div>
         
         <div class="sitemap-item">
-          <h3><a href="/privacy">Privacy Policy</a></h3>
-          <p>How we protect your personal information</p>
-        </div>
-        
-        <div class="sitemap-item">
-          <h3><a href="/contact">Contact</a></h3>
-          <p>Get in touch for behaviour support enquiries</p>
+          <h3><a href="/contact">General Contact</a></h3>
+          <p>Business enquiries and direct contact information.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- BLOG POSTS SECTION -->
   <section class="sitemap-section">
     <div class="container">
-      <h2 class="h2">Blog Posts</h2>
+      <h2 class="h2">Educational Resources & Blog</h2>
       <div class="blog-sitemap-grid">
         <article class="sitemap-blog-item">
-          <h3><a href="/blog/understanding-behaviour-support-under-supervision">Understanding Behaviour Support Under Supervision</a></h3>
-          <p>Discover the benefits of working with a behaviour support practitioner under professional supervision</p>
+          <h3><a href="/blog/understanding-suitable-practitioners">What is an NDIS Suitable Practitioner?</a></h3>
+          <p>Understanding the NDIS Commission's assessment levels for behaviour support.</p>
           <div class="post-meta">
-            <span class="post-date">January 10, 2026</span>
-            <span class="post-category">Behaviour Support</span>
+            <span class="post-date">Jan 2026</span>
+            <span class="post-category">NDIS Compliance</span>
           </div>
         </article>
         
         <article class="sitemap-blog-item">
-          <h3><a href="/blog/signs-ndis-participant-needs-behaviour-support">5 Signs Your NDIS Participant Might Benefit from Behaviour Support</a></h3>
-          <p>Key indicators that suggest behaviour support could improve quality of life and help achieve NDIS goals</p>
+          <h3><a href="/blog/signs-ndis-participant-needs-behaviour-support">5 Signs a Participant Needs PBS</a></h3>
+          <p>Key indicators that suggest behaviour support could improve quality of life.</p>
           <div class="post-meta">
-            <span class="post-date">January 5, 2026</span>
-            <span class="post-category">NDIS Support</span>
+            <span class="post-date">Jan 2026</span>
+            <span class="post-category">PBS Guide</span>
           </div>
         </article>
         
         <article class="sitemap-blog-item">
-          <h3><a href="/blog/preparing-first-behaviour-support-meeting">Preparing for Your First Behaviour Support Meeting</a></h3>
-          <p>What to expect and how to prepare for your initial consultation with a behaviour support practitioner</p>
+          <h3><a href="/blog/functional-behaviour-assessment-process">The FBA Process Explained</a></h3>
+          <p>A guide to functional behaviour assessment and how it forms the foundation of a BSP.</p>
           <div class="post-meta">
-            <span class="post-date">December 28, 2025</span>
-            <span class="post-category">First Meeting</span>
-          </div>
-        </article>
-        
-        <article class="sitemap-blog-item">
-          <h3><a href="/blog/functional-behaviour-assessment-process">Understanding the Functional Behaviour Assessment Process</a></h3>
-          <p>A comprehensive guide to functional behaviour assessment and how it forms the foundation of effective behaviour support</p>
-          <div class="post-meta">
-            <span class="post-date">December 20, 2025</span>
+            <span class="post-date">Dec 2025</span>
             <span class="post-category">Assessment</span>
           </div>
         </article>
@@ -96,213 +84,113 @@ const description = "Complete sitemap of syedbokhari.com.au including all pages,
     </div>
   </section>
 
-  <!-- QUICK LINKS SECTION -->
   <section class="sitemap-section">
     <div class="container">
-      <h2 class="h2">Quick Links</h2>
+      <h2 class="h2">Administrative & Legal</h2>
       <div class="quick-links-grid">
         <div class="quick-link-card">
-          <h3>Get Started</h3>
+          <h3>Compliance</h3>
           <div class="link-list">
-            <a href="/contact">Book Free Consultation</a>
-            <a href="/services">View Services</a>
-            <a href="/about">About Syed</a>
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/thank-you">Enquiry Success Page</a>
           </div>
         </div>
         
         <div class="quick-link-card">
-          <h3>Learn More</h3>
+          <h3>External Links</h3>
           <div class="link-list">
-            <a href="/blog">Latest Articles</a>
-            <a href="/privacy">Privacy Policy</a>
+            <a href="https://www.ndiscommission.gov.au" target="_blank">NDIS Commission</a>
             <a href="https://www.linkedin.com/in/syed-fr-bokhari/" target="_blank">LinkedIn Profile</a>
           </div>
         </div>
         
         <div class="quick-link-card">
-          <h3>Contact</h3>
+          <h3>Technical</h3>
           <div class="link-list">
-            <a href="mailto:syed@syedbokhari.com.au">syed@syedbokhari.com.au</a>
-            <a href="tel:0411072466">0411 072 466</a>
+            <a href="/sitemap.xml">XML Sitemap</a>
+            <a href="/robots.txt">Robots.txt</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SEARCH ENGINES SECTION -->
   <section class="sitemap-section">
     <div class="container">
-      <h2 class="h2">For Search Engines</h2>
       <div class="search-info">
-        <p><strong>XML Sitemap:</strong> <a href="/sitemap.xml">sitemap.xml</a></p>
-        <p><strong>Robots.txt:</strong> <a href="/robots.txt">robots.txt</a></p>
-        <p><strong>Last Updated:</strong> {new Date().toLocaleDateString('en-AU', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+        <p><strong>Practitioner ID:</strong> P1636047</p>
+        <p><strong>Last Crawl:</strong> {new Date().toLocaleDateString('en-AU', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
       </div>
     </div>
   </section>
 </BaseLayout>
 
 <style>
+  :root {
+    --primary: #1a365d;
+    --secondary: #2c7a7b;
+    --border: #e2e8f0;
+  }
+
   .page-header {
-    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
     color: white;
-    padding: 3rem 0;
+    padding: 4rem 0;
     text-align: center;
   }
   
-  .page-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .subtitle {
-    font-size: 1.2rem;
-    opacity: 0.9;
-  }
+  .page-header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+  .subtitle { font-size: 1.1rem; opacity: 0.8; }
 
-  .sitemap-section {
-    padding: 3rem 0;
-  }
+  .sitemap-section { padding: 4rem 0; }
+  .sitemap-section:nth-child(even) { background: #f8fafc; }
   
-  .sitemap-section:nth-child(even) {
-    background: #f8fafc;
-  }
-  
-  .sitemap-grid {
+  .sitemap-grid, .blog-sitemap-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: 1.5rem;
     margin-top: 2rem;
   }
   
-  .sitemap-item {
+  .sitemap-item, .sitemap-blog-item {
     background: white;
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 12px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .sitemap-item h3 {
-    margin-bottom: 0.5rem;
-  }
-  
-  .sitemap-item h3 a {
-    color: #1e293b;
-    text-decoration: none;
-  }
-  
-  .sitemap-item h3 a:hover {
-    color: #2563eb;
-  }
-  
-  .sitemap-item p {
-    color: #64748b;
-    font-size: 0.95rem;
+    border: 1px solid var(--border);
+    transition: 0.2s;
   }
 
-  .blog-sitemap-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-  }
+  .sitemap-item:hover { border-color: var(--secondary); transform: translateY(-2px); }
   
-  .sitemap-blog-item {
-    background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
+  .sitemap-item h3, .sitemap-blog-item h3 { margin-bottom: 0.5rem; font-size: 1.15rem; }
+  .sitemap-item a, .sitemap-blog-item a { color: var(--primary); text-decoration: none; font-weight: 700; }
   
-  .sitemap-blog-item h3 {
-    margin-bottom: 0.5rem;
-  }
-  
-  .sitemap-blog-item h3 a {
-    color: #1e293b;
-    text-decoration: none;
-  }
-  
-  .sitemap-blog-item h3 a:hover {
-    color: #2563eb;
-  }
-  
-  .sitemap-blog-item p {
-    color: #64748b;
-    font-size: 0.95rem;
-    margin-bottom: 1rem;
-  }
-  
-  .post-meta {
-    display: flex;
-    gap: 1rem;
-    font-size: 0.85rem;
-    color: #64748b;
-  }
+  .sitemap-item p, .sitemap-blog-item p { color: #64748b; font-size: 0.9rem; line-height: 1.5; }
+
+  .post-meta { display: flex; gap: 1rem; font-size: 0.75rem; color: var(--secondary); font-weight: 700; margin-top: 1rem; text-transform: uppercase; }
 
   .quick-links-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
   }
   
-  .quick-link-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
+  .quick-link-card h3 { margin-bottom: 1rem; color: var(--primary); font-size: 1.1rem; }
   
-  .quick-link-card h3 {
-    margin-bottom: 1rem;
-    color: #2563eb;
-  }
-  
-  .link-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-  
-  .link-list a {
-    color: #1e293b;
-    text-decoration: none;
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #f1f5f9;
-  }
-  
-  .link-list a:hover {
-    color: #2563eb;
-  }
+  .link-list { display: flex; flex-direction: column; gap: 0.5rem; }
+  .link-list a { color: #475569; text-decoration: none; font-size: 0.95rem; }
+  .link-list a:hover { color: var(--secondary); text-decoration: underline; }
 
   .search-info {
-    background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
-  }
-  
-  .search-info p {
-    margin: 0.5rem 0;
-  }
-  
-  .search-info a {
-    color: #2563eb;
-    text-decoration: none;
-  }
-  
-  .search-info a:hover {
-    text-decoration: underline;
+    color: #94a3b8;
+    font-size: 0.85rem;
+    border-top: 1px solid var(--border);
+    padding-top: 2rem;
   }
 
   @media (max-width: 768px) {
-    .sitemap-grid,
-    .blog-sitemap-grid,
-    .quick-links-grid {
-      grid-template-columns: 1fr;
-    }
+    .page-header h1 { font-size: 2rem; }
   }
 </style>

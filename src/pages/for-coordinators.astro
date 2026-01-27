@@ -2,14 +2,14 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pathname = Astro.url.pathname;
 
-const title = "Information for Support Coordinators | Syed Bokhari";
-const description = "Specialist NDIS Behaviour Support capacity and referral information for Support Coordinators in Melbourne West.";
+const title = "Information for Support Coordinators | Syed Bokhari | ID: P1636047";
+const description = "Specialist NDIS Behaviour Support capacity for Support Coordinators. Suitable Practitioner ID: P1636047. Serving Melbourne West.";
 ---
 
 <BaseLayout title={title} pathname={pathname} description={description}>
   <section class="sc-hero">
     <div class="container">
-      <p class="kicker">Streamlined Referrals</p>
+      <p class="kicker">Practitioner ID: P1636047</p>
       <h1 class="h1">Partnering with Support Coordinators</h1>
       <p class="subtitle">I provide timely, compliant, and evidence-based PBS services so you can ensure your participants get the best outcomes without the waitlist headache.</p>
     </div>
@@ -19,7 +19,7 @@ const description = "Specialist NDIS Behaviour Support capacity and referral inf
     <div class="container">
       <div class="status-card">
         <span class="pulse"></span>
-        <strong>Current Capacity:</strong> Accepting new FBAs and Plan Reviews for Feb/March 2026.
+        <strong>Current Capacity:</strong> Immediate capacity for FBAs and Restrictive Practice Reviews (Feb 2026).
       </div>
     </div>
   </section>
@@ -28,44 +28,57 @@ const description = "Specialist NDIS Behaviour Support capacity and referral inf
     <div class="container">
       <div class="sc-grid">
         <div class="info-group">
-          <h2>Why refer to me?</h2>
+          <h2>Clinical Excellence & Efficiency</h2>
+          
           <div class="value-prop">
-            <h4>✅ Registered Status</h4>
-            <p>I am a Registered Behaviour Support Practitioner. I handle all NDIS Commission reporting and Restrictive Practice requirements internally.</p>
+            <h4>✅ NDIS Suitable Practitioner</h4>
+            <p>I am assessed as a <strong>Suitable Practitioner</strong> by the Commission (ID: P1636047). I handle all NDIS Commission reporting, RPA submissions, and Restrictive Practice compliance internally.</p>
           </div>
+
           <div class="value-prop">
-            <h4>✅ 4-Week Turnaround</h4>
-            <p>I aim to deliver draft Behaviour Support Plans within 4 weeks of completing the Functional Behaviour Assessment.</p>
+            <h4>✅ Specialized in RRPs</h4>
+            <p>I have extensive experience in identifying and reducing <strong>Regulated Restrictive Practices</strong>. I provide clear, compliant documentation for your RPA panels and state authorizations.</p>
           </div>
+
           <div class="value-prop">
-            <h4>✅ Travel Transparency</h4>
-            <p>I service Melbourne's West (Tarneit, Werribee, Melton). Travel is billed strictly per NDIS guidelines (MM1) with grouping options available.</p>
+            <h4>✅ 4-Week Draft Turnaround</h4>
+            <p>To reduce your administrative burden, I aim to deliver draft Behaviour Support Plans within 4 weeks of completing the Functional Behaviour Assessment.</p>
+          </div>
+
+          <div class="value-prop">
+            <h4>✅ System Literacy</h4>
+            <p>As a former <strong>NDIA Senior Planner</strong>, I understand exactly what evidence is required for plan reviews and audits, ensuring your participant's funding remains secure.</p>
           </div>
 
           <hr class="divider" />
 
           <h3>Primary Service Areas</h3>
-          <p class="text-secondary">Providing face-to-face support across the Western Suburbs:</p>
+          <p class="text-secondary">Face-to-face visits in Melbourne West & Telehealth nationwide:</p>
           <div class="suburb-tags">
             <span>Tarneit</span> <span>Werribee</span> <span>Hoppers Crossing</span> 
             <span>Melton</span> <span>Point Cook</span> <span>Wyndham Vale</span>
+            <span>Truganina</span> <span>Deer Park</span>
           </div>
         </div>
 
         <div class="referral-box">
-          <h3>Direct Intake</h3>
-          <p>Skip the initial back-and-forth. Use my clinical intake form to provide all necessary data in one go.</p>
+          <h3>Streamlined Intake</h3>
+          <p>Skip the initial paperwork trail. Use my secure intake form to provide the necessary data in under 5 minutes.</p>
           
-          <a href="/referrals" class="btn btn-primary full-width">Submit a Referral</a>
+          <a href="/referrals" class="btn btn-primary full-width">Submit Secure Referral</a>
           
           <div class="contact-divider">OR</div>
           
           <div class="direct-contact">
-            <p class="contact-label">Call for Case Discussion</p>
+            <p class="contact-label">Direct Case Discussion</p>
             <a href="tel:0411072466" class="phone-link">0411 072 466</a>
           </div>
 
-          <a href="https://calendly.com/syed-syedbokhari/30min" class="btn btn-outline full-width">Book a Case Discussion</a>
+          <a href="https://calendly.com/syed-syedbokhari/30min" class="btn btn-outline full-width">Book a 30-Min Intake Call</a>
+          
+          <div class="compliance-badge">
+            <small>Compliant with NDIS Quality & Safeguards Framework</small>
+          </div>
         </div>
       </div>
     </div>
@@ -73,9 +86,16 @@ const description = "Specialist NDIS Behaviour Support capacity and referral inf
 </BaseLayout>
 
 <style>
-  .sc-hero { padding: 5rem 0 3rem; background: #f8fafc; text-align: center; }
-  
-  .capacity-bar { background: #1e293b; color: white; padding: 1rem 0; text-align: center; }
+  :root {
+    --primary: #1a365d;
+    --secondary: #2c7a7b;
+    --border: #e2e8f0;
+  }
+
+  .sc-hero { padding: 5rem 0 3rem; background: #f8fafc; text-align: center; border-bottom: 1px solid var(--border); }
+  .kicker { color: var(--secondary); font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; }
+
+  .capacity-bar { background: #0f172a; color: white; padding: 1.2rem 0; text-align: center; }
   
   .pulse { 
     height: 10px; width: 10px; background: #22c55e; border-radius: 50%; 
@@ -91,21 +111,21 @@ const description = "Specialist NDIS Behaviour Support capacity and referral inf
 
   .sc-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 4rem; padding: 4rem 0; }
   
-  .value-prop { margin-bottom: 2rem; }
-  .value-prop h4 { margin-bottom: 0.5rem; color: var(--primary); }
+  .value-prop { margin-bottom: 2.5rem; }
+  .value-prop h4 { margin-bottom: 0.5rem; color: var(--primary); font-size: 1.2rem; display: flex; align-items: center; gap: 0.5rem; }
   
   .divider { border: 0; border-top: 1px solid #e2e8f0; margin: 2rem 0; }
 
   .suburb-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
   .suburb-tags span { 
-    background: #f1f5f9; padding: 0.4rem 0.8rem; border-radius: 6px; 
-    font-size: 0.85rem; color: #475569; font-weight: 600; 
+    background: #eff6ff; padding: 0.4rem 0.8rem; border-radius: 6px; 
+    font-size: 0.85rem; color: var(--primary); font-weight: 700; 
   }
 
   .referral-box { 
     background: white; padding: 2.5rem; border-radius: 16px; 
     border: 2px solid var(--primary); height: fit-content; 
-    position: sticky; top: 100px; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    position: sticky; top: 40px; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
   }
 
   .contact-divider { 
@@ -126,7 +146,13 @@ const description = "Specialist NDIS Behaviour Support capacity and referral inf
     text-decoration: none; display: block;
   }
 
-  .full-width { width: 100%; margin-bottom: 1rem; display: block; text-align: center; }
+  .btn { padding: 1rem; border-radius: 8px; font-weight: 700; text-decoration: none; display: block; text-align: center; cursor: pointer; border: none; font-size: 1rem; transition: 0.3s; }
+  .btn-primary { background: var(--primary); color: white; }
+  .btn-outline { border: 2px solid var(--primary); color: var(--primary); background: transparent; }
+  .full-width { width: 100%; margin-bottom: 1rem; }
+  .btn:hover { opacity: 0.9; transform: translateY(-1px); }
+
+  .compliance-badge { text-align: center; margin-top: 1.5rem; color: var(--muted); font-size: 0.75rem; }
 
   @media (max-width: 992px) {
     .sc-grid { grid-template-columns: 1fr; gap: 3rem; }

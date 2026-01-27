@@ -2,15 +2,16 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pathname = Astro.url.pathname;
 
-const title = "About Syed Bokhari | Registered NDIS Behaviour Support Practitioner";
-const description = "Qualifications and approach of Syed Bokhari, a Registered NDIS Behaviour Support Practitioner. Specialist in evidence-based PBS, FBA, and person-centred care.";
+// SEO Optimized Title & Description including your ID
+const title = "About Syed Bokhari | NDIS Behaviour Support Practitioner | ID: P1636047";
+const description = "Learn about Syed Bokhari, an NDIS Suitable Behaviour Support Practitioner (P1636047). Specialist in evidence-based PBS, FBA, and trauma-informed care.";
 ---
 
 <BaseLayout title={title} pathname={pathname} description={description}>
   <section class="page-header">
     <div class="container">
       <h1 class="h1">About Syed Bokhari</h1>
-      <p class="subtitle">Registered Behaviour Support Practitioner</p>
+      <p class="subtitle">NDIS Behaviour Support Practitioner (ID: P1636047)</p>
     </div>
   </section>
 
@@ -22,12 +23,12 @@ const description = "Qualifications and approach of Syed Bokhari, a Registered N
           <h2 class="h2">Evidence-Based Support for Meaningful Change</h2>
           
           <p class="p lead">
-            I am a <strong>Registered Behaviour Support Practitioner</strong> dedicated to enhancing the quality of life for NDIS participants through Positive Behaviour Support (PBS). My practice focuses on understanding the "why" behind behaviours to create environments where individuals can thrive.
+            I am an <strong>NDIS Behaviour Support Practitioner</strong> deemed suitable by the NDIS Quality and Safeguards Commission. My practice is dedicated to enhancing the quality of life for NDIS participants through Positive Behaviour Support (PBS), focusing on understanding the "why" behind behaviours to create environments where individuals can thrive.
           </p>
 
           <div class="status-badge">
             <span class="status-indicator"></span>
-            <span>Registered with NDIS Quality & Safeguards Commission</span>
+            <span>Assessed as Suitable (ID: P1636047) — NDIS Commission</span>
           </div>
 
           <div class="social-links">
@@ -43,12 +44,12 @@ const description = "Qualifications and approach of Syed Bokhari, a Registered N
         <div class="photo-card">
           <img
             src="/images/headshot.jpg"
-            alt="Syed Bokhari - Registered NDIS Practitioner"
+            alt="Syed Bokhari - NDIS Behaviour Support Practitioner P1636047"
             loading="lazy"
           />
           <div class="photo-caption">
             <strong>Syed Bokhari</strong><br>
-            <small>Registered Behaviour Support Practitioner</small>
+            <small>NDIS Behaviour Support Practitioner</small>
           </div>
         </div>
       </div>
@@ -85,8 +86,6 @@ const description = "Qualifications and approach of Syed Bokhari, a Registered N
         Grounding every intervention in human rights and clinical evidence.
       </p>
       
-      
-
       <div class="approach-grid">
         <div class="approach-card">
           <div class="approach-icon">👤</div>
@@ -114,16 +113,16 @@ const description = "Qualifications and approach of Syed Bokhari, a Registered N
       <div class="status-card">
         <h2 class="h2">Compliance & Clinical Governance</h2>
         <p class="p">
-          Professionalism and safety are paramount. My practice is aligned with the NDIS Capability Framework, ensuring that all 
-          Behaviour Support Plans meet the highest regulatory standards.
+          Professionalism and safety are paramount. My practice is fully aligned with the NDIS Capability Framework, ensuring that all 
+          Behaviour Support Plans meet the highest regulatory standards and focus on the reduction or elimination of restrictive practices.
         </p>
         
         <div class="notice" role="note">
-          <strong>📝 Practitioner Note:</strong>
+          <strong>📝 Practitioner Registration Details:</strong>
           <span class="small">
-            As a Registered Practitioner, I engage in regular clinical supervision and multidisciplinary collaboration. 
-            All services involving regulated restrictive practices are developed with strict adherence to 
-            State/Territory authorization requirements and NDIS Commission reporting obligations.
+            I am a Suitable NDIS Behaviour Support Practitioner (Practitioner ID: P1636047). 
+            My services are delivered in strict adherence to the <em>NDIS (Restrictive Practices and Behaviour Support) Rules 2018</em>, 
+            including all state-specific authorization and reporting requirements.
           </span>
         </div>
       </div>
@@ -134,7 +133,7 @@ const description = "Qualifications and approach of Syed Bokhari, a Registered N
     <div class="container">
       <div class="cta-card">
         <h3 class="h3">Work with Syed</h3>
-        <p class="p">I am currently available for new referrals and collaborative projects.</p>
+        <p class="p">I have immediate capacity for Functional Behaviour Assessments and PBS Plan development Australia-wide.</p>
         
         <div class="connect-options">
           <a href="/contact" class="btn btn-primary">Make a Referral</a>
@@ -180,6 +179,7 @@ const description = "Qualifications and approach of Syed Bokhari, a Registered N
     font-weight: 600;
     font-size: 0.9rem;
     border: 1px solid #bbf7d0;
+    margin-top: 1.5rem;
   }
 
   .status-indicator {
@@ -197,7 +197,9 @@ const description = "Qualifications and approach of Syed Bokhari, a Registered N
     padding: 0.8rem 1.5rem;
     border-radius: 8px;
     font-weight: 600;
+    transition: 0.3s;
   }
+  .social-link:hover { opacity: 0.9; transform: translateY(-2px); }
 
   .photo-card img { width: 100%; border-radius: 12px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
 
@@ -213,6 +215,7 @@ const description = "Qualifications and approach of Syed Bokhari, a Registered N
     padding: 2.5rem;
     border-radius: 12px;
     text-align: center;
+    border: 1px solid #e2e8f0;
   }
 
   .status-card {
@@ -235,11 +238,13 @@ const description = "Qualifications and approach of Syed Bokhari, a Registered N
   .btn { padding: 1rem 2rem; border-radius: 8px; font-weight: 700; text-decoration: none; transition: 0.3s; }
   .btn-primary { background: var(--secondary); color: white; }
   .btn-secondary { border: 2px solid white; color: white; }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
 
   .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
 
   @media (max-width: 768px) {
     .overview-grid { grid-template-columns: 1fr; }
     .connect-options { flex-direction: column; }
+    .page-header h1 { font-size: 2rem; }
   }
 </style>
