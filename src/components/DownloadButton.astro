@@ -1,0 +1,52 @@
+---
+/**
+ * Props:
+ * - file (required): path to file inside /public
+ * - label (optional): button text
+ * - icon (optional): emoji or icon text
+ */
+
+const {
+  file = "",
+  label = "Download",
+  icon = "⬇️"
+} = Astro.props;
+
+if (!file) {
+  throw new Error("DownloadButton.astro requires a 'file' prop.");
+}
+---
+
+<a
+  href={file}
+  download
+  class="download-btn"
+>
+  <span class="icon">{icon}</span>
+  {label}
+</a>
+
+<style>
+  .download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #1a365d;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.2s ease;
+    border: 2px solid transparent;
+  }
+
+  .download-btn:hover {
+    background: #2c5282;
+    transform: translateY(-2px);
+  }
+
+  .icon {
+    font-size: 1.2rem;
+  }
+</style>

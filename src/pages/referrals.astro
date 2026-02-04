@@ -3,34 +3,49 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 const pathname = Astro.url.pathname;
 
 const title = "NDIS Referral Form | Syed Bokhari | ID: P1636047";
-const description = "Submit a referral for NDIS Positive Behaviour Support. Immediate capacity for FBAs and PBS Plans by a Suitable Practitioner.";
+const description =
+  "Submit a referral for NDIS Positive Behaviour Support. Immediate capacity for Functional Behaviour Assessments and PBS Plans by a Suitable Practitioner.";
 ---
 
 <BaseLayout title={title} pathname={pathname} description={description}>
+  <!-- HEADER -->
   <section class="referral-header">
     <div class="container">
       <p class="kicker">NDIS Intake • Practitioner ID: P1636047</p>
       <h1 class="h1">New Participant Referral</h1>
-      <p class="subtitle">Secure intake for Support Coordinators and families. All information is handled in accordance with NDIS privacy standards.</p>
+      <p class="subtitle">
+        Secure intake for Support Coordinators, providers, and families. All information is handled in accordance with NDIS privacy and data protection requirements.
+      </p>
+
+      <div class="download-referral">
+        <a href="/Syed_Bokhari_Full_Referral_Form.pdf" target="_blank" rel="noopener" class="btn btn-outline">
+          Download Referral Form (PDF)
+        </a>
+      </div>
     </div>
   </section>
 
+  <!-- REFERRAL FORM SECTION -->
   <section class="referral-section">
     <div class="container">
       <div class="referral-grid">
-        
+
+        <!-- FORM -->
         <div class="form-container">
           <div class="card">
             <form action="https://formspree.io/f/mykegzwn" method="POST" class="intake-form">
-              <input type="hidden" name="_subject" value="URGENT REFERRAL: New Intake Form Submission" />
+              <input type="hidden" name="_subject" value="New Referral Submission" />
               <input type="hidden" name="_next" value="https://syedbokhari.com.au/thank-you" />
 
+              <!-- PARTICIPANT INFO -->
               <h2 class="form-section-title">1. Participant Information</h2>
+
               <div class="form-row">
                 <div class="form-group">
                   <label for="p-name">Participant Name</label>
                   <input type="text" name="Participant Name" id="p-name" required placeholder="Full Name" />
                 </div>
+
                 <div class="form-group">
                   <label for="p-age">Age</label>
                   <input type="number" name="Participant Age" id="p-age" required placeholder="Years" />
@@ -56,7 +71,7 @@ const description = "Submit a referral for NDIS Positive Behaviour Support. Imme
                 <label for="rrp">Are there Regulated Restrictive Practices in place?</label>
                 <select name="Restrictive Practices" id="rrp">
                   <option value="Unknown">Not Sure / Unknown</option>
-                  <option value="Yes">Yes (Requires urgent compliance review)</option>
+                  <option value="Yes">Yes (Requires compliance review)</option>
                   <option value="No">No</option>
                 </select>
               </div>
@@ -68,46 +83,66 @@ const description = "Submit a referral for NDIS Positive Behaviour Support. Imme
 
               <hr class="divider" />
 
+              <!-- REFERRER INFO -->
               <h2 class="form-section-title">2. Referrer Details</h2>
+
               <div class="form-group">
                 <label for="r-name">Your Name</label>
                 <input type="text" name="Referrer Name" id="r-name" required placeholder="Full Name" />
               </div>
+
               <div class="form-group">
                 <label for="r-role">Your Role</label>
                 <input type="text" name="Referrer Role" id="r-role" required placeholder="e.g. Support Coordinator, Parent, Plan Manager" />
               </div>
+
               <div class="form-group">
                 <label for="r-email">Your Email Address</label>
                 <input type="email" name="_replyto" id="r-email" required placeholder="email@example.com" />
               </div>
 
-              <button type="submit" class="btn btn-primary full-width btn-large">Submit Referral to Syed</button>
-              <p class="privacy-note">Secure Submission. Data is encrypted and sent directly to <strong>referrals@syedbokhari.com.au</strong>.</p>
+              <button type="submit" class="btn btn-primary full-width btn-large">Submit Referral</button>
+
+              <p class="privacy-note">
+                Secure submission. Data is encrypted and sent directly to <strong>referrals@syedbokhari.com.au</strong>.
+              </p>
             </form>
           </div>
         </div>
 
+        <!-- SIDEBAR -->
         <div class="sidebar">
           <div class="sticky-sidebar">
+
             <div class="card highlight-card">
               <h3>Direct Case Discussion</h3>
-              <p>Skip the email back-and-forth. Book a 20-minute discussion regarding this participant immediately.</p>
-              <a href="https://calendly.com/syed-syedbokhari/30min" target="_blank" class="btn btn-outline full-width">Book Consultation Call</a>
+              <p>Support Coordinators can book a 20‑minute case discussion to confirm suitability and next steps.</p>
+              <a href="https://calendly.com/syed-syedbokhari/30min" target="_blank" class="btn btn-outline full-width">
+                Book Consultation Call
+              </a>
             </div>
 
             <div class="info-box">
               <h4>Current Intake Status</h4>
               <p>✅ <strong>Immediate Capacity</strong> for:</p>
-              <ul style="margin-top: 0.5rem; padding-left: 1rem;">
-                <li>Functional Assessments (FBA)</li>
+              <ul>
+                <li>Functional Behaviour Assessments (FBA)</li>
                 <li>Comprehensive PBS Plans</li>
                 <li>Restrictive Practice Reviews</li>
               </ul>
-              <p style="margin-top:0.5rem"><em>Serving Melbourne West & Telehealth Australia-wide.</em></p>
+              <p><em>Serving Melbourne West & Telehealth Australia‑wide.</em></p>
             </div>
 
-            
+            <div class="download-box">
+              <h4>Referral Resources</h4>
+              <a href="/Syed_Bokhari_Full_Referral_Form.pdf" target="_blank" rel="noopener" class="text-link">
+                Download Referral Form (PDF) →
+              </a>
+              <a href="/profile.pdf" target="_blank" rel="noopener" class="text-link">
+                Download Practitioner Profile (PDF) →
+              </a>
+            </div>
+
           </div>
         </div>
 
@@ -132,9 +167,21 @@ const description = "Submit a referral for NDIS Positive Behaviour Support. Imme
     border-bottom: 1px solid var(--border);
   }
 
-  .kicker { color: var(--secondary); font-weight: bold; text-transform: uppercase; margin-bottom: 1rem; }
+  .kicker {
+    color: var(--secondary);
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
 
-  .referral-section { padding: 4rem 0; background: #fff; }
+  .download-referral {
+    margin-top: 1.5rem;
+  }
+
+  .referral-section {
+    padding: 4rem 0;
+    background: #fff;
+  }
 
   .referral-grid {
     display: grid;
@@ -166,7 +213,9 @@ const description = "Submit a referral for NDIS Positive Behaviour Support. Imme
     gap: 1.5rem;
   }
 
-  .form-group { margin-bottom: 1.5rem; }
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
 
   label {
     display: block;
@@ -176,7 +225,9 @@ const description = "Submit a referral for NDIS Positive Behaviour Support. Imme
     color: var(--text);
   }
 
-  input, select, textarea {
+  input,
+  select,
+  textarea {
     width: 100%;
     padding: 0.85rem;
     border: 1px solid #cbd5e1;
@@ -185,19 +236,46 @@ const description = "Submit a referral for NDIS Positive Behaviour Support. Imme
     transition: all 0.2s;
   }
 
-  input:focus, select:focus, textarea:focus {
+  input:focus,
+  select:focus,
+  textarea:focus {
     outline: none;
     border-color: var(--secondary);
     box-shadow: 0 0 0 3px rgba(44, 122, 123, 0.1);
   }
 
-  .btn { padding: 1rem; border-radius: 8px; font-weight: 700; text-decoration: none; display: block; text-align: center; cursor: pointer; border: none; font-size: 1rem; }
-  .btn-primary { background: var(--primary); color: white; }
-  .btn-outline { border: 2px solid var(--primary); color: var(--primary); background: transparent; }
-  .full-width { width: 100%; }
-  .btn:hover { opacity: 0.9; transform: translateY(-1px); }
+  .btn {
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+  }
 
-  .divider { margin: 2rem 0; border: 0; border-top: 1px solid var(--border); }
+  .btn-primary {
+    background: var(--primary);
+    color: white;
+  }
+
+  .btn-outline {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    background: transparent;
+  }
+
+  .full-width {
+    width: 100%;
+  }
+
+  .divider {
+    margin: 2rem 0;
+    border: 0;
+    border-top: 1px solid var(--border);
+  }
 
   .privacy-note {
     margin-top: 1.5rem;
@@ -206,7 +284,10 @@ const description = "Submit a referral for NDIS Positive Behaviour Support. Imme
     text-align: center;
   }
 
-  .sticky-sidebar { position: sticky; top: 40px; }
+  .sticky-sidebar {
+    position: sticky;
+    top: 40px;
+  }
 
   .highlight-card {
     background: #f8fafc;
@@ -221,13 +302,44 @@ const description = "Submit a referral for NDIS Positive Behaviour Support. Imme
     font-size: 0.95rem;
     color: #134e4a;
     border: 1px solid #ccfbf1;
+    margin-bottom: 2rem;
   }
 
-  .info-box h4 { margin-bottom: 0.5rem; color: var(--secondary); }
+  .info-box h4 {
+    margin-bottom: 0.5rem;
+    color: var(--secondary);
+  }
+
+  .download-box {
+    padding: 1.5rem;
+    background: #f8fafc;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+  }
+
+  .text-link {
+    display: block;
+    margin-top: 0.5rem;
+    color: var(--secondary);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .text-link:hover {
+    text-decoration: underline;
+  }
 
   @media (max-width: 992px) {
-    .referral-grid { grid-template-columns: 1fr; }
-    .sticky-sidebar { position: static; }
-    .form-row { grid-template-columns: 1fr; }
+    .referral-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .sticky-sidebar {
+      position: static;
+    }
+
+    .form-row {
+      grid-template-columns: 1fr;
+    }
   }
 </style>

@@ -2,9 +2,9 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pathname = Astro.url.pathname;
 
-// SEO Optimized Title & Description
-const title = "Syed Bokhari | NDIS Behaviour Support Practitioner | ID: P1636047";
-const description = "NDIS Suitable Behaviour Support Practitioner (P1636047). Providing evidence-based PBS plans, FBAs, and specialist coaching for NDIS participants Australia-wide.";
+const title = "Syed Bokhari | NDIS Behaviour Support Practitioner | Immediate Capacity";
+const description =
+  "NDIS Suitable Behaviour Support Practitioner (ID: P1636047). Providing evidence-informed Positive Behaviour Support, Functional Behaviour Assessments, and coaching for NDIS participants Australia-wide.";
 const gaId = "G-8F52E8QTN1";
 ---
 
@@ -17,43 +17,50 @@ const gaId = "G-8F52E8QTN1";
     gtag('config', gaId);
   </script>
 
+  <!-- CAPACITY BANNER -->
   <div class="capacity-banner">
     <span class="pulse">●</span> Currently Accepting New Referrals — Immediate Capacity for Assessments & PBS Plans
   </div>
 
+  <!-- HERO SECTION -->
   <section class="hero">
     <div class="container">
       <div class="hero-grid">
         <div class="hero-content">
           <p class="kicker">NDIS Suitable Practitioner • ID: P1636047</p>
-          <h1 class="h1">Empowering Lives Through Positive Behaviour Support</h1>
-          <p class="p hero-description">
-            I'm Syed Bokhari. I provide person-centered, evidence-informed behaviour support designed to improve quality of life and reduce the need for restrictive practices.
+          <h1 class="h1">Positive Behaviour Support That Improves Quality of Life</h1>
+
+          <p class="hero-description">
+            I’m Syed Bokhari, an NDIS Suitable Behaviour Support Practitioner providing evidence-informed,
+            person‑centred support for participants across Australia. My practice focuses on understanding behaviour,
+            building skills, and promoting safety, dignity, and independence.
           </p>
 
           <div class="hero-highlights">
             <div class="highlight">
               <span class="check">✓</span>
-              <span><strong>Official NDIS Practitioner</strong> - Assessed as Suitable by the NDIS Commission</span>
+              <span><strong>NDIS Suitable Practitioner</strong> — Assessed by the NDIS Commission</span>
             </div>
             <div class="highlight">
               <span class="check">✓</span>
-              <span><strong>Data-Driven FBAs</strong> - Comprehensive Functional Behaviour Assessments</span>
+              <span><strong>Comprehensive FBAs</strong> — Clear insights to guide effective support</span>
             </div>
             <div class="highlight">
               <span class="check">✓</span>
-              <span><strong>Telehealth & On-site</strong> - Supporting participants across all Australian States</span>
+              <span><strong>Telehealth & On‑Site</strong> — Supporting participants Australia‑wide</span>
             </div>
           </div>
 
           <div class="actions">
-            <a class="btn btn-primary" href="/contact">Book Free Consultation</a>
-            <a class="btn btn-secondary" href="/services">Explore Services</a>
+            <a class="btn btn-primary" href="/contact">Book a Free Consultation</a>
+            <a class="btn btn-secondary" href="/Syed_Bokhari_Full_Referral_Form.pdf" target="_blank" rel="noopener">
+              Make a Referral
+            </a>
           </div>
 
           <div class="contact-info">
             <p class="small">
-              📧 <a href="mailto:syed@syedbokhari.com.au">syed@syedbokhari.com.au</a> | 
+              📧 <a href="mailto:syed@syedbokhari.com.au">syed@syedbokhari.com.au</a> |
               📱 <a href="tel:0411072466">0411 072 466</a>
             </p>
           </div>
@@ -61,10 +68,17 @@ const gaId = "G-8F52E8QTN1";
 
         <div class="hero-image">
           <div class="photo-card">
-            <img src="/images/headshot.jpg" alt="Syed Bokhari - NDIS Behaviour Support Practitioner" loading="eager" />
+            <img
+              src="/images/headshot.jpg"
+              alt="Syed Bokhari - NDIS Behaviour Support Practitioner"
+              loading="eager"
+            />
             <div class="photo-caption">
-              <strong>Syed Bokhari</strong><br>
-              <small>NDIS Behaviour Support Practitioner</small>
+              <strong>Syed Bokhari</strong><br />
+              <small>NDIS Behaviour Support Practitioner</small><br />
+              <a href="/profile.pdf" target="_blank" rel="noopener" class="profile-link">
+                Download Professional Profile (PDF)
+              </a>
             </div>
           </div>
         </div>
@@ -72,76 +86,122 @@ const gaId = "G-8F52E8QTN1";
     </div>
   </section>
 
-  <section class="why-me">
+  <!-- HOW I HELP -->
+  <section class="how-i-help">
     <div class="container">
-      <h2 class="text-center h2 mb-3">Why Work With Me?</h2>
+      <h2 class="h2 text-center mb-3">How I Support Participants</h2>
       <div class="grid-three">
-        <div class="trust-item">
-          <h4>Person-Centered</h4>
-          <p>I focus on the individual’s strengths, goals, and rights, ensuring plans are respectful and practical.</p>
+        <div class="help-item">
+          <h4>Understanding Behaviour</h4>
+          <p>
+            I work to understand the function of behaviour through respectful, evidence-informed assessment.
+            This helps identify what the participant needs to feel safe, supported, and successful.
+          </p>
         </div>
-        <div class="trust-item">
-          <h4>Fast Turnaround</h4>
-          <p>As an independent practitioner, I offer timely assessments and plan development without long waitlists.</p>
+        <div class="help-item">
+          <h4>Building Skills & Capacity</h4>
+          <p>
+            Support focuses on developing practical skills, improving communication, and strengthening daily routines
+            to enhance independence and wellbeing.
+          </p>
         </div>
-        <div class="trust-item">
-          <h4>Compliance-Ready</h4>
-          <p>All plans meet the high standards of the NDIS Quality and Safeguards Commission.</p>
+        <div class="help-item">
+          <h4>Collaborative Support</h4>
+          <p>
+            I work closely with families, support workers, and providers to ensure strategies are understood,
+            implemented consistently, and aligned with the participant’s goals.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- WHY SUPPORT COORDINATORS CHOOSE ME -->
+  <section class="why-sc">
+    <div class="container">
+      <h2 class="h2 text-center mb-3">Why Support Coordinators Choose Me</h2>
+      <div class="grid-three">
+        <div class="trust-item">
+          <h4>Clear Communication</h4>
+          <p>
+            Coordinators receive timely updates, realistic timeframes, and transparent expectations throughout the process.
+          </p>
+        </div>
+        <div class="trust-item">
+          <h4>Immediate Capacity</h4>
+          <p>
+            No long waitlists — assessments and PBS plans can begin promptly, including urgent or high‑risk referrals.
+          </p>
+        </div>
+        <div class="trust-item">
+          <h4>Compliance‑Aligned Practice</h4>
+          <p>
+            All documentation meets NDIS Quality and Safeguards Commission requirements, including restrictive practice reporting.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES OVERVIEW -->
   <section class="services-overview">
     <div class="container">
-      <h2 class="text-center h2 mb-3">Professional Support Services</h2>
+      <h2 class="h2 text-center mb-3">Behaviour Support Services</h2>
       <div class="grid-three">
         <div class="card service-card">
           <div class="service-icon">🔍</div>
-          <h3>Functional Assessment</h3>
-          <p>Determining the 'why' behind behaviours to create effective, long-term strategies.</p>
+          <h3>Functional Behaviour Assessment</h3>
+          <p>Understanding the purpose of behaviour to guide effective, person‑centred support.</p>
           <a href="/services#fba" class="text-link">Learn more →</a>
         </div>
         <div class="card service-card">
           <div class="service-icon">📋</div>
-          <h3>PBS Plan Development</h3>
-          <p>Customized, evidence-based plans focusing on skill-building and environmental changes.</p>
+          <h3>Positive Behaviour Support Plans</h3>
+          <p>Comprehensive PBS plans focused on safety, skill‑building, and reducing restrictive practices.</p>
           <a href="/services#pbs" class="text-link">Learn more →</a>
         </div>
         <div class="card service-card">
           <div class="service-icon">🤝</div>
-          <h3>Team Coaching</h3>
-          <p>Training for families and support workers to implement strategies with confidence.</p>
+          <h3>Coaching & Implementation</h3>
+          <p>Practical coaching for families and support teams to implement strategies confidently.</p>
           <a href="/services#coaching" class="text-link">Learn more →</a>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- COMPLIANCE BOX -->
   <section class="notice-section">
     <div class="container">
       <div class="registration-box">
-        <strong>✅ NDIS Registration & Compliance:</strong>
+        <strong>NDIS Suitability & Compliance</strong>
         <p class="small">
-          I am a <strong>Suitable NDIS Behaviour Support Practitioner (ID: P1636047)</strong>. 
-          I operate in strict accordance with the <em>NDIS (Restrictive Practices and Behaviour Support) Rules 2018</em>. 
-          My focus is on the clinical excellence of Positive Behaviour Support to enhance participant autonomy and well-being.
+          I am a <strong>Suitable NDIS Behaviour Support Practitioner (ID: P1636047)</strong> and practice in accordance with the
+          <em>NDIS (Restrictive Practices and Behaviour Support) Rules 2018</em>. My work prioritises safety, dignity,
+          and evidence‑informed decision‑making.
         </p>
       </div>
     </div>
   </section>
 
+  <!-- FINAL CTA -->
   <section class="cta-section">
     <div class="container text-center">
-      <h2>Ready to Improve Quality of Life?</h2>
-      <p>I am currently accepting new referrals for NDIS participants Australia-wide.</p>
+      <h2>Ready to Begin?</h2>
+      <p>
+        Whether you're a Support Coordinator, provider, or family member, I’m here to help participants receive
+        respectful, effective behaviour support.
+      </p>
       <div class="cta-actions">
-        <a href="/contact" class="btn btn-white">Submit Referral</a>
-        <a href="tel:0411072466" class="btn btn-outline-white">Call 0411 072 466</a>
+        <a href="/contact" class="btn btn-white">Book a Free Consultation</a>
+        <a href="/Syed_Bokhari_Full_Referral_Form.pdf" target="_blank" rel="noopener" class="btn btn-outline-white">
+          Make a Referral
+        </a>
       </div>
     </div>
   </section>
 
+  <!-- STYLES -->
   <style>
     :root {
       --primary: #1a365d;
@@ -152,7 +212,10 @@ const gaId = "G-8F52E8QTN1";
       --text: #334155;
     }
 
-    body { color: var(--text); font-family: system-ui, -apple-system, sans-serif; }
+    body {
+      color: var(--text);
+      font-family: system-ui, -apple-system, sans-serif;
+    }
 
     .capacity-banner {
       background: var(--success);
@@ -166,12 +229,30 @@ const gaId = "G-8F52E8QTN1";
       z-index: 100;
     }
 
-    .pulse { animation: opacityPulse 2s infinite; margin-right: 5px; }
-    @keyframes opacityPulse { 0% { opacity: 1; } 50% { opacity: 0.4; } 100% { opacity: 1; } }
+    .pulse {
+      animation: opacityPulse 2s infinite;
+      margin-right: 5px;
+    }
 
-    .hero { padding: 5rem 0; background: white; }
-    .kicker { color: var(--secondary); font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; }
-    
+    @keyframes opacityPulse {
+      0% { opacity: 1; }
+      50% { opacity: 0.4; }
+      100% { opacity: 1; }
+    }
+
+    .hero {
+      padding: 5rem 0;
+      background: white;
+    }
+
+    .kicker {
+      color: var(--secondary);
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+    }
+
     .hero-grid {
       display: grid;
       grid-template-columns: 1.4fr 1fr;
@@ -179,10 +260,121 @@ const gaId = "G-8F52E8QTN1";
       align-items: center;
     }
 
-    .hero-description { font-size: 1.2rem; line-height: 1.6; margin-bottom: 2rem; }
+    .hero-description {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
 
-    .highlight { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; font-size: 1rem; }
-    .check { color: var(--success); font-weight: bold; }
+    .highlight {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 12px;
+      font-size: 1rem;
+    }
+
+    .check {
+      color: var(--success);
+      font-weight: bold;
+    }
+
+    .photo-card {
+      background: white;
+      padding: 1rem;
+      border-radius: 15px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .photo-card img {
+      width: 100%;
+      border-radius: 10px;
+      filter: grayscale(10%);
+    }
+
+    .profile-link {
+      display: inline-block;
+      margin-top: 0.35rem;
+      color: var(--secondary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .profile-link:hover {
+      text-decoration: underline;
+    }
+
+    .btn {
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: 0.3s;
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background: #2a4365;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      border: 2px solid var(--primary);
+      color: var(--primary);
+      background: transparent;
+    }
+
+    .grid-three {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .help-item,
+    .trust-item,
+    .service-card {
+      background: var(--bg-light);
+      padding: 2.5rem;
+      border-radius: 15px;
+      border: 1px solid #e2e8f0;
+      transition: 0.3s;
+    }
+
+    .service-card:hover,
+    .help-item:hover,
+    .trust-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .service-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .text-link {
+      color: var(--secondary);
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+
+    .text-link:hover {
+      text-decoration: underline;
+    }
+
+    .notice-section {
+      padding: 4rem 0;
+    }
 
     .registration-box {
       background: #f1f5f9;
@@ -192,50 +384,82 @@ const gaId = "G-8F52E8QTN1";
       margin: 3rem 0;
     }
 
-    .photo-card {
-      background: white;
-      padding: 1rem;
-      border-radius: 15px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    .cta-section {
+      background: var(--primary);
+      color: white;
+      padding: 5rem 0;
       text-align: center;
     }
-    .photo-card img { width: 100%; border-radius: 10px; filter: grayscale(10%); }
 
-    .btn { padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; transition: 0.3s; cursor: pointer; }
-    .btn-primary { background: var(--primary); color: white; border: none; }
-    .btn-primary:hover { background: #2a4365; transform: translateY(-2px); }
-    .btn-secondary { border: 2px solid var(--primary); color: var(--primary); }
-
-    .grid-three { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; }
-    
-    .service-card {
-      background: var(--bg-light);
-      padding: 2.5rem;
-      border-radius: 15px;
-      transition: 0.3s;
-      border: 1px solid #e2e8f0;
+    .cta-actions {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      margin-top: 2.5rem;
+      flex-wrap: wrap;
     }
-    .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-    .service-icon { font-size: 2.5rem; margin-bottom: 1rem; }
-    .text-link { color: var(--secondary); font-weight: bold; text-decoration: none; display: block; margin-top: 1rem; }
 
-    .why-me { padding: 4rem 0; background: #fff; }
-    .trust-item h4 { color: var(--primary); margin-bottom: 0.5rem; }
+    .btn-white {
+      background: white;
+      color: var(--primary);
+    }
 
-    .cta-section { background: var(--primary); color: white; padding: 5rem 0; text-align: center; }
-    .cta-actions { display: flex; gap: 1.5rem; justify-content: center; margin-top: 2.5rem; }
-    .btn-white { background: white; color: var(--primary); }
-    .btn-outline-white { border: 2px solid white; color: white; }
+    .btn-outline-white {
+      border: 2px solid white;
+      color: white;
+      background: transparent;
+    }
 
     @media (max-width: 992px) {
-      .hero-grid { grid-template-columns: 1fr; text-align: center; }
-      .hero-image { order: -1; max-width: 400px; margin: 0 auto; }
-      .highlight { justify-content: center; }
-      .cta-actions { flex-direction: column; align-items: center; }
+      .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-image {
+        order: -1;
+        max-width: 400px;
+        margin: 0 auto 2rem;
+      }
+
+      .highlight {
+        justify-content: center;
+      }
+
+      .cta-actions {
+        flex-direction: column;
+        align-items: center;
+      }
     }
 
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-    .h1 { font-size: 3rem; color: var(--primary); line-height: 1.2; margin-bottom: 1.5rem; }
-    .mb-3 { margin-bottom: 2rem; }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .h1 {
+      font-size: 3rem;
+      color: var(--primary);
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+
+    .h2 {
+      font-size: 2rem;
+      color: var(--primary);
+    }
+
+    .mb-3 {
+      margin-bottom: 2rem;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .small {
+      font-size: 0.9rem;
+    }
   </style>
 </BaseLayout>

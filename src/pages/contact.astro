@@ -3,42 +3,50 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 const pathname = Astro.url.pathname;
 
 const title = "Contact Syed Bokhari | NDIS Suitable Practitioner ID: P1636047";
-const description = "Get in touch for NDIS behaviour support enquiries. Serving Melbourne West and providing Telehealth services Australia-wide.";
+const description =
+  "Contact Syed Bokhari for NDIS Behaviour Support enquiries. Immediate capacity for FBAs and PBS Plans. Serving Melbourne West and Telehealth Australia-wide.";
 ---
 
 <BaseLayout title={title} pathname={pathname} description={description}>
+  <!-- HEADER -->
   <section class="contact-header">
     <div class="container">
       <p class="kicker">NDIS Suitable Practitioner • ID: P1636047</p>
       <h1 class="h1">How can I help you today?</h1>
-      <p class="subtitle">Select the most relevant channel below to ensure your enquiry is handled with priority.</p>
+      <p class="subtitle">
+        Choose the most relevant option below to ensure your enquiry is directed to the right channel.
+      </p>
     </div>
   </section>
 
+  <!-- CONTACT CHANNELS -->
   <section class="contact-channels">
     <div class="container">
       <div class="channels-grid">
-        
+
+        <!-- REFERRALS -->
         <div class="channel-card highlight">
           <div class="channel-icon">📝</div>
           <h3>New Referrals</h3>
-          <p>Support Coordinators or families looking to initiate FBAs or PBS plans for a new participant.</p>
+          <p>For Support Coordinators or families initiating Functional Behaviour Assessments or PBS Plans.</p>
           <a href="/referrals" class="btn btn-primary">Go to Referral Form</a>
           <span class="email-link">referrals@syedbokhari.com.au</span>
         </div>
 
+        <!-- GENERAL ENQUIRIES -->
         <div class="channel-card">
           <div class="channel-icon">💬</div>
           <h3>General Enquiries</h3>
-          <p>Questions about my clinical approach, current waitlist times, or service areas.</p>
+          <p>Questions about services, capacity, or clinical approach.</p>
           <a href="mailto:enquiries@syedbokhari.com.au" class="btn btn-outline">Email Enquiries</a>
           <span class="email-link">enquiries@syedbokhari.com.au</span>
         </div>
 
+        <!-- PROVIDER SUPPORT -->
         <div class="channel-card">
           <div class="channel-icon">🛠️</div>
           <h3>Provider Support</h3>
-          <p>For existing care teams, support workers, or OTs collaborating on current cases.</p>
+          <p>For support workers, OTs, or allied health teams collaborating on current cases.</p>
           <a href="mailto:support@syedbokhari.com.au" class="btn btn-outline">Collaboration Team</a>
           <span class="email-link">support@syedbokhari.com.au</span>
         </div>
@@ -47,48 +55,58 @@ const description = "Get in touch for NDIS behaviour support enquiries. Serving 
     </div>
   </section>
 
+  <!-- BOOKING + CONTACT FORM -->
   <section class="booking-form-section">
     <div class="container">
       <div class="dual-column">
-        
+
+        <!-- LEFT COLUMN -->
         <div class="calendly-intro">
           <h2>Book a Case Discussion</h2>
-          <p>As a former <strong>NDIA Senior Planner</strong>, I understand the complexities of the system. Let's discuss your participant's needs and how we can achieve the best outcomes.</p>
-          
+          <p>
+            As a former <strong>NDIA Senior Planner</strong>, I understand the evidence and documentation required for
+            complex cases. Book a case discussion to confirm suitability and next steps.
+          </p>
+
           <div class="calendly-embed-container">
-            <a href="https://calendly.com/syed-syedbokhari/30min" target="_blank" class="btn btn-primary btn-large">Schedule 30-Min Call</a>
+            <a href="https://calendly.com/syed-syedbokhari/30min" target="_blank" class="btn btn-primary btn-large">
+              Schedule 30‑Min Call
+            </a>
             <p class="small-note">Recommended for Support Coordinators</p>
           </div>
 
-          
-
           <div class="admin-note">
-            <strong>Invoicing & Admin:</strong> For billing enquiries or service agreements, please contact <a href="mailto:admin@syedbokhari.com.au">admin@syedbokhari.com.au</a>
+            <strong>Invoicing & Admin:</strong>  
+            For service agreements, billing, or administrative enquiries, contact  
+            <a href="mailto:admin@syedbokhari.com.au">admin@syedbokhari.com.au</a>
           </div>
         </div>
 
+        <!-- RIGHT COLUMN -->
         <div class="form-wrapper">
           <div class="contact-form-card">
             <h3>Quick Message</h3>
             <p>I aim to respond to all general messages within 24–48 hours.</p>
-            
+
             <form action="https://formspree.io/f/mykegzwn" method="POST" class="contact-form">
               <div class="form-group">
                 <label for="name">Your Name</label>
                 <input type="text" id="name" name="name" required placeholder="Full Name" />
               </div>
+
               <div class="form-group">
                 <label for="email">Email Address</label>
                 <input type="email" id="email" name="_replyto" required placeholder="email@example.com" />
               </div>
+
               <div class="form-group">
                 <label for="message">How can I help?</label>
                 <textarea id="message" name="message" rows="5" required placeholder="Provide a brief overview..."></textarea>
               </div>
-              
+
               <input type="hidden" name="_next" value="https://syedbokhari.com.au/thank-you" />
               <input type="hidden" name="_subject" value="New Website General Enquiry" />
-              
+
               <button type="submit" class="btn btn-primary full-width">Send Secure Message</button>
             </form>
           </div>
@@ -114,7 +132,12 @@ const description = "Get in touch for NDIS behaviour support enquiries. Serving 
     border-bottom: 1px solid var(--border);
   }
 
-  .kicker { color: var(--secondary); font-weight: bold; text-transform: uppercase; margin-bottom: 1rem; }
+  .kicker {
+    color: var(--secondary);
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
 
   .channels-grid {
     display: grid;
@@ -142,10 +165,22 @@ const description = "Get in touch for NDIS behaviour support enquiries. Serving 
     z-index: 10;
   }
 
-  .channel-icon { font-size: 2.5rem; margin-bottom: 1rem; }
-  .email-link { margin-top: 1.5rem; font-size: 0.8rem; color: var(--muted); font-family: monospace; }
+  .channel-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
 
-  .booking-form-section { padding: 5rem 0; background: #fff; }
+  .email-link {
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
+    color: var(--muted);
+    font-family: monospace;
+  }
+
+  .booking-form-section {
+    padding: 5rem 0;
+    background: #fff;
+  }
 
   .dual-column {
     display: grid;
@@ -154,9 +189,21 @@ const description = "Get in touch for NDIS behaviour support enquiries. Serving 
     align-items: start;
   }
 
-  .calendly-intro h2 { margin-bottom: 1rem; color: var(--primary); }
-  .calendly-embed-container { margin: 2.5rem 0; }
-  .small-note { font-size: 0.8rem; color: var(--muted); margin-top: 0.5rem; font-style: italic; }
+  .calendly-intro h2 {
+    margin-bottom: 1rem;
+    color: var(--primary);
+  }
+
+  .calendly-embed-container {
+    margin: 2.5rem 0;
+  }
+
+  .small-note {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-top: 0.5rem;
+    font-style: italic;
+  }
 
   .admin-note {
     margin-top: 3rem;
@@ -174,10 +221,20 @@ const description = "Get in touch for NDIS behaviour support enquiries. Serving 
     border: 1px solid var(--border);
   }
 
-  .form-group { margin-bottom: 1.5rem; }
-  label { display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--primary); font-size: 0.9rem; }
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
 
-  input, textarea {
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--primary);
+    font-size: 0.9rem;
+  }
+
+  input,
+  textarea {
     width: 100%;
     padding: 0.85rem;
     border: 1px solid #cbd5e1;
@@ -186,16 +243,53 @@ const description = "Get in touch for NDIS behaviour support enquiries. Serving 
     font-size: 1rem;
   }
 
-  input:focus, textarea:focus { outline: none; border-color: var(--secondary); box-shadow: 0 0 0 3px rgba(44, 122, 123, 0.1); }
+  input:focus,
+  textarea:focus {
+    outline: none;
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 3px rgba(44, 122, 123, 0.1);
+  }
 
-  .btn { padding: 1rem 2rem; border-radius: 8px; font-weight: 700; text-decoration: none; display: inline-block; transition: 0.3s; text-align: center; border: none; cursor: pointer; }
-  .btn-primary { background: var(--secondary); color: white; }
-  .btn-outline { border: 2px solid var(--secondary); color: var(--secondary); background: transparent; }
-  .full-width { width: 100%; display: block; }
+  .btn {
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-primary {
+    background: var(--secondary);
+    color: white;
+  }
+
+  .btn-outline {
+    border: 2px solid var(--secondary);
+    color: var(--secondary);
+    background: transparent;
+  }
+
+  .full-width {
+    width: 100%;
+    display: block;
+  }
 
   @media (max-width: 992px) {
-    .dual-column { grid-template-columns: 1fr; gap: 3rem; }
-    .channel-card.highlight { transform: none; }
-    .channels-grid { margin-top: 2rem; }
+    .dual-column {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .channel-card.highlight {
+      transform: none;
+    }
+
+    .channels-grid {
+      margin-top: 2rem;
+    }
   }
 </style>

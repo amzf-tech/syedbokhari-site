@@ -1,0 +1,40 @@
+---
+/**
+ * Reusable SEO component
+ * Usage:
+ * <SEO title="Page Title" description="..." image="/images/og.png" />
+ */
+
+const {
+  title = "Syed Bokhari | NDIS Suitable Behaviour Support Practitioner",
+  description = "Official NDIS Suitable Behaviour Support Practitioner (ID: P1636047). Specializing in Functional Behaviour Assessment (FBA) and clinical PBS plans in Melbourne West.",
+  image = "https://syedbokhari.com.au/images/og-default.png",
+  pathname = Astro.url.pathname,
+  jsonld = null
+} = Astro.props;
+
+const fullUrl = `https://syedbokhari.com.au${pathname}`;
+---
+
+<!-- Primary Meta -->
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={fullUrl} />
+
+<!-- OpenGraph -->
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={fullUrl} />
+<meta property="og:type" content="website" />
+<meta property="og:image" content={image} />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={image} />
+
+<!-- Optional JSON-LD -->
+{jsonld && (
+  <script type="application/ld+json" set:html={JSON.stringify(jsonld)}></script>
+)}

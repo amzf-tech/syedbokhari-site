@@ -3,33 +3,34 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
 export async function getStaticPaths() {
   const posts = {
-    'understanding-your-practitioner-suitability-id': {
-      title: 'What Does an NDIS Practitioner Suitability Mean for You?',
-      description: 'Understanding the importance of the NDIS Suitability assessment and how it protects participants.',
-      category: 'Clinical Standards',
-      date: '2026-01-22',
-      readTime: '5 min read',
-      tags: ['NDIS Commission', 'Suitability', 'Quality Assurance'],
+    "understanding-your-practitioner-suitability-id": {
+      title: "What Does an NDIS Practitioner Suitability Mean for You?",
+      description:
+        "Understanding the importance of the NDIS Suitability assessment and how it protects participants.",
+      category: "Clinical Standards",
+      date: "2026-01-22",
+      readTime: "5 min read",
+      tags: ["NDIS Commission", "Suitability", "Quality Assurance"],
       content: `
         <h2>Commitment to Clinical Excellence</h2>
         <p>In the NDIS ecosystem, working with a practitioner who has been deemed <strong>Suitable</strong> by the NDIS Quality and Safeguards Commission marks a commitment to the highest level of accountability.</p>
         <p>As an NDIS Suitable Practitioner (ID: P1636047), my practice meets the rigorous standards of the NDIS Capability Framework, ensuring that participants receive evidence-based support.</p>
         <h3>Direct Accountability</h3>
         <p>Suitable practitioners have a direct responsibility to the NDIS Commission. All plans are developed under strict adherence to the <em>National Disability Insurance Scheme Rules 2018</em>, with a primary focus on human rights and the reduction of restrictive practices.</p>
-      `
+      `,
     },
-    'functional-behaviour-assessment-process': {
-      title: 'Understanding the Functional Behaviour Assessment Process',
-      description: 'A comprehensive guide to FBA - the foundation of effective, evidence-based behaviour support.',
-      category: 'Clinical Assessment',
-      date: '2025-12-20',
-      readTime: '7 min read',
-      tags: ['Assessment', 'FBA', 'Data-Driven'],
+
+    "functional-behaviour-assessment-process": {
+      title: "Understanding the Functional Behaviour Assessment Process",
+      description:
+        "A comprehensive guide to FBA — the foundation of effective, evidence-based behaviour support.",
+      category: "Clinical Assessment",
+      date: "2025-12-20",
+      readTime: "7 min read",
+      tags: ["Assessment", "FBA", "Data-Driven"],
       content: `
         <h2>What is Functional Behaviour Assessment (FBA)?</h2>
         <p>An FBA is a systematic process for understanding the 'why' behind behaviours of concern. As a Suitable Practitioner, I use data-driven methods to identify triggers and the functions of behaviour.</p>
-        
-        
 
         <h3>The FBA Steps</h3>
         <ul>
@@ -37,58 +38,166 @@ export async function getStaticPaths() {
           <li><strong>Direct Observation:</strong> Seeing the participant in their natural environment to identify environmental precursors.</li>
           <li><strong>Data Analysis:</strong> Determining if the behaviour is for communication, sensory needs, or escape/tangible outcomes.</li>
         </ul>
-      `
+      `,
     },
-    'preparing-first-behaviour-support-meeting': {
-      title: 'Preparing for Your First Behaviour Support Meeting',
-      description: 'What to expect and how to prepare for your initial consultation with a PBS practitioner.',
-      category: 'Participant Guide',
-      date: '2025-11-15',
-      readTime: '4 min read',
-      tags: ['Getting Started', 'Consultation', 'NDIS'],
+
+    "preparing-first-behaviour-support-meeting": {
+      title: "Preparing for Your First Behaviour Support Meeting",
+      description:
+        "What to expect and how to prepare for your initial consultation with a PBS practitioner.",
+      category: "Participant Guide",
+      date: "2025-11-15",
+      readTime: "4 min read",
+      tags: ["Getting Started", "Consultation", "NDIS"],
       content: `
         <h2>Setting the Stage for Success</h2>
         <p>The first meeting is about building rapport and understanding the participant’s unique story. It’s a collaborative space where we define goals together.</p>
+
         <h3>What to Bring</h3>
         <p>To make the most of our time, it is helpful to have copies of the NDIS plan, any recent therapy reports (OT, Speech, or Psychology), and a basic list of current support routines.</p>
-      `
+      `,
     },
-    'signs-ndis-participant-needs-behaviour-support': {
-      title: 'Signs an NDIS Participant Needs Behaviour Support',
-      description: 'How to identify when Positive Behaviour Support (PBS) is the right choice for a participant.',
-      category: 'NDIS Navigation',
-      date: '2025-11-01',
-      readTime: '6 min read',
-      tags: ['PBS', 'Referral Signs', 'NDIS Help'],
+
+    "signs-ndis-participant-needs-behaviour-support": {
+      title: "Signs an NDIS Participant Needs Behaviour Support",
+      description:
+        "How to identify when Positive Behaviour Support (PBS) is the right choice for a participant.",
+      category: "NDIS Navigation",
+      date: "2025-11-01",
+      readTime: "6 min read",
+      tags: ["PBS", "Referral Signs", "NDIS Help"],
       content: `
         <h2>Recognising the Need for Support</h2>
         <p>Positive Behaviour Support is often required when behaviours impact a person’s quality of life, limit their community participation, or pose a safety risk to themselves or others.</p>
+
         <h3>Key Indicators</h3>
         <ul>
           <li>Frequent school or placement suspensions.</li>
           <li>Use of restrictive practices (physical, chemical, or environmental).</li>
           <li>Withdrawal from social activities due to behavioural challenges.</li>
         </ul>
-      `
-    }
-    // REMOVED: 'understanding-behaviour-support-under-supervision' post as it is no longer applicable.
+      `,
+    },
+
+    /* -----------------------------
+       NEW BLOG POSTS (4)
+    ------------------------------*/
+
+    "understanding-restrictive-practices-ndis-compliance": {
+      title: "Understanding Restrictive Practices Under the NDIS",
+      description:
+        "A clear guide to regulated restrictive practices, why they occur, and how the NDIS Commission regulates their use.",
+      category: "NDIS Compliance",
+      date: "2026-02-01",
+      readTime: "6 min read",
+      tags: ["Restrictive Practices", "Compliance", "NDIS Commission"],
+      content: `
+        <h2>What Are Regulated Restrictive Practices?</h2>
+        <p>Restrictive practices are interventions that limit a person’s rights or freedom of movement. Under the <em>NDIS (Restrictive Practices and Behaviour Support) Rules 2018</em>, these practices are tightly regulated to protect participant safety and uphold human rights.</p>
+
+        <h3>The Five Types of Regulated Restrictive Practices</h3>
+        <ul>
+          <li><strong>Physical restraint</strong> – using physical force to prevent movement.</li>
+          <li><strong>Chemical restraint</strong> – medication used primarily to influence behaviour.</li>
+          <li><strong>Mechanical restraint</strong> – devices that restrict movement.</li>
+          <li><strong>Environmental restraint</strong> – restricting access to areas or items.</li>
+          <li><strong>Seclusion</strong> – isolating a person in a room or space.</li>
+        </ul>
+
+        <h3>Compliance Requirements</h3>
+        <p>All regulated restrictive practices must be authorised, documented, reported, and paired with strategies to reduce and eliminate their use.</p>
+      `,
+    },
+
+    "human-rights-positive-behaviour-support": {
+      title: "Human Rights in Positive Behaviour Support",
+      description:
+        "How human rights principles guide ethical behaviour support and protect participant dignity.",
+      category: "Practice Framework",
+      date: "2026-01-28",
+      readTime: "5 min read",
+      tags: ["Human Rights", "PBS", "Ethical Practice"],
+      content: `
+        <h2>Why Human Rights Matter in PBS</h2>
+        <p>Positive Behaviour Support is grounded in the belief that every person has the right to autonomy, dignity, and inclusion.</p>
+
+        <h3>Core Human Rights Principles</h3>
+        <ul>
+          <li><strong>Dignity</strong> — respecting identity and lived experience.</li>
+          <li><strong>Choice and Control</strong> — participants as active decision‑makers.</li>
+          <li><strong>Least Restrictive Practice</strong> — prioritising freedom and independence.</li>
+          <li><strong>Participation</strong> — supporting community involvement.</li>
+        </ul>
+      `,
+    },
+
+    "data-collection-behaviour-support": {
+      title: "Why Data Collection Matters in Behaviour Support",
+      description:
+        "A practical guide to collecting meaningful behaviour data and how it improves PBS outcomes.",
+      category: "Clinical Assessment",
+      date: "2026-01-18",
+      readTime: "6 min read",
+      tags: ["Data Collection", "FBA", "PBS"],
+      content: `
+        <h2>The Role of Data in Behaviour Support</h2>
+        <p>Accurate data is essential for understanding behaviour patterns and developing effective strategies.</p>
+
+        <h3>Types of Behaviour Data</h3>
+        <ul>
+          <li><strong>ABC Data</strong> — Antecedent, Behaviour, Consequence.</li>
+          <li><strong>Frequency</strong> — how often behaviour occurs.</li>
+          <li><strong>Duration</strong> — how long behaviour lasts.</li>
+          <li><strong>Intensity</strong> — severity or impact.</li>
+        </ul>
+      `,
+    },
+
+    "support-coordinators-behaviour-support-guide": {
+      title: "A Behaviour Support Guide for Support Coordinators",
+      description:
+        "Key information Support Coordinators need when referring participants for PBS services.",
+      category: "NDIS Navigation",
+      date: "2026-01-10",
+      readTime: "5 min read",
+      tags: ["Support Coordinators", "Referral Guide", "PBS"],
+      content: `
+        <h2>When to Refer for Behaviour Support</h2>
+        <p>Support Coordinators play a crucial role in identifying when a participant may benefit from PBS.</p>
+
+        <h3>Common Referral Indicators</h3>
+        <ul>
+          <li>Increased incidents or safety concerns</li>
+          <li>Use of restrictive practices</li>
+          <li>Placement instability</li>
+          <li>Family or carer burnout</li>
+        </ul>
+      `,
+    },
   };
 
-  return Object.keys(posts).map(slug => ({
+  return Object.keys(posts).map((slug) => ({
     params: { slug },
-    props: { posts, slug }
+    props: { posts, slug },
   }));
 }
 
 const { posts, slug } = Astro.props;
 const post = posts[slug];
 const pathname = Astro.url.pathname;
-const formattedDate = new Date(post.date).toLocaleDateString('en-AU', {
-  year: 'numeric', month: 'long', day: 'numeric'
+
+const formattedDate = new Date(post.date).toLocaleDateString("en-AU", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
 });
 ---
 
-<BaseLayout title={`${post.title} | Syed Bokhari`} pathname={pathname} description={post.description}>
+<BaseLayout
+  title={`${post.title} | Syed Bokhari`}
+  pathname={pathname}
+  description={post.description}
+>
   <article class="blog-post">
     <header class="article-header">
       <div class="container">
@@ -105,14 +214,14 @@ const formattedDate = new Date(post.date).toLocaleDateString('en-AU', {
       <div class="container">
         <div class="content-wrapper">
           <div class="post-content" set:html={post.content} />
-          
+
           <div class="author-bio">
             <div class="bio-text">
               <p class="bio-kicker">Written By</p>
               <h4>Syed Bokhari</h4>
               <p class="bio-desc">
-                <strong>NDIS Behaviour Support Practitioner (ID: P1636047)</strong>. 
-                Based in Melbourne West with immediate capacity for FBAs and PBS Plans Australia-wide.
+                <strong>NDIS Behaviour Support Practitioner (ID: P1636047)</strong>.
+                Based in Melbourne West with immediate capacity for FBAs and PBS Plans Australia‑wide.
               </p>
               <a href="/referrals" class="btn btn-primary">Make a Referral</a>
             </div>
@@ -124,28 +233,106 @@ const formattedDate = new Date(post.date).toLocaleDateString('en-AU', {
 </BaseLayout>
 
 <style>
-  /* Keep your existing styles here */
-  .article-header { padding: 5rem 0 3rem; background: #f8fafc; border-bottom: 1px solid #e2e8f0; }
-  .article-meta { display: flex; gap: 1rem; color: #64748b; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; margin-bottom: 1rem; }
-  .article-category { color: var(--primary); }
-  .article-title { font-size: 2.75rem; color: #0f172a; line-height: 1.1; max-width: 900px; }
+  .article-header {
+    padding: 5rem 0 3rem;
+    background: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+  }
 
-  .article-content { padding: 4rem 0; }
-  .content-wrapper { max-width: 720px; margin: 0 auto; }
-  
-  .post-content :global(h2) { font-size: 1.75rem; margin: 2.5rem 0 1rem; color: #1e293b; }
-  .post-content :global(h3) { font-size: 1.4rem; margin: 2rem 0 1rem; color: #334155; }
-  .post-content :global(p) { line-height: 1.8; color: #475569; margin-bottom: 1.5rem; font-size: 1.1rem; }
-  .post-content :global(ul) { margin-bottom: 1.5rem; padding-left: 1.5rem; }
-  .post-content :global(li) { margin-bottom: 0.75rem; color: #475569; line-height: 1.6; }
+  .article-meta {
+    display: flex;
+    gap: 1rem;
+    color: #64748b;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
 
-  .author-bio { margin-top: 5rem; padding: 2.5rem; background: #f8fafc; border-radius: 16px; border: 1px solid #e2e8f0; }
-  .bio-kicker { font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: var(--primary); margin-bottom: 0.5rem; }
-  .bio-desc { margin: 0.5rem 0 1.5rem; font-size: 1rem; }
+  .article-category {
+    color: var(--primary);
+  }
 
-  .btn-primary { background: #1a365d; color: white; padding: 0.8rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block; }
+  .article-title {
+    font-size: 2.75rem;
+    color: #0f172a;
+    line-height: 1.1;
+    max-width: 900px;
+  }
+
+  .article-content {
+    padding: 4rem 0;
+  }
+
+  .content-wrapper {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .post-content :global(h2) {
+    font-size: 1.75rem;
+    margin: 2.5rem 0 1rem;
+    color: #1e293b;
+  }
+
+  .post-content :global(h3) {
+    font-size: 1.4rem;
+    margin: 2rem 0 1rem;
+    color: #334155;
+  }
+
+  .post-content :global(p) {
+    line-height: 1.8;
+    color: #475569;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+
+  .post-content :global(ul) {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  .post-content :global(li) {
+    margin-bottom: 0.75rem;
+    color: #475569;
+    line-height: 1.6;
+  }
+
+  .author-bio {
+    margin-top: 5rem;
+    padding: 2.5rem;
+    background: #f8fafc;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+  }
+
+  .bio-kicker {
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .bio-desc {
+    margin: 0.5rem 0 1.5rem;
+    font-size: 1rem;
+  }
+
+  .btn-primary {
+    background: #1a365d;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+  }
 
   @media (max-width: 768px) {
-    .article-title { font-size: 2rem; }
+    .article-title {
+      font-size: 2rem;
+    }
   }
 </style>

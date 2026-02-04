@@ -3,19 +3,22 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 const pathname = Astro.url.pathname;
 
 const title = "Privacy Policy | Syed Bokhari - NDIS Behaviour Support";
-const description = "Privacy and data protection policy for NDIS Behaviour Support services. NDIS Practitioner ID: P1636047.";
+const description =
+  "Privacy and data protection policy for NDIS Behaviour Support services. NDIS Practitioner ID: P1636047.";
 const lastUpdated = "27 January 2026";
 ---
 
 <BaseLayout title={title} pathname={pathname} description={description}>
+  <!-- HEADER -->
   <section class="page-header">
     <div class="container">
       <p class="kicker">NDIS Practitioner ID: P1636047</p>
       <h1 class="h1">Privacy & Data Protection</h1>
-      <p class="subtitle">Commitment to the NDIS Quality and Safeguards Framework. Last updated: {lastUpdated}</p>
+      <p class="subtitle">Committed to the NDIS Quality and Safeguards Framework • Last updated: {lastUpdated}</p>
     </div>
   </section>
 
+  <!-- OVERVIEW -->
   <section class="policy-overview">
     <div class="container">
       <div class="overview-card">
@@ -23,60 +26,63 @@ const lastUpdated = "27 January 2026";
         <div class="overview-content">
           <h2 class="h2">Clinical Privacy Commitment</h2>
           <p class="p">
-            As an <strong>NDIS Suitable Practitioner</strong>, I am bound by the <em>Privacy Act 1988</em> and the <em>NDIS Code of Conduct</em>. This policy details how I collect, use, and protect personal and sensitive clinical information provided via <strong>syedbokhari.com.au</strong>.
+            As an <strong>NDIS Suitable Behaviour Support Practitioner</strong>, I comply with the
+            <em>Privacy Act 1988</em>, the <em>Australian Privacy Principles (APPs)</em>, and the
+            <em>NDIS Code of Conduct</em>. This policy explains how personal and sensitive information is collected,
+            stored, used, and protected when engaging with <strong>syedbokhari.com.au</strong>.
           </p>
+
           <div class="policy-highlights">
             <span class="highlight">✓ NDIS Commission Compliant</span>
             <span class="highlight">✓ Secure Intake Protocols</span>
-            <span class="highlight">✓ Encrypted Data Storage</span>
+            <span class="highlight">✓ Encrypted Data Handling</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- INFORMATION COLLECTION -->
   <section class="policy-sections">
     <div class="container">
-      
+
       <div class="policy-section">
         <div class="section-header">
           <div class="section-icon">📋</div>
-          <h2 class="h2">Information Collection</h2>
+          <h2 class="h2">Information I Collect</h2>
         </div>
-        
+
         <div class="section-content">
-          <p class="p">
-            I collect information necessary to provide Positive Behaviour Support and fulfill NDIS reporting requirements:
-          </p>
-          
+          <p class="p">Information is collected only when necessary to provide Behaviour Support services or meet NDIS obligations.</p>
+
           <div class="info-types">
             <div class="info-type">
               <div class="type-icon">👤</div>
               <div>
-                <h4>Referrer Details</h4>
+                <h4>Referrer Information</h4>
                 <ul>
                   <li>Name and professional role</li>
-                  <li>Organization and contact info</li>
+                  <li>Organisation and contact details</li>
                 </ul>
               </div>
             </div>
-            
+
             <div class="info-type">
               <div class="type-icon">🧬</div>
               <div>
-                <h4>Participant Data</h4>
+                <h4>Participant Information</h4>
                 <ul>
                   <li>Name, age, and location</li>
-                  <li>Behaviours of concern</li>
+                  <li>Behaviours of concern and support needs</li>
                   <li>Restrictive Practice status</li>
                 </ul>
               </div>
             </div>
-            
+
             <div class="info-type">
               <div class="type-icon">🛡️</div>
               <div>
-                <h4>NDIS Information</h4>
+                <h4>NDIS‑Related Information</h4>
                 <ul>
                   <li>Funding management type</li>
                   <li>Support Coordinator details</li>
@@ -87,71 +93,144 @@ const lastUpdated = "27 January 2026";
         </div>
       </div>
 
+      <!-- MANDATORY REPORTING -->
       <div class="policy-section warning-section">
         <div class="section-header">
           <div class="section-icon warning-icon">⚖️</div>
           <h2 class="h2">NDIS Commission Reporting</h2>
         </div>
-        
+
         <div class="section-content">
           <div class="warning-card">
             <p class="p">
-              <strong>Mandatory Disclosure:</strong> Under the <em>NDIS (Restrictive Practices and Behaviour Support) Rules 2018</em>, I am legally required to report certain information to the NDIS Quality and Safeguards Commission, specifically regarding the use of Regulated Restrictive Practices.
+              <strong>Mandatory Disclosure:</strong> Under the
+              <em>NDIS (Restrictive Practices and Behaviour Support) Rules 2018</em>, I am legally required to report
+              the use of <strong>Regulated Restrictive Practices</strong> to the NDIS Quality and Safeguards Commission.
+              This includes reporting, monitoring, and lodging Behaviour Support Plans.
             </p>
           </div>
         </div>
       </div>
 
+      <!-- FORM PROCESSING -->
       <div class="policy-section">
         <div class="section-header">
           <div class="section-icon">📧</div>
           <h2 class="h2">Secure Form Processing</h2>
         </div>
-        
+
         <div class="section-content">
           <div class="formspree-info">
             <div class="formspree-logo">
               <span class="logo-text">Formspree</span>
               <span class="logo-badge">SSL Encrypted</span>
             </div>
+
             <p class="p">
-              Referral and contact forms are processed via <strong>Formspree</strong> using 256-bit SSL encryption. Once received, data is transferred to a secure clinical management environment. I do not sell or lease your data to third-party marketers.
+              Referral and contact forms submitted through this website are processed securely via
+              <strong>Formspree</strong>, which provides encrypted form transmission. Formspree acts as a
+              <strong>data processor only</strong> and does not use or sell your information. Once received, data is
+              transferred to a secure clinical management environment.
             </p>
           </div>
         </div>
       </div>
 
+      <!-- COOKIES & ANALYTICS -->
+      <div class="policy-section">
+        <div class="section-header">
+          <div class="section-icon">🍪</div>
+          <h2 class="h2">Cookies & Website Analytics</h2>
+        </div>
+
+        <div class="section-content">
+          <p class="p">
+            This website uses basic analytics tools (such as Google Analytics) to understand website performance. These
+            tools may collect:
+          </p>
+
+          <ul class="p">
+            <li>Browser type and device information</li>
+            <li>Pages visited and time spent on the site</li>
+            <li>General location (non‑identifiable)</li>
+          </ul>
+
+          <p class="p">
+            No clinical or sensitive information is collected through analytics. You may disable cookies in your browser
+            settings at any time.
+          </p>
+        </div>
+      </div>
+
+      <!-- STORAGE & RETENTION -->
       <div class="policy-section">
         <div class="section-header">
           <div class="section-icon">🔐</div>
-          <h2 class="h2">Storage and Retention</h2>
+          <h2 class="h2">Storage & Retention</h2>
         </div>
-        
+
         <div class="section-content">
           <p class="p">
-            I retain clinical records in accordance with Australian health record legislation (typically 7 years, or until a minor reaches age 25). 
+            Clinical records are stored securely and retained in accordance with Australian health record legislation:
+            typically <strong>7 years</strong>, or until a minor turns <strong>25</strong>.
           </p>
-          
+
           <div class="security-measures">
             <div class="measures-grid">
-              <div class="measure">✅ Multi-Factor Authentication</div>
+              <div class="measure">✅ Multi‑Factor Authentication</div>
               <div class="measure">✅ Periodic Data Audits</div>
-              <div class="measure">✅ De-identification Protocols</div>
+              <div class="measure">✅ De‑identification Protocols</div>
             </div>
           </div>
+        </div>
+      </div>
+
+      <!-- YOUR RIGHTS -->
+      <div class="policy-section">
+        <div class="section-header">
+          <div class="section-icon">📝</div>
+          <h2 class="h2">Your Rights</h2>
+        </div>
+
+        <div class="section-content">
+          <p class="p">Under the Australian Privacy Principles, you have the right to:</p>
+
+          <ul class="p">
+            <li>Request access to your personal information</li>
+            <li>Request corrections to inaccurate information</li>
+            <li>Withdraw consent for non‑mandatory data collection</li>
+            <li>Request deletion where legally appropriate</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- COMPLAINTS -->
+      <div class="policy-section">
+        <div class="section-header">
+          <div class="section-icon">📣</div>
+          <h2 class="h2">How to Make a Privacy Complaint</h2>
+        </div>
+
+        <div class="section-content">
+          <p class="p">If you have concerns about how your information is handled, you may contact:</p>
+
+          <ul class="p">
+            <li><strong>Privacy Officer:</strong> <a href="mailto:admin@syedbokhari.com.au">admin@syedbokhari.com.au</a></li>
+            <li><strong>NDIS Quality and Safeguards Commission:</strong> 1800 035 544</li>
+            <li><strong>Office of the Australian Information Commissioner (OAIC):</strong> oaic.gov.au</li>
+          </ul>
         </div>
       </div>
 
     </div>
   </section>
 
+  <!-- FOOTER CONTACT -->
   <section class="policy-updates">
     <div class="container">
       <div class="updates-card">
         <h2 class="h2">Privacy Officer</h2>
-        <p class="p">
-          To request access to your data or lodge a correction, please contact:
-        </p>
+        <p class="p">For access requests or corrections, contact:</p>
         <div class="privacy-contact">
           <a href="mailto:admin@syedbokhari.com.au">admin@syedbokhari.com.au</a>
         </div>
@@ -178,13 +257,29 @@ const lastUpdated = "27 January 2026";
     padding: 5rem 0 4rem;
     text-align: center;
   }
-  
-  .kicker { color: #38bdf8; font-weight: bold; text-transform: uppercase; margin-bottom: 1rem; }
-  .subtitle { font-size: 1.1rem; opacity: 0.8; }
 
-  .container { max-width: 1000px; margin: 0 auto; padding: 0 1.5rem; }
+  .kicker {
+    color: #38bdf8;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
 
-  .policy-overview { padding: 4rem 0; background: #f8fafc; }
+  .subtitle {
+    font-size: 1.1rem;
+    opacity: 0.8;
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .policy-overview {
+    padding: 4rem 0;
+    background: #f8fafc;
+  }
 
   .overview-card {
     background: white;
@@ -197,7 +292,9 @@ const lastUpdated = "27 January 2026";
     border: 1px solid var(--border);
   }
 
-  .overview-icon { font-size: 3.5rem; }
+  .overview-icon {
+    font-size: 3.5rem;
+  }
 
   .highlight {
     background: #f0fdf4;
@@ -212,11 +309,27 @@ const lastUpdated = "27 January 2026";
     border: 1px solid #bbf7d0;
   }
 
-  .policy-sections { padding: 5rem 0; }
-  .policy-section { margin-bottom: 5rem; }
+  .policy-sections {
+    padding: 5rem 0;
+  }
 
-  .section-header { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem; }
-  .section-icon { font-size: 2rem; background: #f1f5f9; padding: 0.75rem; border-radius: 12px; }
+  .policy-section {
+    margin-bottom: 5rem;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .section-icon {
+    font-size: 2rem;
+    background: #f1f5f9;
+    padding: 0.75rem;
+    border-radius: 12px;
+  }
 
   .info-types {
     display: grid;
@@ -225,28 +338,108 @@ const lastUpdated = "27 January 2026";
     margin-top: 2.5rem;
   }
 
-  .info-type { background: #f8fafc; padding: 2rem; border-radius: 16px; border: 1px solid var(--border); }
-  .info-type h4 { margin-bottom: 1rem; color: var(--primary); }
-  .info-type ul { padding-left: 1.2rem; font-size: 0.95rem; color: var(--text); }
-  .info-type ul li { margin-bottom: 0.5rem; }
+  .info-type {
+    background: #f8fafc;
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+  }
 
-  .warning-section { background: #fff7ed; border-radius: 20px; padding: 2.5rem; border: 1px solid #ffedd5; }
-  .warning-card { background: white; padding: 2rem; border-radius: 12px; border-left: 6px solid #f97316; }
+  .info-type h4 {
+    margin-bottom: 1rem;
+    color: var(--primary);
+  }
 
-  .formspree-info { background: #f1f5f9; padding: 2rem; border-radius: 16px; border-left: 6px solid var(--secondary); }
-  .logo-text { font-weight: 800; color: #e51a4b; }
-  .logo-badge { background: #1e293b; color: white; padding: 0.3rem 0.75rem; font-size: 0.7rem; border-radius: 6px; margin-left: 0.75rem; text-transform: uppercase; font-weight: bold; }
+  .info-type ul {
+    padding-left: 1.2rem;
+    font-size: 0.95rem;
+    color: var(--text);
+  }
 
-  .measures-grid { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
-  .measure { background: #f0f9ff; color: #075985; padding: 0.75rem 1.25rem; border-radius: 10px; font-size: 0.9rem; font-weight: 700; border: 1px solid #bae6fd; }
+  .warning-section {
+    background: #fff7ed;
+    border-radius: 20px;
+    padding: 2.5rem;
+    border: 1px solid #ffedd5;
+  }
 
-  .policy-updates { background: #f8fafc; padding: 5rem 0; text-align: center; border-top: 1px solid var(--border); }
-  .privacy-contact a { font-size: 1.5rem; color: var(--secondary); font-weight: 800; text-decoration: none; }
-  .update-info { margin-top: 2rem; font-size: 0.9rem; color: var(--muted); font-weight: 600; }
+  .warning-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    border-left: 6px solid #f97316;
+  }
+
+  .formspree-info {
+    background: #f1f5f9;
+    padding: 2rem;
+    border-radius: 16px;
+    border-left: 6px solid var(--secondary);
+  }
+
+  .logo-text {
+    font-weight: 800;
+    color: #e51a4b;
+  }
+
+  .logo-badge {
+    background: #1e293b;
+    color: white;
+    padding: 0.3rem 0.75rem;
+    font-size: 0.7rem;
+    border-radius: 6px;
+    margin-left: 0.75rem;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .measures-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .measure {
+    background: #f0f9ff;
+    color: #075985;
+    padding: 0.75rem 1.25rem;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border: 1px solid #bae6fd;
+  }
+
+  .policy-updates {
+    background: #f8fafc;
+    padding: 5rem 0;
+    text-align: center;
+    border-top: 1px solid var(--border);
+  }
+
+  .privacy-contact a {
+    font-size: 1.5rem;
+    color: var(--secondary);
+    font-weight: 800;
+    text-decoration: none;
+  }
+
+  .update-info {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: var(--muted);
+    font-weight: 600;
+  }
 
   @media (max-width: 768px) {
-    .overview-card { flex-direction: column; text-align: center; padding: 2rem; }
-    .page-header h1 { font-size: 2.2rem; }
-    .dual-column { grid-template-columns: 1fr; }
+    .overview-card {
+      flex-direction: column;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .page-header h1 {
+      font-size: 2.2rem;
+    }
   }
 </style>

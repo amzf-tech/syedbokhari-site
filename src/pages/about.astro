@@ -2,12 +2,13 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 const pathname = Astro.url.pathname;
 
-// SEO Optimized Title & Description including your ID
 const title = "About Syed Bokhari | NDIS Behaviour Support Practitioner | ID: P1636047";
-const description = "Learn about Syed Bokhari, an NDIS Suitable Behaviour Support Practitioner (P1636047). Specialist in evidence-based PBS, FBA, and trauma-informed care.";
+const description =
+  "Learn about Syed Bokhari, an NDIS Suitable Behaviour Support Practitioner (P1636047) providing evidence-informed Positive Behaviour Support, Functional Behaviour Assessments, and trauma-informed practice.";
 ---
 
 <BaseLayout title={title} pathname={pathname} description={description}>
+  <!-- PAGE HEADER -->
   <section class="page-header">
     <div class="container">
       <h1 class="h1">About Syed Bokhari</h1>
@@ -15,20 +16,35 @@ const description = "Learn about Syed Bokhari, an NDIS Suitable Behaviour Suppor
     </div>
   </section>
 
+  <!-- PROFESSIONAL OVERVIEW -->
   <section class="professional-overview">
     <div class="container">
       <div class="overview-grid">
         <div class="content-card">
           <p class="kicker">Professional Background</p>
-          <h2 class="h2">Evidence-Based Support for Meaningful Change</h2>
-          
+          <h2 class="h2">Supporting Participants with Respect, Insight & Evidence</h2>
+
           <p class="p lead">
-            I am an <strong>NDIS Behaviour Support Practitioner</strong> deemed suitable by the NDIS Quality and Safeguards Commission. My practice is dedicated to enhancing the quality of life for NDIS participants through Positive Behaviour Support (PBS), focusing on understanding the "why" behind behaviours to create environments where individuals can thrive.
+            I am an <strong>NDIS Behaviour Support Practitioner</strong> deemed suitable by the NDIS Quality and Safeguards Commission.
+            My work focuses on understanding the function of behaviour, building practical skills, and supporting participants to live
+            safer, more independent, and more meaningful lives.
+          </p>
+
+          <p class="p">
+            My approach is grounded in Positive Behaviour Support (PBS), trauma-informed practice, and a strong commitment to human
+            rights. I work collaboratively with families, Support Coordinators, and providers to ensure strategies are practical,
+            respectful, and aligned with each participant’s goals.
           </p>
 
           <div class="status-badge">
             <span class="status-indicator"></span>
             <span>Assessed as Suitable (ID: P1636047) — NDIS Commission</span>
+          </div>
+
+          <div class="profile-download">
+            <a href="/profile.pdf" target="_blank" rel="noopener" class="profile-link">
+              📄 Download Professional Profile (PDF)
+            </a>
           </div>
 
           <div class="social-links">
@@ -48,7 +64,7 @@ const description = "Learn about Syed Bokhari, an NDIS Suitable Behaviour Suppor
             loading="lazy"
           />
           <div class="photo-caption">
-            <strong>Syed Bokhari</strong><br>
+            <strong>Syed Bokhari</strong><br />
             <small>NDIS Behaviour Support Practitioner</small>
           </div>
         </div>
@@ -56,85 +72,90 @@ const description = "Learn about Syed Bokhari, an NDIS Suitable Behaviour Suppor
     </div>
   </section>
 
+  <!-- QUALIFICATIONS -->
   <section class="qualifications">
     <div class="container">
       <h2 class="h2 text-center">Academic Foundation</h2>
       <p class="text-center text-secondary mb-4">
-        Rigorous educational background informing clinical practice.
+        A strong academic background supporting clinical reasoning and evidence-informed practice.
       </p>
-      
+
       <div class="qualifications-grid">
         <div class="qualification-card">
           <div class="qual-icon">🎓</div>
           <h3>Bachelor of Biomedicine</h3>
-          <p>Provides a deep understanding of the biological and physiological drivers of behaviour.</p>
+          <p>Provides a deep understanding of biological, neurological, and physiological factors influencing behaviour.</p>
         </div>
 
         <div class="qualification-card">
           <div class="qual-icon">📚</div>
           <h3>Master of Arts</h3>
-          <p>Advanced skills in communication, analysis, and understanding complex human systems.</p>
+          <p>Strengthens communication, analysis, and the ability to understand complex human systems and environments.</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- PRACTICE APPROACH -->
   <section class="practice-approach">
     <div class="container">
       <h2 class="h2 text-center">My Practice Philosophy</h2>
       <p class="text-center text-secondary mb-4">
-        Grounding every intervention in human rights and clinical evidence.
+        Every plan is grounded in dignity, safety, and evidence.
       </p>
-      
+
       <div class="approach-grid">
         <div class="approach-card">
           <div class="approach-icon">👤</div>
           <h4>Person-Centred</h4>
-          <p>The participant is at the heart of every decision, ensuring dignity and choice.</p>
+          <p>Every strategy is tailored to the participant’s strengths, preferences, and goals.</p>
         </div>
-        
+
         <div class="approach-card">
           <div class="approach-icon">🧠</div>
           <h4>Trauma-Informed</h4>
-          <p>Recognizing the impact of past experiences on current behavioural presentations.</p>
+          <p>Recognising the impact of past experiences and ensuring support is safe, respectful, and predictable.</p>
         </div>
-        
+
         <div class="approach-card">
           <div class="approach-icon">📊</div>
-          <h4>Evidence-Based</h4>
-          <p>Utilizing Functional Behaviour Assessments (FBA) to drive data-informed strategies.</p>
+          <h4>Evidence-Informed</h4>
+          <p>Using Functional Behaviour Assessments (FBA) and data to guide meaningful, sustainable change.</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- REGISTRATION & COMPLIANCE -->
   <section class="registration-status">
     <div class="container">
       <div class="status-card">
         <h2 class="h2">Compliance & Clinical Governance</h2>
         <p class="p">
-          Professionalism and safety are paramount. My practice is fully aligned with the NDIS Capability Framework, ensuring that all 
-          Behaviour Support Plans meet the highest regulatory standards and focus on the reduction or elimination of restrictive practices.
+          My practice aligns with the NDIS Capability Framework and the NDIS Quality and Safeguards Commission requirements.
+          Behaviour Support Plans are developed with a focus on safety, skill-building, and the reduction or elimination of
+          restrictive practices.
         </p>
-        
+
         <div class="notice" role="note">
           <strong>📝 Practitioner Registration Details:</strong>
           <span class="small">
-            I am a Suitable NDIS Behaviour Support Practitioner (Practitioner ID: P1636047). 
-            My services are delivered in strict adherence to the <em>NDIS (Restrictive Practices and Behaviour Support) Rules 2018</em>, 
-            including all state-specific authorization and reporting requirements.
+            Suitable NDIS Behaviour Support Practitioner (ID: P1636047).  
+            Services delivered in accordance with the
+            <em>NDIS (Restrictive Practices and Behaviour Support) Rules 2018</em>, including all state-based authorisation and reporting requirements.
           </span>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- CTA -->
   <section class="connect-cta">
     <div class="container">
       <div class="cta-card">
         <h3 class="h3">Work with Syed</h3>
-        <p class="p">I have immediate capacity for Functional Behaviour Assessments and PBS Plan development Australia-wide.</p>
-        
+        <p class="p">Immediate capacity for Functional Behaviour Assessments and PBS Plan development Australia-wide.</p>
+
         <div class="connect-options">
           <a href="/contact" class="btn btn-primary">Make a Referral</a>
           <a href="mailto:syed@syedbokhari.com.au" class="btn btn-secondary">Email Syed</a>
@@ -145,7 +166,6 @@ const description = "Learn about Syed Bokhari, an NDIS Suitable Behaviour Suppor
 </BaseLayout>
 
 <style>
-  /* Root Colors matching your brand */
   :root {
     --primary: #1a365d;
     --secondary: #2c7a7b;
@@ -158,16 +178,33 @@ const description = "Learn about Syed Bokhari, an NDIS Suitable Behaviour Suppor
     text-align: center;
     border-bottom: 1px solid #e2e8f0;
   }
-  
-  .page-header h1 { font-size: 2.5rem; color: var(--primary); }
-  .subtitle { font-size: 1.2rem; color: var(--secondary); font-weight: 600; }
 
-  .professional-overview, .qualifications, .practice-approach, .registration-status, .connect-cta {
+  .page-header h1 {
+    font-size: 2.5rem;
+    color: var(--primary);
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+    color: var(--secondary);
+    font-weight: 600;
+  }
+
+  .professional-overview,
+  .qualifications,
+  .practice-approach,
+  .registration-status,
+  .connect-cta {
     padding: 4rem 0;
   }
 
-  .overview-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 3rem; align-items: center; }
-  
+  .overview-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
   .status-badge {
     display: inline-flex;
     align-items: center;
@@ -189,7 +226,24 @@ const description = "Learn about Syed Bokhari, an NDIS Suitable Behaviour Suppor
     border-radius: 50%;
   }
 
-  .social-links { display: flex; gap: 1rem; margin-top: 2rem; }
+  .profile-link {
+    display: inline-block;
+    margin-top: 1rem;
+    font-weight: 600;
+    color: var(--secondary);
+    text-decoration: none;
+  }
+
+  .profile-link:hover {
+    text-decoration: underline;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
   .social-link {
     text-decoration: none;
     background: var(--primary);
@@ -199,18 +253,28 @@ const description = "Learn about Syed Bokhari, an NDIS Suitable Behaviour Suppor
     font-weight: 600;
     transition: 0.3s;
   }
-  .social-link:hover { opacity: 0.9; transform: translateY(-2px); }
 
-  .photo-card img { width: 100%; border-radius: 12px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
+  .social-link:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+  }
 
-  .qualifications-grid, .approach-grid {
+  .photo-card img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+
+  .qualifications-grid,
+  .approach-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
   }
 
-  .qualification-card, .approach-card {
+  .qualification-card,
+  .approach-card {
     background: var(--bg-light);
     padding: 2.5rem;
     border-radius: 12px;
@@ -226,25 +290,65 @@ const description = "Learn about Syed Bokhari, an NDIS Suitable Behaviour Suppor
   }
 
   .notice {
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
     border-left: 4px solid var(--secondary);
     padding: 1.5rem;
     margin-top: 2rem;
   }
 
-  .connect-cta { background: var(--primary); color: white; text-align: center; }
-  .connect-options { display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; }
-  
-  .btn { padding: 1rem 2rem; border-radius: 8px; font-weight: 700; text-decoration: none; transition: 0.3s; }
-  .btn-primary { background: var(--secondary); color: white; }
-  .btn-secondary { border: 2px solid white; color: white; }
-  .btn:hover { transform: translateY(-2px); box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+  .connect-cta {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+  }
 
-  .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+  .connect-options {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .btn {
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  .btn-primary {
+    background: var(--secondary);
+    color: white;
+  }
+
+  .btn-secondary {
+    border: 2px solid white;
+    color: white;
+  }
+
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
 
   @media (max-width: 768px) {
-    .overview-grid { grid-template-columns: 1fr; }
-    .connect-options { flex-direction: column; }
-    .page-header h1 { font-size: 2rem; }
+    .overview-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .connect-options {
+      flex-direction: column;
+    }
+
+    .page-header h1 {
+      font-size: 2rem;
+    }
   }
 </style>

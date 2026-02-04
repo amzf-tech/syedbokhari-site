@@ -1,109 +1,98 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-const title = "Sitemap | Syed Bokhari - Complete Website Navigation";
-const description = "Complete sitemap of syedbokhari.com.au including all pages, blog posts, and NDIS service information. Easy navigation for visitors and search engines.";
+const title = "Sitemap | Syed Bokhari – NDIS Behaviour Support";
+const description =
+  "Complete sitemap for syedbokhari.com.au including all service pages, referral pathways, coordinator resources, and legal information.";
+const pathname = Astro.url.pathname;
 ---
 
-<BaseLayout title={title} pathname={Astro.url.pathname} description={description}>
+<BaseLayout title={title} pathname={pathname} description={description}>
+  <!-- HEADER -->
   <section class="page-header">
     <div class="container">
       <h1 class="h1">Website Sitemap</h1>
-      <p class="subtitle">A complete guide to NDIS Behaviour Support resources on syedbokhari.com.au</p>
+      <p class="subtitle">A structured overview of all pages on syedbokhari.com.au</p>
     </div>
   </section>
 
+  <!-- PRIMARY NAVIGATION -->
   <section class="sitemap-section">
     <div class="container">
-      <h2 class="h2">Primary Navigation</h2>
+      <h2 class="h2">Primary Pages</h2>
+
       <div class="sitemap-grid">
         <div class="sitemap-item">
           <h3><a href="/">Home</a></h3>
-          <p>Overview of PBS services and practitioner credentials (ID: P1636047).</p>
+          <p>Overview of Behaviour Support services and practitioner credentials.</p>
         </div>
-        
-        <div class="sitemap-item">
-          <h3><a href="/services">Services</a></h3>
-          <p>Details on FBAs, Behaviour Support Plans, and Restrictive Practice reviews.</p>
-        </div>
-        
+
         <div class="sitemap-item">
           <h3><a href="/about">About</a></h3>
-          <p>Syed’s background as a Senior Planner and current PBS practitioner approach.</p>
+          <p>Professional background, qualifications, and practice philosophy.</p>
+        </div>
+
+        <div class="sitemap-item">
+          <h3><a href="/services">Services</a></h3>
+          <p>Functional Behaviour Assessments, PBS Plans, and implementation support.</p>
         </div>
 
         <div class="sitemap-item">
           <h3><a href="/coordinators">Support Coordinators</a></h3>
-          <p>B2B information for NDIS professionals seeking timely PBS intake.</p>
+          <p>Capacity, compliance, and referral information for NDIS professionals.</p>
         </div>
-        
+
         <div class="sitemap-item">
           <h3><a href="/referrals">Referral Portal</a></h3>
-          <p>Secure intake form for new NDIS participant referrals.</p>
+          <p>Secure intake form for new participant referrals.</p>
         </div>
-        
+
         <div class="sitemap-item">
-          <h3><a href="/contact">General Contact</a></h3>
-          <p>Business enquiries and direct contact information.</p>
+          <h3><a href="/contact">Contact</a></h3>
+          <p>General enquiries, collaboration, and booking options.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="sitemap-section">
+  <!-- BLOG / RESOURCES -->
+  <section class="sitemap-section alt">
     <div class="container">
-      <h2 class="h2">Educational Resources & Blog</h2>
-      <div class="blog-sitemap-grid">
-        <article class="sitemap-blog-item">
+      <h2 class="h2">Educational Resources</h2>
+
+      <div class="sitemap-grid">
+        <div class="sitemap-item">
           <h3><a href="/blog/understanding-suitable-practitioners">What is an NDIS Suitable Practitioner?</a></h3>
-          <p>Understanding the NDIS Commission's assessment levels for behaviour support.</p>
-          <div class="post-meta">
-            <span class="post-date">Jan 2026</span>
-            <span class="post-category">NDIS Compliance</span>
-          </div>
-        </article>
-        
-        <article class="sitemap-blog-item">
+          <p>Explaining the NDIS Commission’s suitability levels.</p>
+        </div>
+
+        <div class="sitemap-item">
           <h3><a href="/blog/signs-ndis-participant-needs-behaviour-support">5 Signs a Participant Needs PBS</a></h3>
-          <p>Key indicators that suggest behaviour support could improve quality of life.</p>
-          <div class="post-meta">
-            <span class="post-date">Jan 2026</span>
-            <span class="post-category">PBS Guide</span>
-          </div>
-        </article>
-        
-        <article class="sitemap-blog-item">
+          <p>Indicators that behaviour support may improve quality of life.</p>
+        </div>
+
+        <div class="sitemap-item">
           <h3><a href="/blog/functional-behaviour-assessment-process">The FBA Process Explained</a></h3>
-          <p>A guide to functional behaviour assessment and how it forms the foundation of a BSP.</p>
-          <div class="post-meta">
-            <span class="post-date">Dec 2025</span>
-            <span class="post-category">Assessment</span>
-          </div>
-        </article>
+          <p>How Functional Behaviour Assessments guide effective PBS Plans.</p>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- ADMIN / LEGAL -->
   <section class="sitemap-section">
     <div class="container">
       <h2 class="h2">Administrative & Legal</h2>
+
       <div class="quick-links-grid">
         <div class="quick-link-card">
           <h3>Compliance</h3>
           <div class="link-list">
             <a href="/privacy">Privacy Policy</a>
-            <a href="/thank-you">Enquiry Success Page</a>
+            <a href="/thank-you">Enquiry Confirmation</a>
           </div>
         </div>
-        
-        <div class="quick-link-card">
-          <h3>External Links</h3>
-          <div class="link-list">
-            <a href="https://www.ndiscommission.gov.au" target="_blank">NDIS Commission</a>
-            <a href="https://www.linkedin.com/in/syed-fr-bokhari/" target="_blank">LinkedIn Profile</a>
-          </div>
-        </div>
-        
+
         <div class="quick-link-card">
           <h3>Technical</h3>
           <div class="link-list">
@@ -111,16 +100,30 @@ const description = "Complete sitemap of syedbokhari.com.au including all pages,
             <a href="/robots.txt">Robots.txt</a>
           </div>
         </div>
+
+        <div class="quick-link-card">
+          <h3>External</h3>
+          <div class="link-list">
+            <a href="https://www.ndiscommission.gov.au" target="_blank">NDIS Commission</a>
+            <a href="https://www.linkedin.com/in/syed-fr-bokhari/" target="_blank">LinkedIn Profile</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="sitemap-section">
+  <!-- META -->
+  <section class="sitemap-section meta">
     <div class="container">
-      <div class="search-info">
-        <p><strong>Practitioner ID:</strong> P1636047</p>
-        <p><strong>Last Crawl:</strong> {new Date().toLocaleDateString('en-AU', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
-      </div>
+      <p class="meta-line"><strong>Practitioner ID:</strong> P1636047</p>
+      <p class="meta-line">
+        <strong>Last Updated:</strong>
+        {new Date().toLocaleDateString("en-AU", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        })}
+      </p>
     </div>
   </section>
 </BaseLayout>
@@ -133,56 +136,87 @@ const description = "Complete sitemap of syedbokhari.com.au including all pages,
   }
 
   .page-header {
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    background: linear-gradient(135deg, #0f172a, #1e293b);
     color: white;
     padding: 4rem 0;
     text-align: center;
   }
-  
-  .page-header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-  .subtitle { font-size: 1.1rem; opacity: 0.8; }
 
-  .sitemap-section { padding: 4rem 0; }
-  .sitemap-section:nth-child(even) { background: #f8fafc; }
-  
-  .sitemap-grid, .blog-sitemap-grid {
+  .subtitle {
+    opacity: 0.85;
+    margin-top: 0.5rem;
+  }
+
+  .sitemap-section {
+    padding: 4rem 0;
+  }
+
+  .sitemap-section.alt {
+    background: #f8fafc;
+  }
+
+  .sitemap-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
     margin-top: 2rem;
   }
-  
-  .sitemap-item, .sitemap-blog-item {
+
+  .sitemap-item {
     background: white;
-    padding: 1.5rem;
+    padding: 1.75rem;
     border-radius: 12px;
     border: 1px solid var(--border);
-    transition: 0.2s;
+    transition: 0.2s ease;
   }
 
-  .sitemap-item:hover { border-color: var(--secondary); transform: translateY(-2px); }
-  
-  .sitemap-item h3, .sitemap-blog-item h3 { margin-bottom: 0.5rem; font-size: 1.15rem; }
-  .sitemap-item a, .sitemap-blog-item a { color: var(--primary); text-decoration: none; font-weight: 700; }
-  
-  .sitemap-item p, .sitemap-blog-item p { color: #64748b; font-size: 0.9rem; line-height: 1.5; }
+  .sitemap-item:hover {
+    border-color: var(--secondary);
+    transform: translateY(-2px);
+  }
 
-  .post-meta { display: flex; gap: 1rem; font-size: 0.75rem; color: var(--secondary); font-weight: 700; margin-top: 1rem; text-transform: uppercase; }
+  .sitemap-item h3 a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  .sitemap-item p {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
 
   .quick-links-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
   }
-  
-  .quick-link-card h3 { margin-bottom: 1rem; color: var(--primary); font-size: 1.1rem; }
-  
-  .link-list { display: flex; flex-direction: column; gap: 0.5rem; }
-  .link-list a { color: #475569; text-decoration: none; font-size: 0.95rem; }
-  .link-list a:hover { color: var(--secondary); text-decoration: underline; }
 
-  .search-info {
+  .quick-link-card h3 {
+    margin-bottom: 1rem;
+    color: var(--primary);
+  }
+
+  .link-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .link-list a {
+    color: #475569;
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+
+  .link-list a:hover {
+    color: var(--secondary);
+    text-decoration: underline;
+  }
+
+  .meta {
     text-align: center;
     color: #94a3b8;
     font-size: 0.85rem;
@@ -191,6 +225,8 @@ const description = "Complete sitemap of syedbokhari.com.au including all pages,
   }
 
   @media (max-width: 768px) {
-    .page-header h1 { font-size: 2rem; }
+    .page-header h1 {
+      font-size: 2rem;
+    }
   }
 </style>
